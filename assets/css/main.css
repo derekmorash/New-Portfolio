@@ -452,7 +452,7 @@ body {
 header {
   height: 450px;
   background-image: url(../img/hero-bg.jpg);
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat; }
   header .logo {
