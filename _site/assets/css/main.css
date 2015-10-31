@@ -4,6 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -358,15 +359,9 @@ td,
 th {
   padding: 0; }
 
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Open Sans"), local("OpenSans"), url(//themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
-
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
-  color: #BD5248;
+  color: #DC3522;
   font-weight: bold; }
 
 .gigantic {
@@ -412,12 +407,12 @@ hr {
   height: 0; }
 
 a {
-  color: #BD5248;
+  color: #DC3522;
   text-decoration: none;
   outline: 0; }
 
 a:hover, a:focus {
-  color: #d89993; }
+  color: #ea857a; }
 
 ::-moz-selection {
   background: #FFF498; }
