@@ -359,6 +359,11 @@ td,
 th {
   padding: 0; }
 
+header nav a, header .kicker, footer .content-wrap a {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
   color: #DC3522;
@@ -461,10 +466,7 @@ header {
     margin: 30px 30px 0 0; }
     header nav a {
       display: inline-block;
-      margin-left: 20px;
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase; }
+      margin-left: 20px; }
   header h1 {
     text-align: center;
     font-size: 72px;
@@ -481,8 +483,6 @@ header {
       border: white solid 10px; }
   header .kicker {
     text-align: center;
-    font-weight: 700;
-    text-transform: uppercase;
     letter-spacing: 0.05em;
     color: white; }
 
@@ -490,32 +490,42 @@ footer {
   background-image: url(../img/hero-bg.jpg);
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 110px;
+  position: relative;
+  overflow: hidden; }
   footer::after {
     clear: both;
     content: "";
     display: table; }
   footer .lockup {
-    padding: 30px; }
-    footer .lockup .logo {
-      height: 50px;
-      width: 50px;
-      background: #999999;
+    overflow: hidden; }
+  footer .logo {
+    height: 50px;
+    width: 50px;
+    background: #999999;
+    float: right;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  footer .content-wrap {
+    float: right;
+    height: 50px;
+    margin-right: 10px;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+    footer .content-wrap a {
+      display: inline-block;
+      margin-left: 20px; }
+    footer .content-wrap .copyright {
       float: right;
-      margin: 0 0 30px 0; }
-    footer .lockup .content-wrap {
-      float: right;
-      margin-right: 10px; }
-      footer .lockup .content-wrap nav a {
-        margin-left: 5px; }
-      footer .lockup .content-wrap .copyright {
-        float: right;
-        margin: 0;
-        color: white;
-        text-transform: uppercase;
-        font-size: 12px; }
-  footer .footer-overlay {
-    background: rgba(0, 0, 0, 0.6);
-    overflow: hidden;
-    height: 100%;
-    z-index: 2; }
+      margin: 0;
+      color: white;
+      text-transform: uppercase;
+      font-size: 12px; }

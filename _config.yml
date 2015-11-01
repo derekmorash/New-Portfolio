@@ -1,4 +1,14 @@
-name: Derek Morash
-markdown: redcarpet
-highlighter: pygments # or rouge or null
-exclude: ["node_modules", "gulpfile.js", "package.json"]
+# Site settings
+title: Derek Morash
+email: derek.morash@gmail.com
+description: "Something // Something // Something"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+port: 9000
+
+sass:
+  sass_dir: assets/css
+  style: :compressed

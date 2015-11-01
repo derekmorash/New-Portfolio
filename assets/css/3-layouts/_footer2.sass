@@ -1,0 +1,42 @@
+footer
+  background:
+    image: url(../img/hero-bg.jpg)
+    position: center
+    size: cover
+    repeat: no-repeat
+  width: 100%
+  height: 110px
+  position: relative
+  overflow: hidden
+  +clearfix
+
+  .lockup
+    overflow: hidden
+
+  .logo
+    +size(50px)
+    background: #999999
+    float: right
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+
+  .content-wrap
+    float: right
+    height: 50px
+    margin-right: 10px
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+
+    a
+      @extend %small-bold
+      display: inline-block
+      margin-left: 20px
+
+    .copyright
+      float: right
+      margin: 0
+      color: white
+      text-transform: uppercase
+      font-size: 12px
