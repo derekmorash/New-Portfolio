@@ -1,0 +1,59 @@
+h3
+  @extend %small-bold
+  text-align:center
+  padding: 100px 0 30px
+  margin: 0
+
+.face-lockup
+  max-width: 780px
+  +display(flex)
+  margin: 0 auto
+  +align-items(center)
+  +justify-content(space-around)
+
+
+  .face-image
+    +size(200px)
+    border-radius: 50%
+    background-color: gray
+    order: 3
+
+  [class^="icon-"]
+    +size(100px)
+    border-radius: 50%
+    background-color: gray
+
+    &.icon-pencil
+      order: 1
+    &.icon-mouse
+      order: 2
+    &.icon-browser
+      order: 4
+    &.icon-video
+      order: 5
+
+@media screen and (max-width: 650px)
+  .face-lockup
+    display: block
+    text-align: center
+
+    div
+      display: inline-block
+
+    .face-image
+      display:block
+      margin: 0 auto 30px
+      background-position: center center
+      background-repeat: no-repeat
+
+    [class^="icon-"]
+      margin: 10px
+
+.blurb
+  max-width: 620px
+  padding: 10px
+  text-align: center
+  margin: 50px auto
+  font-size: 24px
+  font-weight: 300
+  // font-family: 'Open Sans'
