@@ -3,10 +3,9 @@
     <div class="logo"></div>
     <div class="content-wrap">
       <nav>
-        <a href="#">About Me</a>
-        <a href="#">Work</a>
-        <a href="#">Music</a>
-        <a href="#">Contact</a>
+        {% for item in site.data.settings.menu %}
+          <a href="{{ item.url }}">{{ item.name }}</a>
+        {% endfor %}
       </nav>
 
       <p class="copyright">Copyright</p>

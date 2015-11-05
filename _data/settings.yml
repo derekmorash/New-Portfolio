@@ -1,0 +1,22 @@
+#-------------------------------
+# General Site Settings
+
+title: Derek Morash
+email: derek.morash@gmail.com
+description: "Something // Something // Something"
+
+about: <p><strong>Suspendisse dictum feugiat nisl ut dapibus.</strong> Shabby chic ugh readymade narwhal, YOLO health goth marfa green juice 90's fingerstache chartreuse PBR&B. Shoreditch blog pabst, vice mlkshk raw denim cray actually post-ironic green juice quinoa yr beard.</p>
+
+menu:
+- {name: About Me, url: '#about-me'}
+- {name: My Work, url: '#work'}
+- {name: Music, url: '#music'}
+- {name: Contact, url: '#contact'}
+
+#-------------------------------
+# SEO Section
+
+seo:
+  description: 'Halifax Nova Scotia Junior Full Stack Web Developer'
+  rel-author: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
+  rel-publisher: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
