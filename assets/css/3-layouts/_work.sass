@@ -1,0 +1,42 @@
+.alt-section
+  background: $alt-bg
+
+.thumb-container
+  max-width: 960px
+  // width: 100%
+  margin: 0px auto
+  padding-bottom: 100px
+  +clearfix()
+
+  .thumb-unit
+    display: block
+    float: left
+    width: 25%
+    position: relative
+    padding-top: 16%
+    overflow: hidden
+    background:
+      image: url(http://fillmurray.com/500/500)
+      position: center center
+      repeat: no-repeat
+      size: cover
+
+    .thumb-overlay
+      +position(absolute, 100% 0px null 0px)
+      height: 100%
+      background: fade-out($accent-color, 0.1)
+      text-align: center
+      +transition
+      // transition: all 100ms ease-in-out
+
+      strong
+        display: block
+        padding: 20px
+        color: white
+        font-weight: 300
+        text-transform: uppercase
+        font-size: 24px
+
+    &:hover .thumb-overlay
+      +position(absolute, 0% 0px null 0px)
+      background: fade-out($accent-color, 0.1)

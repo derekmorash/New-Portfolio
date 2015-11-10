@@ -539,6 +539,52 @@ footer {
       text-transform: uppercase;
       font-size: 12px; }
 
+.alt-section {
+  background: #e5eaee; }
+
+.thumb-container {
+  max-width: 960px;
+  margin: 0px auto;
+  padding-bottom: 100px; }
+  .thumb-container::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .thumb-container .thumb-unit {
+    display: block;
+    float: left;
+    width: 25%;
+    position: relative;
+    padding-top: 16%;
+    overflow: hidden;
+    background-image: url(http://fillmurray.com/500/500);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .thumb-container .thumb-unit .thumb-overlay {
+      position: absolute;
+      top: 100%;
+      right: 0px;
+      left: 0px;
+      height: 100%;
+      background: rgba(206, 91, 39, 0.9);
+      text-align: center;
+      -webkit-transition: all 0.15s ease-out 0s;
+      transition: all 0.15s ease-out 0s; }
+      .thumb-container .thumb-unit .thumb-overlay strong {
+        display: block;
+        padding: 20px;
+        color: white;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 24px; }
+    .thumb-container .thumb-unit:hover .thumb-overlay {
+      position: absolute;
+      top: 0%;
+      right: 0px;
+      left: 0px;
+      background: rgba(206, 91, 39, 0.9); }
+
 .face-lockup {
   max-width: 780px;
   display: -webkit-box;
