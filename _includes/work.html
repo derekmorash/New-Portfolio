@@ -2,12 +2,16 @@
   <h3 id="work">Work</h3>
 
   <div class="thumb-container">
-    
+
+    {% for posts in site.posts %}
+
     <a class="thumb-unit">
       <div class="thumb-overlay">
         <strong>Project One</strong>
       </div>
     </a>
+
+    {% endfor %}
 
   </div>
 </section>

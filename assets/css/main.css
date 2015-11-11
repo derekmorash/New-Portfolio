@@ -359,14 +359,14 @@ td,
 th {
   padding: 0; }
 
-h3, header nav a, header .kicker, footer .content-wrap a {
+h3, header nav a, footer .content-wrap a {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase; }
 
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
-  color: #CE5B27;
+  color: black;
   font-weight: bold; }
 
 .gigantic {
@@ -412,12 +412,12 @@ hr {
   height: 0; }
 
 a {
-  color: #CE5B27;
+  color: black;
   text-decoration: none;
   outline: 0; }
 
 a:hover, a:focus {
-  color: #e59976; }
+  color: #333333; }
 
 ::-moz-selection {
   background: #FFF498; }
@@ -441,7 +441,7 @@ body {
   -webkit-tap-highlight-color: #FFF498; }
 
 body {
-  background: #F6F6F8;
+  background: #E1D87F;
   font-size: 14px;
   line-height: 1.6;
   font-family: 'Open Sans', sans-serif;
@@ -459,11 +459,7 @@ h3 {
     padding: 50px 0 50px; } }
 
 header {
-  height: 450px;
-  background-image: url(../img/hero-bg.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
+  height: 450px; }
   header .logo {
     height: 50px;
     width: 50px;
@@ -480,20 +476,11 @@ header {
     text-align: center;
     font-size: 72px;
     font-weight: 700;
-    color: white;
-    text-transform: uppercase;
+    color: black;
     letter-spacing: 0.05em;
     margin-bottom: 20px;
     clear: both;
     padding-top: 100px; }
-    header h1 span {
-      display: inline-block;
-      padding: 0.2em 0.5em;
-      border: white solid 10px; }
-  header .kicker {
-    text-align: center;
-    letter-spacing: 0.05em;
-    color: white; }
 
 footer {
   background-image: url(../img/hero-bg.jpg);
@@ -567,7 +554,7 @@ footer {
       right: 0px;
       left: 0px;
       height: 100%;
-      background: rgba(206, 91, 39, 0.9);
+      background: rgba(0, 0, 0, 0.9);
       text-align: center;
       -webkit-transition: all 0.15s ease-out 0s;
       transition: all 0.15s ease-out 0s; }
@@ -583,7 +570,7 @@ footer {
       top: 0%;
       right: 0px;
       left: 0px;
-      background: rgba(206, 91, 39, 0.9); }
+      background: rgba(0, 0, 0, 0.9); }
 
 .face-lockup {
   max-width: 780px;
