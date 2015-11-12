@@ -1,5 +1,5 @@
 header
-  height: 450px
+  // height: 450px
   // background:
   //   image: url(../img/hero-bg.jpg)
   //   position: center center
@@ -9,12 +9,12 @@ header
   .logo
     +size(50px)
     background: blue
-    float: right
-    margin: 10px 20px 0 0
+    float: left
+    margin: 20px 0 0 20px
 
   nav
     float: right
-    margin: 30px 30px 0 0
+    margin: 35px 30px 0 0
 
     a
       display: inline-block
@@ -23,12 +23,19 @@ header
       @extend %small-bold
 
   h1
-    text-align: center
+    // text-align: center
     font:
-      size: 72px
-      weight: 700
+      size: 64px
+      weight: 400
     color: black
-    letter-spacing: 0.05em
     margin-bottom: 20px
     clear: both
-    padding-top: 100px
+    padding: 100px 0 0 40px
+
+  .blurb
+    max-width: 620px
+    padding: 10px
+    text-align: center
+    margin: 50px auto
+    font-size: 24px
+    font-weight: 300
