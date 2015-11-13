@@ -3,11 +3,12 @@
 
   <div class="thumb-container">
 
-    {% for posts in site.posts %}
+    {% for post in site.posts limit: 2 %}
 
-    <a class="thumb-unit">
+    <a href="#" class="thumb-unit" style="background-image: url(http://fillmurray.com/500/500)">
       <div class="thumb-overlay">
-        <strong>Project One</strong>
+        <strong>{{post.title}}</strong>
+        <span>{{post.date | date: "%b, %d, %Y"}}</span>
       </div>
     </a>
 

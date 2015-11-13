@@ -364,30 +364,24 @@ h3, header nav a, footer .content-wrap a {
   font-weight: 700;
   text-transform: uppercase; }
 
-.gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
   color: black;
   font-weight: bold; }
 
-.gigantic {
-  font-size: 110px;
-  line-height: 1.09;
-  letter-spacing: -2px; }
-
-.huge, h1 {
+h1 {
   font-size: 68px;
   line-height: 1.05;
   letter-spacing: -1px; }
 
-.large, h2 {
+h2 {
   font-size: 42px;
   line-height: 1.14; }
 
-.bigger, h3 {
+h3 {
   font-size: 26px;
   line-height: 1.38; }
 
-.big, h4 {
+h4 {
   font-size: 22px;
   line-height: 1.38; }
 
@@ -474,21 +468,15 @@ header nav {
     text-decoration: none; }
 
 header h1 {
-  color: black;
   margin: 0;
   clear: both;
   padding: 100px 0 0 40px; }
 
 header .blurb {
-  float: right;
   max-width: 620px;
   padding: 0px 40px;
   font-size: 24px;
   font-weight: 300; }
-  header .blurb::after {
-    clear: both;
-    content: "";
-    display: table; }
 
 footer {
   width: 100%;
@@ -544,9 +532,8 @@ footer {
     float: left;
     width: 50%;
     position: relative;
-    padding-top: 16%;
+    padding-top: 20%;
     overflow: hidden;
-    background-image: url(http://fillmurray.com/500/500);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; }
