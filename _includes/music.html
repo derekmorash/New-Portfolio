@@ -1,0 +1,21 @@
+<section class="music-section">
+  <h3 id="work">Music</h3>
+
+  <div class="thumb-container">
+
+    {% for post in site.posts %}
+      {% if post.type contains 'music' %}
+        <a href="{{post.url}}" class="thumb-unit" style="background-image: url({{post.thumbnail}})">
+          <div class="thumb-overlay">
+            <div class="overlay-label">
+              <strong>{{post.band}}</strong>
+              <strong>{{post.album}}</strong>
+              <span>{{post.date | date: "%b, %d, %Y"}}</span>
+            </div>
+          </div>
+        </a>
+      {% endif %}
+    {% endfor %}
+
+  </div>
+</section>
