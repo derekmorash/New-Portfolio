@@ -466,6 +466,10 @@ header nav {
     display: inline-block;
     margin-left: 20px;
     text-decoration: none; }
+  header nav::after::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 header h1 {
   margin: 0;
@@ -537,6 +541,14 @@ footer {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; }
+    @media screen and (max-width: 640px) {
+      .music-section .thumb-container .thumb-unit {
+        width: 50%;
+        padding-top: 25%; } }
+    @media screen and (max-width: 490px) {
+      .music-section .thumb-container .thumb-unit {
+        width: 100%;
+        padding-top: 25%; } }
     .music-section .thumb-container .thumb-unit .thumb-overlay {
       position: absolute;
       top: 100%;
@@ -558,9 +570,13 @@ footer {
           font-weight: 300;
           text-transform: uppercase;
           font-size: 24px; }
-    .music-section .thumb-container .thumb-unit:hover .thumb-overlay {
-      position: absolute;
-      top: 0%;
-      right: 0px;
-      left: 0px;
-      background: rgba(159, 174, 249, 0.9); }
+    .music-section .thumb-container .thumb-unit:hover {
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1); }
+      .music-section .thumb-container .thumb-unit:hover .thumb-overlay {
+        position: absolute;
+        top: 0%;
+        right: 0px;
+        left: 0px;
+        background: rgba(159, 174, 249, 0.9); }

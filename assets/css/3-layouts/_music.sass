@@ -21,6 +21,14 @@
         repeat: no-repeat
         size: cover
 
+      @media screen and (max-width: 640px)
+        width: 50%
+        padding-top: 25%
+
+      @media screen and (max-width: 490px)
+        width: 100%
+        padding-top: 25%
+
       .thumb-overlay
         +position(absolute, 100% 0px null 0px)
         height: 100%
@@ -43,6 +51,8 @@
             text-transform: uppercase
             font-size: 24px
 
-      &:hover .thumb-overlay
-        +position(absolute, 0% 0px null 0px)
-        background: fade-out($accent-color, 0.1)
+      &:hover
+        transform: scale(1.1)
+        .thumb-overlay
+          +position(absolute, 0% 0px null 0px)
+          background: fade-out($accent-color, 0.1)
