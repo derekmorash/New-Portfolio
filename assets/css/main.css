@@ -524,7 +524,7 @@ footer {
       font-size: 12px; }
 
 .music-section .thumb-container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0px auto;
   padding-bottom: 100px; }
   .music-section .thumb-container::after {
@@ -540,8 +540,10 @@ footer {
     overflow: hidden;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover; }
-    @media screen and (max-width: 640px) {
+    background-size: 110% auto;
+    -webkit-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s; }
+    @media screen and (max-width: 680px) {
       .music-section .thumb-container .thumb-unit {
         width: 50%;
         padding-top: 25%; } }
@@ -560,7 +562,11 @@ footer {
       -webkit-transition: all 0.15s ease-out 0s;
       transition: all 0.15s ease-out 0s; }
       .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label {
-        padding-top: 20px; }
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%); }
         .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label span {
           font-size: 16px; }
         .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label strong {
@@ -571,9 +577,7 @@ footer {
           text-transform: uppercase;
           font-size: 24px; }
     .music-section .thumb-container .thumb-unit:hover {
-      -webkit-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-              transform: scale(1.1); }
+      background-size: 100% auto; }
       .music-section .thumb-container .thumb-unit:hover .thumb-overlay {
         position: absolute;
         top: 0%;
