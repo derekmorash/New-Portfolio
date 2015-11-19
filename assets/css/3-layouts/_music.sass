@@ -33,10 +33,14 @@
       .thumb-overlay
         +position(absolute, 100% 0px null 0px)
         height: 100%
-        background: fade-out($accent-color, 0.1)
+        background: fade-out($accent-color, 0.2)
         text-align: center
         +transition
         // transition: all 100ms ease-in-out
+
+        @media screen and (max-width: $break-small)
+          +position(absolute, 0% 0px null 0px)
+          background: fade-out($accent-color, 0.2)
 
         .overlay-label
           position: relative
@@ -58,4 +62,4 @@
         background-size: 100% auto
         .thumb-overlay
           +position(absolute, 0% 0px null 0px)
-          background: fade-out($accent-color, 0.1)
+          background: fade-out($accent-color, 0.2)
