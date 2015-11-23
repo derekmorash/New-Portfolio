@@ -13,7 +13,13 @@ header
       display: inline-block
       margin-left: 20px
       text-decoration: none
-      @extend %small-bold
+      font-size: 18px
+      color: lighten($text-color, 40%)
+      // @extend %small-bold
+      +transition()
+
+      &:hover
+        color: black
 
     &::after
       +clearfix

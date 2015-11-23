@@ -13,13 +13,13 @@
       float: left
       width: 33.33%
       position: relative
-      padding-top: 20%
+      padding-top: 18%
       overflow: hidden
       background:
         // image: url(http://fillmurray.com/500/500)
         position: center center
         repeat: no-repeat
-        size: 110% auto
+        size: 100% auto
       +transition
 
       @media screen and (max-width: $break-medium)
@@ -36,7 +36,7 @@
         background: fade-out($accent-color, 0.2)
         text-align: center
         +transition
-        // transition: all 100ms ease-in-out
+        // transition: all 1s ease-in-out
 
         @media screen and (max-width: $break-small)
           +position(absolute, 0% 0px null 0px)
@@ -47,19 +47,19 @@
           top: 50%
           transform: translateY(-50%)
 
-          span
-            font-size: 16px
-
           strong
             display: block
             line-height: 1
-            color: white
+            color: $text-color
             font-weight: 300
             text-transform: uppercase
-            font-size: 24px
+            font-size: 28px
 
       &:hover
-        background-size: 100% auto
+        background-size: 105% auto //background image size transition
         .thumb-overlay
           +position(absolute, 0% 0px null 0px)
           background: fade-out($accent-color, 0.2)
+
+        strong
+          color: $text-color

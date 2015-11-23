@@ -359,7 +359,7 @@ td,
 th {
   padding: 0; }
 
-h3, header nav a, footer .content-wrap a {
+h3, footer .content-wrap a {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase; }
@@ -411,16 +411,16 @@ a {
   outline: 0; }
 
 a:hover, a:focus {
-  color: #5f5d69; }
+  text-decoration: none; }
 
 ::-moz-selection {
-  background: #f9ea9f; }
+  background: #DBF99F; }
 
 ::selection {
-  background: #f9ea9f; }
+  background: #DBF99F; }
 
 ::-moz-selection {
-  background: #f9ea9f; }
+  background: #DBF99F; }
 
 img::-moz-selection {
   background: transparent; }
@@ -432,7 +432,7 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: #f9ea9f; }
+  -webkit-tap-highlight-color: #DBF99F; }
 
 body {
   background: #f9ea9f;
@@ -465,7 +465,13 @@ header nav {
   header nav a {
     display: inline-block;
     margin-left: 20px;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 18px;
+    color: #928f9d;
+    -webkit-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s; }
+    header nav a:hover {
+      color: black; }
   header nav::after::after {
     clear: both;
     content: "";
@@ -481,6 +487,75 @@ header .blurb {
   padding: 0px 40px;
   font-size: 24px;
   font-weight: 300; }
+
+.music-section .thumb-container {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding-bottom: 100px; }
+  .music-section .thumb-container::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .music-section .thumb-container .thumb-unit {
+    display: block;
+    float: left;
+    width: 33.33%;
+    position: relative;
+    padding-top: 18%;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    -webkit-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s; }
+    @media screen and (max-width: 680px) {
+      .music-section .thumb-container .thumb-unit {
+        width: 50%;
+        padding-top: 25%; } }
+    @media screen and (max-width: 540px) {
+      .music-section .thumb-container .thumb-unit {
+        width: 100%;
+        padding-top: 25%; } }
+    .music-section .thumb-container .thumb-unit .thumb-overlay {
+      position: absolute;
+      top: 100%;
+      right: 0px;
+      left: 0px;
+      height: 100%;
+      background: rgba(219, 249, 159, 0.8);
+      text-align: center;
+      -webkit-transition: all 0.15s ease-out 0s;
+      transition: all 0.15s ease-out 0s; }
+      @media screen and (max-width: 540px) {
+        .music-section .thumb-container .thumb-unit .thumb-overlay {
+          position: absolute;
+          top: 0%;
+          right: 0px;
+          left: 0px;
+          background: rgba(219, 249, 159, 0.8); } }
+      .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%); }
+        .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label strong {
+          display: block;
+          line-height: 1;
+          color: #2E2D33;
+          font-weight: 300;
+          text-transform: uppercase;
+          font-size: 28px; }
+    .music-section .thumb-container .thumb-unit:hover {
+      background-size: 105% auto; }
+      .music-section .thumb-container .thumb-unit:hover .thumb-overlay {
+        position: absolute;
+        top: 0%;
+        right: 0px;
+        left: 0px;
+        background: rgba(219, 249, 159, 0.8); }
+      .music-section .thumb-container .thumb-unit:hover strong {
+        color: #2E2D33; }
 
 footer {
   width: 100%;
@@ -522,72 +597,3 @@ footer {
       color: white;
       text-transform: uppercase;
       font-size: 12px; }
-
-.music-section .thumb-container {
-  max-width: 1200px;
-  margin: 0px auto;
-  padding-bottom: 100px; }
-  .music-section .thumb-container::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .music-section .thumb-container .thumb-unit {
-    display: block;
-    float: left;
-    width: 33.33%;
-    position: relative;
-    padding-top: 20%;
-    overflow: hidden;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 110% auto;
-    -webkit-transition: all 0.15s ease-out 0s;
-    transition: all 0.15s ease-out 0s; }
-    @media screen and (max-width: 680px) {
-      .music-section .thumb-container .thumb-unit {
-        width: 50%;
-        padding-top: 25%; } }
-    @media screen and (max-width: 490px) {
-      .music-section .thumb-container .thumb-unit {
-        width: 100%;
-        padding-top: 25%; } }
-    .music-section .thumb-container .thumb-unit .thumb-overlay {
-      position: absolute;
-      top: 100%;
-      right: 0px;
-      left: 0px;
-      height: 100%;
-      background: rgba(159, 174, 249, 0.8);
-      text-align: center;
-      -webkit-transition: all 0.15s ease-out 0s;
-      transition: all 0.15s ease-out 0s; }
-      @media screen and (max-width: 490px) {
-        .music-section .thumb-container .thumb-unit .thumb-overlay {
-          position: absolute;
-          top: 0%;
-          right: 0px;
-          left: 0px;
-          background: rgba(159, 174, 249, 0.8); } }
-      .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label {
-        position: relative;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-                transform: translateY(-50%); }
-        .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label span {
-          font-size: 16px; }
-        .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label strong {
-          display: block;
-          line-height: 1;
-          color: white;
-          font-weight: 300;
-          text-transform: uppercase;
-          font-size: 24px; }
-    .music-section .thumb-container .thumb-unit:hover {
-      background-size: 100% auto; }
-      .music-section .thumb-container .thumb-unit:hover .thumb-overlay {
-        position: absolute;
-        top: 0%;
-        right: 0px;
-        left: 0px;
-        background: rgba(159, 174, 249, 0.8); }
