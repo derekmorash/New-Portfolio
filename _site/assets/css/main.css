@@ -452,37 +452,80 @@ h3 {
   h3 {
     padding: 50px 0 50px; } }
 
-header .logo {
-  height: 50px;
-  width: 50px;
-  background: blue;
-  float: left;
-  margin: 20px 0 0 40px; }
+header {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-bottom: 100px; }
+  header .logo {
+    height: 50px;
+    width: 50px;
+    background: blue;
+    float: left;
+    margin: 40px 0 0 60px; }
+  header .menu {
+    height: 50px;
+    width: 50px;
+    background: blue;
+    float: right;
+    margin: 40px 60px 0 0;
+    display: none; }
+    @media screen and (max-width: 540px) {
+      header .menu {
+        display: block; } }
+  header nav {
+    float: right;
+    width: 50%;
+    padding-top: 40px; }
+    header nav ul {
+      width: 100%;
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+      header nav ul li {
+        display: inline-block;
+        float: left;
+        width: 50%;
+        position: relative;
+        padding-bottom: 10px; }
+    @media screen and (max-width: 540px) {
+      header nav {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center; }
+        header nav::after {
+          clear: both;
+          content: "";
+          display: table; }
+        header nav ul li {
+          float: none;
+          width: 100;
+          text-align: center;
+          margin: 0 auto; } }
+    header nav a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #928f9d;
+      -webkit-transition: all 0.15s ease-out 0s;
+      transition: all 0.15s ease-out 0s; }
+      header nav a:hover {
+        color: black; }
+    header nav::after::after {
+      clear: both;
+      content: "";
+      display: table; }
 
-header nav {
-  float: right;
-  margin: 35px 40px 0 0; }
-  header nav a {
-    display: inline-block;
-    margin-left: 20px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #928f9d;
-    -webkit-transition: all 0.15s ease-out 0s;
-    transition: all 0.15s ease-out 0s; }
-    header nav a:hover {
-      color: black; }
-  header nav::after::after {
-    clear: both;
-    content: "";
-    display: table; }
+.about::before::after {
+  clear: both;
+  content: "";
+  display: table; }
 
-header h1 {
+.about h1 {
   margin: 0;
   clear: both;
   padding: 100px 0 0 40px; }
 
-header .blurb {
+.about .blurb {
   max-width: 620px;
   padding: 0px 40px;
   font-size: 24px;
@@ -508,7 +551,7 @@ header .blurb {
     background-size: 100% auto;
     -webkit-transition: all 0.15s ease-out 0s;
     transition: all 0.15s ease-out 0s; }
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 740px) {
       .music-section .thumb-container .thumb-unit {
         width: 50%;
         padding-top: 25%; } }
@@ -547,7 +590,7 @@ header .blurb {
           text-transform: uppercase;
           font-size: 28px; }
     .music-section .thumb-container .thumb-unit:hover {
-      background-size: 105% auto; }
+      background-size: 110% auto; }
       .music-section .thumb-container .thumb-unit:hover .thumb-overlay {
         position: absolute;
         top: 0%;

@@ -1,0 +1,68 @@
+header
+  display: block
+  max-width: 100%
+  margin: 0 auto
+  padding-bottom: 100px
+
+  .logo
+    +size(50px)
+    background: blue
+    float: left
+    margin: 40px 0 0 60px
+
+  .menu
+    +size(50px)
+    background: blue
+    float: right
+    margin: 40px 60px 0 0
+    display: none
+
+    @media screen and(max-width: $break-small)
+      display: block
+
+  nav
+    float: right
+    width: 50%
+    padding-top: 40px
+
+    ul
+      width: 100%
+      list-style: none
+      // float:right
+      padding: 0
+      margin: 0
+
+      li
+        display: inline-block
+        float: left
+        width: 50%
+        position: relative
+        padding-bottom: 10px
+
+    @media screen and(max-width: $break-small)
+      +clearfix
+      width: 100%
+      margin: 0 auto
+      text-align: center
+
+      ul
+        li
+          float: none
+          width: 100
+          text-align: center
+          margin: 0 auto
+
+    a
+      // display: inline-block
+      // margin-left: 20px
+      text-decoration: none
+      font-size: 18px
+      color: lighten($text-color, 40%)
+      // @extend %small-bold
+      +transition()
+
+      &:hover
+        color: black
+
+    &::after
+      +clearfix
