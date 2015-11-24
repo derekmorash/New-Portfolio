@@ -4,7 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -366,7 +366,7 @@ h3, footer .content-wrap a {
 
 h1, h2, h3, h4, h5, h6 {
   color: black;
-  font-weight: bold; }
+  font-weight: 700; }
 
 h1 {
   font-size: 68px;
@@ -463,6 +463,9 @@ header {
     background: blue;
     float: left;
     margin: 40px 0 0 60px; }
+    @media screen and (max-width: 540px) {
+      header .logo {
+        margin: 40px 0 0 20px; } }
   header .menu--check {
     display: none; }
     header .menu--check:checked ~ nav {
@@ -473,7 +476,8 @@ header {
     display: none; }
     @media screen and (max-width: 540px) {
       header .menu--label {
-        display: block; } }
+        display: block;
+        margin: 40px 20px 0 0; } }
   header nav {
     float: right;
     width: 50%;
@@ -536,6 +540,14 @@ header {
   font-size: 24px;
   font-weight: 300; }
 
+@media screen and (max-width: 540px) {
+  .about h1 {
+    font-size: 48px;
+    padding: 50px 20px 0; }
+  .about .blurb {
+    font-size: 20px;
+    padding: 0 20px; } }
+
 .music-section .thumb-container {
   max-width: 1200px;
   margin: 0px auto;
@@ -556,7 +568,7 @@ header {
     background-size: 100% auto;
     -webkit-transition: all 0.15s ease-out 0s;
     transition: all 0.15s ease-out 0s; }
-    @media screen and (max-width: 740px) {
+    @media screen and (max-width: 800px) {
       .music-section .thumb-container .thumb-unit {
         width: 50%;
         padding-top: 25%; } }
