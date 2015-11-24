@@ -10,9 +10,13 @@ header
     float: left
     margin: 40px 0 0 60px
 
-  .menu
-    +size(50px)
-    background: blue
+  .menu--check
+    display: none
+
+    &:checked ~ nav
+      display: block
+
+  .menu--label
     float: right
     margin: 40px 60px 0 0
     display: none
@@ -24,6 +28,10 @@ header
     float: right
     width: 50%
     padding-top: 40px
+    display: none
+
+    @media screen and(min-width: $break-small)
+      display: block
 
     ul
       width: 100%

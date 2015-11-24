@@ -463,20 +463,25 @@ header {
     background: blue;
     float: left;
     margin: 40px 0 0 60px; }
-  header .menu {
-    height: 50px;
-    width: 50px;
-    background: blue;
+  header .menu--check {
+    display: none; }
+    header .menu--check:checked ~ nav {
+      display: block; }
+  header .menu--label {
     float: right;
     margin: 40px 60px 0 0;
     display: none; }
     @media screen and (max-width: 540px) {
-      header .menu {
+      header .menu--label {
         display: block; } }
   header nav {
     float: right;
     width: 50%;
-    padding-top: 40px; }
+    padding-top: 40px;
+    display: none; }
+    @media screen and (min-width: 540px) {
+      header nav {
+        display: block; } }
     header nav ul {
       width: 100%;
       list-style: none;
