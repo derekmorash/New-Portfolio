@@ -463,6 +463,9 @@ header {
     background: blue;
     float: left;
     margin: 40px 0 0 60px; }
+    @media screen and (max-width: 768px) {
+      header .logo {
+        margin: 40px 0 0 40px; } }
     @media screen and (max-width: 540px) {
       header .logo {
         margin: 40px 0 0 20px; } }
@@ -482,7 +485,9 @@ header {
     float: right;
     width: 50%;
     padding-top: 40px;
-    display: none; }
+    display: none;
+    -webkit-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s; }
     @media screen and (min-width: 540px) {
       header nav {
         display: block; } }
@@ -514,7 +519,7 @@ header {
     header nav a {
       text-decoration: none;
       font-size: 18px;
-      color: #928f9d;
+      color: #7f7c8c;
       -webkit-transition: all 0.15s ease-out 0s;
       transition: all 0.15s ease-out 0s; }
       header nav a:hover {
@@ -532,17 +537,22 @@ header {
 .about h1 {
   margin: 0;
   clear: both;
-  padding: 100px 0 0 40px; }
+  padding: 100px 0 0 60px; }
 
 .about .blurb {
-  max-width: 620px;
-  padding: 0px 40px;
+  padding: 0px 60px;
   font-size: 24px;
   font-weight: 300; }
 
+@media screen and (max-width: 768px) {
+  .about h1 {
+    padding: 100px 0 0 40px; }
+  .about .blurb {
+    padding: 0 40px; } }
+
 @media screen and (max-width: 540px) {
   .about h1 {
-    font-size: 48px;
+    font-size: 42px;
     padding: 50px 20px 0; }
   .about .blurb {
     font-size: 20px;
@@ -568,14 +578,14 @@ header {
     background-size: 100% auto;
     -webkit-transition: all 0.15s ease-out 0s;
     transition: all 0.15s ease-out 0s; }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 768px) {
       .music-section .thumb-container .thumb-unit {
         width: 50%;
         padding-top: 25%; } }
     @media screen and (max-width: 540px) {
       .music-section .thumb-container .thumb-unit {
         width: 100%;
-        padding-top: 25%; } }
+        padding-top: 30%; } }
     .music-section .thumb-container .thumb-unit .thumb-overlay {
       position: absolute;
       top: 100%;
@@ -586,7 +596,7 @@ header {
       text-align: center;
       -webkit-transition: all 0.15s ease-out 0s;
       transition: all 0.15s ease-out 0s; }
-      @media screen and (max-width: 540px) {
+      @media screen and (max-width: 768px) {
         .music-section .thumb-container .thumb-unit .thumb-overlay {
           position: absolute;
           top: 0%;
@@ -607,7 +617,7 @@ header {
           text-transform: uppercase;
           font-size: 28px; }
     .music-section .thumb-container .thumb-unit:hover {
-      background-size: 110% auto; }
+      background-size: 106% auto; }
       .music-section .thumb-container .thumb-unit:hover .thumb-overlay {
         position: absolute;
         top: 0%;

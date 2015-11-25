@@ -10,6 +10,9 @@ header
     float: left
     margin: 40px 0 0 60px
 
+    @media screen and(max-width: $break-medium)
+      margin: 40px 0 0 40px
+
     @media screen and(max-width: $break-small)
       margin: 40px 0 0 20px
 
@@ -33,6 +36,7 @@ header
     width: 50%
     padding-top: 40px
     display: none
+    +transition
 
     @media screen and(min-width: $break-small)
       display: block
@@ -65,12 +69,9 @@ header
           margin: 0 auto
 
     a
-      // display: inline-block
-      // margin-left: 20px
       text-decoration: none
       font-size: 18px
-      color: lighten($text-color, 40%)
-      // @extend %small-bold
+      color: lighten($text-color, 33%)
       +transition()
 
       &:hover

@@ -5,17 +5,24 @@
   h1
     margin: 0
     clear: both
-    padding: 100px 0 0 40px
+    padding: 100px 0 0 60px
 
   .blurb
-    max-width: 620px
-    padding: 0px 40px
+    // max-width: 800px
+    padding: 0px 60px
     font-size: 24px
     font-weight: 300
 
+  @media screen and(max-width: $break-medium)
+    h1
+      padding: 100px 0 0 40px
+
+    .blurb
+      padding: 0 40px
+
   @media screen and(max-width: $break-small)
     h1
-      font-size: 48px
+      font-size: 42px
       padding: 50px 20px 0
 
     .blurb

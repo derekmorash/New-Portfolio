@@ -28,7 +28,7 @@
 
       @media screen and (max-width: $break-small)
         width: 100%
-        padding-top: 25%
+        padding-top: 30%
 
       .thumb-overlay
         +position(absolute, 100% 0px null 0px)
@@ -38,7 +38,7 @@
         +transition
         // transition: all 1s ease-in-out
 
-        @media screen and (max-width: $break-small)
+        @media screen and (max-width: $break-medium)
           +position(absolute, 0% 0px null 0px)
           background: fade-out($accent-color, 0.2)
 
@@ -56,7 +56,7 @@
             font-size: 28px
 
       &:hover
-        background-size: 110% auto //background image size transition
+        background-size: 106% auto //background image size transition
         .thumb-overlay
           +position(absolute, 0% 0px null 0px)
           background: fade-out($accent-color, 0.2)
