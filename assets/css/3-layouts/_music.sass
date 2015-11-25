@@ -38,8 +38,7 @@
         height: 100%
         background: fade-out($accent-color, 0.2)
         text-align: center
-        +transition(all, 300ms, $ease-in-out-cubic)
-        // transition: all 300ms $ease-in-back
+        +transition
 
         @media screen and (max-width: $break-medium)
           +position(absolute, 0% 0px null 0px)
@@ -53,13 +52,14 @@
           strong
             display: block
             line-height: 1
-            color: $text-color
-            font-weight: 300
+            color: darken($text-color, 50%)
+            font-weight: 700
             text-transform: uppercase
             font-size: 28px
 
-          strong:nth-child(1)
-            color: darken($text-color, 50%)
+            &:nth-child(2)
+              color: lighten($text-color, 10%)
+              font-weight: 300
 
       &:hover
         background-size: 106% auto //background image size transition
@@ -67,8 +67,8 @@
           +position(absolute, 0% 0px null 0px)
           background: fade-out($accent-color, 0.2)
 
-        strong
-          color: $text-color
+          strong
+            color: darken($text-color, 50%)
 
-        strong:nth-last-child
-          color: lighten($text-color, 20%)
+            &:nth-child(2)
+              color: lighten($text-color, 10%)
