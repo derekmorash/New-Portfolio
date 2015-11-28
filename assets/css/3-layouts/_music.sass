@@ -1,5 +1,14 @@
 .music-section
-  // background: $alt-bg
+  padding: 50px 80px
+
+  @media screen and (max-width: $break-large)
+    padding: 50px 60px
+
+  @media screen and (max-width: $break-medium)
+    padding: 50px 0
+
+  @media screen and (max-width: $break-small)
+    padding: 50px 0
 
   .thumb-container
     // width: 100%
@@ -10,9 +19,9 @@
     .thumb-unit
       display: block
       float: left
-      width: 25%
+      width: 33.33%
       position: relative
-      padding-top: 12%
+      padding-top: 16%
       overflow: hidden
       background:
         // image: url(http://fillmurray.com/500/500)
@@ -21,9 +30,9 @@
         size: 100% auto
       +transition
 
-      @media screen and (max-width: $break-xlarge)
-        width: 33.33%
-        padding-top: 16%
+      @media screen and (max-width: $break-large)
+        width: 50%
+        padding-top: 25%
 
       @media screen and (max-width: $break-medium)
         width: 50%

@@ -1,10 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
+html {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit; }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -461,7 +473,10 @@ header {
     width: 50px;
     background: blue;
     float: left;
-    margin: 40px 0 0 60px; }
+    margin: 40px 0 0 80px; }
+    @media screen and (max-width: 1080px) {
+      header .logo {
+        margin: 40px 0 0 60px; } }
     @media screen and (max-width: 768px) {
       header .logo {
         margin: 40px 0 0 40px; } }
@@ -536,12 +551,18 @@ header {
 .about h1 {
   margin: 0;
   clear: both;
-  padding: 100px 0 0 60px; }
+  padding: 100px 0 0 80px; }
 
 .about .blurb {
-  padding: 0px 60px;
+  padding: 0px 80px;
   font-size: 24px;
   font-weight: 300; }
+
+@media screen and (max-width: 1080px) {
+  .about h1 {
+    padding: 100px 0 0 60px; }
+  .about .blurb {
+    padding: 0 60px; } }
 
 @media screen and (max-width: 768px) {
   .about h1 {
@@ -557,82 +578,147 @@ header {
     font-size: 20px;
     padding: 0 20px; } }
 
-.music-section .thumb-container {
-  margin: 0px auto;
-  padding-bottom: 100px; }
-  .music-section .thumb-container::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .music-section .thumb-container .thumb-unit {
-    display: block;
-    float: left;
-    width: 25%;
-    position: relative;
-    padding-top: 12%;
-    overflow: hidden;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    -webkit-transition: all 0.15s ease-out 0s;
-    transition: all 0.15s ease-out 0s; }
-    @media screen and (max-width: 1200px) {
-      .music-section .thumb-container .thumb-unit {
-        width: 33.33%;
-        padding-top: 16%; } }
-    @media screen and (max-width: 768px) {
-      .music-section .thumb-container .thumb-unit {
-        width: 50%;
-        padding-top: 25%; } }
-    @media screen and (max-width: 540px) {
-      .music-section .thumb-container .thumb-unit {
-        width: 100%;
-        padding-top: 30%; } }
-    .music-section .thumb-container .thumb-unit .thumb-overlay {
-      position: absolute;
-      top: 100%;
-      right: 0;
-      left: 0;
-      height: 100%;
-      background: rgba(219, 249, 159, 0.8);
+.work {
+  padding: 100px 80px 0; }
+  @media screen and (max-width: 1080px) {
+    .work {
+      padding: 0 60px; } }
+  @media screen and (max-width: 768px) {
+    .work {
+      padding: 0 40px; } }
+  @media screen and (max-width: 540px) {
+    .work {
+      padding: 0 20px; } }
+  .work .work--card-container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    .work .work--card-container::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .work .work--card-container .work--card {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      background: white;
+      margin-bottom: 20px;
       text-align: center;
+      text-decoration: none;
       -webkit-transition: all 0.15s ease-out 0s;
       transition: all 0.15s ease-out 0s; }
+      .work .work--card-container .work--card:last-child {
+        margin-right: 0; }
+      .work .work--card-container .work--card:nth-child(even) {
+        margin-right: 0; }
+      .work .work--card-container .work--card:hover {
+        background-color: #DBF99F; }
       @media screen and (max-width: 768px) {
-        .music-section .thumb-container .thumb-unit .thumb-overlay {
+        .work .work--card-container .work--card {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 100%; }
+          .work .work--card-container .work--card:last-child {
+            margin-right: 0; } }
+      .work .work--card-container .work--card span {
+        display: block;
+        padding: 10px 0;
+        font-size: 20px; }
+      .work .work--card-container .work--card img {
+        width: 100%;
+        padding: 10px 10px 0; }
+      .work .work--card-container .work--card h2 {
+        font-size: 28px; }
+
+.music-section {
+  padding: 50px 80px; }
+  @media screen and (max-width: 1080px) {
+    .music-section {
+      padding: 50px 60px; } }
+  @media screen and (max-width: 768px) {
+    .music-section {
+      padding: 50px 0; } }
+  @media screen and (max-width: 540px) {
+    .music-section {
+      padding: 50px 0; } }
+  .music-section .thumb-container {
+    margin: 0px auto;
+    padding-bottom: 100px; }
+    .music-section .thumb-container::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .music-section .thumb-container .thumb-unit {
+      display: block;
+      float: left;
+      width: 33.33%;
+      position: relative;
+      padding-top: 16%;
+      overflow: hidden;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      -webkit-transition: all 0.15s ease-out 0s;
+      transition: all 0.15s ease-out 0s; }
+      @media screen and (max-width: 1080px) {
+        .music-section .thumb-container .thumb-unit {
+          width: 50%;
+          padding-top: 25%; } }
+      @media screen and (max-width: 768px) {
+        .music-section .thumb-container .thumb-unit {
+          width: 50%;
+          padding-top: 25%; } }
+      @media screen and (max-width: 540px) {
+        .music-section .thumb-container .thumb-unit {
+          width: 100%;
+          padding-top: 30%; } }
+      .music-section .thumb-container .thumb-unit .thumb-overlay {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        height: 100%;
+        background: rgba(219, 249, 159, 0.8);
+        text-align: center;
+        -webkit-transition: all 0.15s ease-out 0s;
+        transition: all 0.15s ease-out 0s; }
+        @media screen and (max-width: 768px) {
+          .music-section .thumb-container .thumb-unit .thumb-overlay {
+            position: absolute;
+            top: 0%;
+            right: 0px;
+            left: 0px;
+            background: rgba(219, 249, 159, 0.8); } }
+        .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label {
+          position: relative;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+                  transform: translateY(-50%); }
+          .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label strong {
+            display: block;
+            line-height: 1;
+            color: black;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 28px; }
+            .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label strong:nth-child(2) {
+              color: #46454e;
+              font-weight: 300; }
+      .music-section .thumb-container .thumb-unit:hover {
+        background-size: 106% auto; }
+        .music-section .thumb-container .thumb-unit:hover .thumb-overlay {
           position: absolute;
           top: 0%;
           right: 0px;
           left: 0px;
-          background: rgba(219, 249, 159, 0.8); } }
-      .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label {
-        position: relative;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-                transform: translateY(-50%); }
-        .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label strong {
-          display: block;
-          line-height: 1;
-          color: black;
-          font-weight: 700;
-          text-transform: uppercase;
-          font-size: 28px; }
-          .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label strong:nth-child(2) {
-            color: #46454e;
-            font-weight: 300; }
-    .music-section .thumb-container .thumb-unit:hover {
-      background-size: 106% auto; }
-      .music-section .thumb-container .thumb-unit:hover .thumb-overlay {
-        position: absolute;
-        top: 0%;
-        right: 0px;
-        left: 0px;
-        background: rgba(219, 249, 159, 0.8); }
-        .music-section .thumb-container .thumb-unit:hover .thumb-overlay strong {
-          color: black; }
-          .music-section .thumb-container .thumb-unit:hover .thumb-overlay strong:nth-child(2) {
-            color: #46454e; }
+          background: rgba(219, 249, 159, 0.8); }
+          .music-section .thumb-container .thumb-unit:hover .thumb-overlay strong {
+            color: black; }
+            .music-section .thumb-container .thumb-unit:hover .thumb-overlay strong:nth-child(2) {
+              color: #46454e; }
 
 footer {
   width: 100%;

@@ -1,0 +1,43 @@
+.work
+  padding: 100px 80px 0
+
+  @media screen and (max-width: $break-large)
+    padding: 0 60px
+
+  @media screen and (max-width: $break-medium)
+    padding: 0 40px
+
+  @media screen and (max-width: $break-small)
+    padding: 0 20px
+
+  .work--card-container
+    @include outer-container(100%)
+
+    .work--card
+      @include span-columns(6)
+      @include omega(even) //every even number child
+      background: white
+      // height: 20vw
+      margin-bottom: 20px
+      text-align: center
+      text-decoration: none
+      +transition
+
+      &:hover
+        background-color: $accent-color
+
+      @media screen and (max-width: $break-medium)
+        @include span-columns(12)
+        // padding-bottom: 100%
+
+      span
+        display: block
+        padding: 10px 0
+        font-size: 20px
+
+      img
+        width: 100%
+        padding: 10px 10px 0
+
+      h2
+        font-size: 28px
