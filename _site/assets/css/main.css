@@ -610,16 +610,37 @@ header {
       transition: all 0.15s ease-out 0s; }
       .work .work--card-container .work--card:last-child {
         margin-right: 0; }
-      .work .work--card-container .work--card:nth-child(even) {
-        margin-right: 0; }
       .work .work--card-container .work--card:hover {
         background-color: #DBF99F; }
-      @media screen and (max-width: 768px) {
+      @media screen and (min-width: 1440px) {
         .work .work--card-container .work--card {
           float: left;
           display: block;
           margin-right: 2.35765%;
-          width: 100%; }
+          width: 31.76157%; }
+          .work .work--card-container .work--card:last-child {
+            margin-right: 0; }
+          .work .work--card-container .work--card:nth-child(3) {
+            margin-right: 0; }
+          .work .work--card-container .work--card:nth-child(6) {
+            margin-right: 0; } }
+      @media screen and (min-width: 540px) and (max-width: 1440px) {
+        .work .work--card-container .work--card {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 48.82117%; }
+          .work .work--card-container .work--card:last-child {
+            margin-right: 0; }
+          .work .work--card-container .work--card:nth-child(even) {
+            margin-right: 0; } }
+      @media screen and (max-width: 540px) {
+        .work .work--card-container .work--card {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 100%;
+          margin-right: 0; }
           .work .work--card-container .work--card:last-child {
             margin-right: 0; } }
       .work .work--card-container .work--card span {

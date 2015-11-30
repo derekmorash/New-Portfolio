@@ -17,7 +17,7 @@
 
     .work--card
       @include span-columns(6)
-      @include omega(even) //every even number child
+      // @include omega(even) //every even number child
       background: white
       // height: 20vw
       margin-bottom: 20px
@@ -28,9 +28,18 @@
       &:hover
         background-color: $accent-color
 
-      @media screen and (max-width: $break-medium)
+      @media screen and (min-width: $break-xxlarge)
+        @include span-columns(4)
+        @include omega(3)
+        @include omega(6)
+
+      @media screen and (min-width: $break-small) and (max-width: $break-xxlarge)
+        @include span-columns(6)
+        @include omega(even)
+
+      @media screen and (max-width: $break-small)
         @include span-columns(12)
-        // padding-bottom: 100%
+        @include omega()
 
       span
         display: block
