@@ -654,7 +654,7 @@ header {
         font-size: 28px; }
 
 .music-section {
-  padding: 50px 80px; }
+  padding: 0px 80px; }
   @media screen and (max-width: 1080px) {
     .music-section {
       padding: 50px 60px; } }

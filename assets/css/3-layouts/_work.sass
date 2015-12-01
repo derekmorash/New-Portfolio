@@ -17,9 +17,7 @@
 
     .work--card
       @include span-columns(6)
-      // @include omega(even) //every even number child
       background: white
-      // height: 20vw
       margin-bottom: 20px
       text-align: center
       text-decoration: none
@@ -30,12 +28,14 @@
 
       @media screen and (min-width: $break-xxlarge)
         @include span-columns(4)
-        @include omega(3)
-        @include omega(6)
+        // for elements at the end of rows
+        @include omega(3) //get rid of the elements right margin
+        @include omega(6) //get rid of the elements right margin
 
       @media screen and (min-width: $break-small) and (max-width: $break-xxlarge)
         @include span-columns(6)
-        @include omega(even)
+        // for elements at the end of rows
+        @include omega(even) //get rid of the elements right margin
 
       @media screen and (max-width: $break-small)
         @include span-columns(12)
