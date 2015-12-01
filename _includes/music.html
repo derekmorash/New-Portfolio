@@ -3,8 +3,8 @@
 
   <div class="thumb-container">
 
-    {% for post in site.posts %}
-      {% if post.categories contains 'music' %}
+    {% for post in site.categories.music limit:6 %}
+      <!-- {% if post.categories contains 'music' %} -->
         <a href="{{post.url}}" class="thumb-unit" style="background-image: url({{post.thumbnail}})">
           <div class="thumb-overlay">
             <div class="overlay-label">
@@ -14,7 +14,7 @@
             </div>
           </div>
         </a>
-      {% endif %}
+      <!-- {% endif %} -->
     {% endfor %}
 
   </div>
