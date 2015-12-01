@@ -3,13 +3,14 @@
   <div class="work--card-container">
 
     {% for post in site.categories.work limit:6 %}
+
     <a href="{{ post.url }}" class="work--card">
       <span>{{ post.date | date: "%b, %d, %Y" }}</span>
       <img src="http://fillmurray.com/g/500/200" alt="" />
       <h2>{{ post.title }}</h2>
     </a>
+    
     {% endfor %}
 
   </div>
-
 </section>
