@@ -854,19 +854,15 @@ header {
       margin-bottom: 20px;
       padding-top: 20%;
       text-align: center;
-      text-decoration: none;
-      -webkit-transition: all 0.15s ease-out 0s;
-      transition: all 0.15s ease-out 0s; }
+      text-decoration: none; }
       .work .work--card-container .work--card:last-child {
         margin-right: 0; }
       .work .work--card-container .work--card:nth-child(even) {
         margin-right: 0; }
-      .work .work--card-container .work--card:hover {
-        background-color: #DBF99F; }
-        .work .work--card-container .work--card:hover img {
-          display: block; }
-        .work .work--card-container .work--card:hover h2 {
-          display: none; }
+      .work .work--card-container .work--card:hover img {
+        display: block; }
+      .work .work--card-container .work--card:hover h2 {
+        display: none; }
       @media screen and (max-width: 1080px) {
         .work .work--card-container .work--card {
           float: left;
