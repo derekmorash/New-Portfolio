@@ -21,7 +21,7 @@
       position: relative
       background: white
       margin-bottom: 20px
-      padding-top: 20%
+      padding-top: 30%
       text-align: center
       text-decoration: none
 
@@ -38,22 +38,25 @@
         padding-top: 40%
 
       span
-        display: block
-        padding-top: 10px
-        font-size: 20px
+        &:first-child
+          display: inline-block
+          +position(absolute, 0px 0px null 0px)
+          font-size: 20px
+          padding-top: 10px
 
         &:last-child
-          padding: 0
+          display: block
+          +position(absolute, null 0px 0px 0px)
           font-size: 16px
 
       &-title
-        +position(absolute, 0% 0px null 0px)
+        +position(absolute, 0px)
         height: 100%
 
         img
           @extend %center-vertical
           width: 100%
-          padding: 20%
+          padding: 0 20%
           display: none
 
         h2
