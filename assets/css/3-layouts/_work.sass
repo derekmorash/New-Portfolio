@@ -17,8 +17,11 @@
 
     .work--card
       @include span-columns(6)
+      @include omega(even)
+      position: relative
       background: white
       margin-bottom: 20px
+      padding-top: 20%
       text-align: center
       text-decoration: none
       +transition
@@ -26,29 +29,39 @@
       &:hover
         background-color: $accent-color
 
-      @media screen and (min-width: $break-xxlarge)
-        @include span-columns(4)
-        // for elements at the end of rows
-        @include omega(3) //get rid of the elements right margin
-        @include omega(6) //get rid of the elements right margin
+        img
+          display:block
 
-      @media screen and (min-width: $break-small) and (max-width: $break-xxlarge)
-        @include span-columns(6)
-        // for elements at the end of rows
-        @include omega(even) //get rid of the elements right margin
+        h2
+          display: none
 
-      @media screen and (max-width: $break-small)
+      @media screen and (max-width: $break-large)
         @include span-columns(12)
         @include omega()
+        padding-top: 40%
 
       span
         display: block
-        padding: 10px 0
+        padding-top: 10px
         font-size: 20px
 
-      img
-        width: 100%
-        padding: 10px 10px 0
+        &:last-child
+          padding: 0
+          font-size: 16px
 
-      h2
-        font-size: 28px
+      &-title
+        +position(absolute, 0% 0px null 0px)
+        height: 100%
+
+        img
+          @extend %center-vertical
+          width: 100%
+          padding: 20%
+          display: none
+
+        h2
+          @extend %center-vertical
+          font-size: 20px
+          margin: 0
+          vertical-align: middle
+          line-height: normal

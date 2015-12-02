@@ -616,6 +616,13 @@ h3, footer .content-wrap a {
   font-weight: 700;
   text-transform: uppercase; }
 
+.work .work--card-container .work--card-title img, .work .work--card-container .work--card-title h2, .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
 h1, h2, h3, h4, h5, h6 {
   color: black;
   font-weight: 700; }
@@ -842,56 +849,56 @@ header {
       display: block;
       margin-right: 2.35765%;
       width: 48.82117%;
+      position: relative;
       background: white;
       margin-bottom: 20px;
+      padding-top: 20%;
       text-align: center;
       text-decoration: none;
       -webkit-transition: all 0.15s ease-out 0s;
       transition: all 0.15s ease-out 0s; }
       .work .work--card-container .work--card:last-child {
         margin-right: 0; }
+      .work .work--card-container .work--card:nth-child(even) {
+        margin-right: 0; }
       .work .work--card-container .work--card:hover {
         background-color: #DBF99F; }
-      @media screen and (min-width: 1440px) {
-        .work .work--card-container .work--card {
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 31.76157%; }
-          .work .work--card-container .work--card:last-child {
-            margin-right: 0; }
-          .work .work--card-container .work--card:nth-child(3) {
-            margin-right: 0; }
-          .work .work--card-container .work--card:nth-child(6) {
-            margin-right: 0; } }
-      @media screen and (min-width: 540px) and (max-width: 1440px) {
-        .work .work--card-container .work--card {
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 48.82117%; }
-          .work .work--card-container .work--card:last-child {
-            margin-right: 0; }
-          .work .work--card-container .work--card:nth-child(even) {
-            margin-right: 0; } }
-      @media screen and (max-width: 540px) {
+        .work .work--card-container .work--card:hover img {
+          display: block; }
+        .work .work--card-container .work--card:hover h2 {
+          display: none; }
+      @media screen and (max-width: 1080px) {
         .work .work--card-container .work--card {
           float: left;
           display: block;
           margin-right: 2.35765%;
           width: 100%;
-          margin-right: 0; }
+          margin-right: 0;
+          padding-top: 40%; }
           .work .work--card-container .work--card:last-child {
             margin-right: 0; } }
       .work .work--card-container .work--card span {
         display: block;
-        padding: 10px 0;
+        padding-top: 10px;
         font-size: 20px; }
-      .work .work--card-container .work--card img {
-        width: 100%;
-        padding: 10px 10px 0; }
-      .work .work--card-container .work--card h2 {
-        font-size: 28px; }
+        .work .work--card-container .work--card span:last-child {
+          padding: 0;
+          font-size: 16px; }
+      .work .work--card-container .work--card-title {
+        position: absolute;
+        top: 0%;
+        right: 0px;
+        left: 0px;
+        height: 100%; }
+        .work .work--card-container .work--card-title img {
+          width: 100%;
+          padding: 20%;
+          display: none; }
+        .work .work--card-container .work--card-title h2 {
+          font-size: 20px;
+          margin: 0;
+          vertical-align: middle;
+          line-height: normal; }
 
 .music-section {
   padding: 0px 80px; }
@@ -952,22 +959,16 @@ header {
             right: 0px;
             left: 0px;
             background: rgba(219, 249, 159, 0.8); } }
-        .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label {
-          position: relative;
-          top: 50%;
-          -webkit-transform: translateY(-50%);
-              -ms-transform: translateY(-50%);
-                  transform: translateY(-50%); }
-          .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label strong {
-            display: block;
-            line-height: 1;
-            color: black;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 28px; }
-            .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label strong:nth-child(2) {
-              color: #46454e;
-              font-weight: 300; }
+        .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label strong {
+          display: block;
+          line-height: 1;
+          color: black;
+          font-weight: 700;
+          text-transform: uppercase;
+          font-size: 28px; }
+          .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label strong:nth-child(2) {
+            color: #46454e;
+            font-weight: 300; }
       .music-section .thumb-container .thumb-unit:hover {
         background-size: 106% auto; }
         .music-section .thumb-container .thumb-unit:hover .thumb-overlay {
