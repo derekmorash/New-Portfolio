@@ -720,13 +720,13 @@ header {
     width: 50px;
     background: blue;
     float: left;
-    margin: 40px 0 0 80px; }
+    margin: 40px 0 0 60px; }
     @media screen and (max-width: 1080px) {
       header .logo {
-        margin: 40px 0 0 60px; } }
+        margin: 40px 0 0 40px; } }
     @media screen and (max-width: 768px) {
       header .logo {
-        margin: 40px 0 0 40px; } }
+        margin: 40px 0 0 20px; } }
     @media screen and (max-width: 540px) {
       header .logo {
         margin: 40px 0 0 20px; } }
@@ -801,21 +801,21 @@ header {
   padding: 100px 0 0 80px; }
 
 .about .blurb {
-  padding: 0px 80px;
+  padding: 0px 60px;
   font-size: 24px;
   font-weight: 300; }
 
 @media screen and (max-width: 1080px) {
   .about h1 {
-    padding: 100px 0 0 60px; }
-  .about .blurb {
-    padding: 0 60px; } }
-
-@media screen and (max-width: 768px) {
-  .about h1 {
     padding: 100px 0 0 40px; }
   .about .blurb {
     padding: 0 40px; } }
+
+@media screen and (max-width: 768px) {
+  .about h1 {
+    padding: 100px 0 0 20px; }
+  .about .blurb {
+    padding: 0 20px; } }
 
 @media screen and (max-width: 540px) {
   .about h1 {
@@ -904,10 +904,10 @@ header {
           line-height: normal; }
 
 .music-section {
-  padding: 0px 80px; }
+  padding: 0px 60px; }
   @media screen and (max-width: 1080px) {
     .music-section {
-      padding: 50px 60px; } }
+      padding: 50px 40px; } }
   @media screen and (max-width: 768px) {
     .music-section {
       padding: 50px 0; } }
