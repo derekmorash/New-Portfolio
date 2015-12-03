@@ -1,26 +1,24 @@
 .work
-  padding: 100px 80px 0
-  // max-width: 1200px
-  // margin: 0 auto
+  padding: 100px 60px 0
 
   @media screen and (max-width: $break-large)
-    padding: 0 60px
-
-  @media screen and (max-width: $break-medium)
     padding: 0 40px
 
-  @media screen and (max-width: $break-small)
+  @media screen and (max-width: $break-medium)
     padding: 0 20px
 
   .work--card-container
     @include outer-container(100%)
 
     .work--card
-      @include span-columns(6)
-      @include omega(even)
+      @include omega(even) //removes margin-right from every even element
+
+      float: left
+      display: block
+      width: calc(50% - 2.5px) //the magic line
+      margin: 0 5px 5px 0
       position: relative
       background: white
-      margin-bottom: 20px
       padding-top: 30%
       text-align: center
       text-decoration: none
@@ -35,7 +33,7 @@
       @media screen and (max-width: $break-large)
         @include span-columns(12)
         @include omega()
-        padding-top: 40%
+        padding-top: 50%
 
       span
         &:first-child
@@ -58,6 +56,9 @@
           width: 100%
           padding: 0 20%
           display: none
+
+          @media screen and (max-width: $break-small)
+            padding: 0 25% //makes the image smaller
 
         h2
           @extend %center-vertical
