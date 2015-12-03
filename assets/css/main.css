@@ -611,7 +611,7 @@ th {
   color: #ae81ff; }
 
 /* Literal.Number.Integer.Long */
-h3, footer .content-wrap a {
+h3 {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase; }
@@ -984,44 +984,3 @@ header {
             color: black; }
             .music-section .thumb-container .thumb-unit:hover .thumb-overlay strong:nth-child(2) {
               color: #46454e; }
-
-footer {
-  width: 100%;
-  height: 110px;
-  position: relative;
-  overflow: hidden; }
-  footer::after {
-    clear: both;
-    content: "";
-    display: table; }
-  footer .lockup {
-    overflow: hidden; }
-  footer .logo {
-    height: 50px;
-    width: 50px;
-    background: #999999;
-    margin-right: 30px;
-    float: left;
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%); }
-  footer .content-wrap {
-    float: right;
-    margin-right: 10px;
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%); }
-    footer .content-wrap a {
-      display: inline-block;
-      margin-left: 20px;
-      text-decoration: none; }
-    footer .content-wrap .copyright {
-      float: right;
-      margin: 0;
-      color: white;
-      text-transform: uppercase;
-      font-size: 12px; }
