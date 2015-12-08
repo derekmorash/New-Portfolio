@@ -18,29 +18,46 @@
       @include span-columns(6)
 
       h1
-        font-size: 70px
+        font-size: 90px
         font-weight: 700
         margin-top: 0
+
+      @media screen and (max-width: $break-xxlarge)
+        h1
+          font-size: 80px
 
       @media screen and (max-width: 1330px)
         @include span-columns(12)
 
         h1
+          font-size: 70px
           margin-bottom: 0
 
     &-blurb
       @include span-columns(6)
       @include omega()
-      font-size: 24px
+      font-size: 30px
       font-weight: 700
       vertical-align: baseline
 
       p
         vertical-align: baseline
-        margin: 34px 0 0
+        margin: 46px 0 0
+
+      @media screen and (max-width: $break-xxlarge)
+        p
+          font-size: 28px
+          margin: 0
+          margin: 38px 0 0
 
       @media screen and (max-width: 1330px)
         @include span-columns(12)
 
         p
+          font-size: 28px
+          margin: 0
+
+      @media screen and (max-width: $break-medium)
+        p
+          font-size: 26px
           margin: 0

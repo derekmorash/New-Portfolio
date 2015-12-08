@@ -819,9 +819,12 @@ header {
       .about--title-name:last-child {
         margin-right: 0; }
       .about--title-name h1 {
-        font-size: 70px;
+        font-size: 90px;
         font-weight: 700;
         margin-top: 0; }
+      @media screen and (max-width: 1440px) {
+        .about--title-name h1 {
+          font-size: 80px; } }
       @media screen and (max-width: 1330px) {
         .about--title-name {
           float: left;
@@ -831,6 +834,7 @@ header {
           .about--title-name:last-child {
             margin-right: 0; }
           .about--title-name h1 {
+            font-size: 70px;
             margin-bottom: 0; } }
     .about--title-blurb {
       float: left;
@@ -838,14 +842,19 @@ header {
       margin-right: 2.35765%;
       width: 48.82117%;
       margin-right: 0;
-      font-size: 24px;
+      font-size: 30px;
       font-weight: 700;
       vertical-align: baseline; }
       .about--title-blurb:last-child {
         margin-right: 0; }
       .about--title-blurb p {
         vertical-align: baseline;
-        margin: 34px 0 0; }
+        margin: 46px 0 0; }
+      @media screen and (max-width: 1440px) {
+        .about--title-blurb p {
+          font-size: 28px;
+          margin: 0;
+          margin: 38px 0 0; } }
       @media screen and (max-width: 1330px) {
         .about--title-blurb {
           float: left;
@@ -855,7 +864,12 @@ header {
           .about--title-blurb:last-child {
             margin-right: 0; }
           .about--title-blurb p {
+            font-size: 28px;
             margin: 0; } }
+      @media screen and (max-width: 768px) {
+        .about--title-blurb p {
+          font-size: 26px;
+          margin: 0; } }
 
 .work {
   padding: 100px 60px 0; }
