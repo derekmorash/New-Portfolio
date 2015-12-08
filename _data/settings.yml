@@ -3,9 +3,9 @@
 
 title: Derek Morash
 email: derek.morash@gmail.com
-description: "Something // Something // Something"
+blurb: Full Stack Web Developer and recent graduate of the Information Technology program at <a href="#" target="_blank">NSCC</a>.
 
-about: <p><strong>Full Stack Web Developer</strong> and recent graduate of the Information Technology program at <a href="#">NSCC</a>.</p>
+about:
 
 menu:
 - {name: About Me, url: '#about'}
