@@ -35,19 +35,17 @@ header
       margin: 40px 20px 0 0
 
   nav
+    @include span-columns(6)
+    @include omega()
     float: right
-    width: 50%
+    // width: calc(50% - 10px)
     padding-top: 40px
     display: none
     +transition
 
-    @media screen and(min-width: $break-small)
-      display: block
-
     ul
       width: 100%
       list-style: none
-      // float:right
       padding: 0
       margin: 0
 
@@ -58,10 +56,11 @@ header
         position: relative
         padding-bottom: 10px
 
-    @media screen and(max-width: $break-small)
+    @media screen and (max-width: $break-small)
       +clearfix
       width: 100%
       margin: 0 auto
+      padding: 0
       text-align: center
 
       ul

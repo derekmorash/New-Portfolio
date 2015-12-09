@@ -743,15 +743,18 @@ header {
         display: block;
         margin: 40px 20px 0 0; } }
   header nav {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-right: 0;
     float: right;
-    width: 50%;
     padding-top: 40px;
     display: none;
     -webkit-transition: all 0.15s ease-out 0s;
     transition: all 0.15s ease-out 0s; }
-    @media screen and (min-width: 540px) {
-      header nav {
-        display: block; } }
+    header nav:last-child {
+      margin-right: 0; }
     header nav ul {
       width: 100%;
       list-style: none;
@@ -767,6 +770,7 @@ header {
       header nav {
         width: 100%;
         margin: 0 auto;
+        padding: 0;
         text-align: center; }
         header nav::after {
           clear: both;
@@ -798,7 +802,7 @@ header {
       padding: 100px 40px 0; } }
   @media screen and (max-width: 768px) {
     .about {
-      padding: 100px 20px 0; } }
+      padding: 50px 20px 0; } }
   .about::before::after {
     clear: both;
     content: "";
