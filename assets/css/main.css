@@ -750,7 +750,7 @@ header {
     margin-right: 0;
     float: right;
     padding-top: 40px;
-    display: none;
+    display: block;
     -webkit-transition: all 0.15s ease-out 0s;
     transition: all 0.15s ease-out 0s; }
     header nav:last-child {
@@ -771,7 +771,8 @@ header {
         width: 100%;
         margin: 0 auto;
         padding: 0;
-        text-align: center; }
+        text-align: center;
+        display: none; }
         header nav::after {
           clear: both;
           content: "";
