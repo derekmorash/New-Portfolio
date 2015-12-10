@@ -1,19 +1,37 @@
 .music-section
-  padding: 0px 60px
+  padding: 100px 60px 0
+
+  h3
+    padding: 0
+
+  p
+    font-size: 24px
+    margin: 0
+    padding: 0
 
   @media screen and (max-width: $break-large)
-    padding: 50px 40px
+    padding: 100px 40px
 
   @media screen and (max-width: $break-medium)
-    padding: 50px 0
+    padding: 100px 0
+
+    h3, p
+      padding: 0 0 0 20px
 
   @media screen and (max-width: $break-small)
-    padding: 50px 0
+    padding: 100px 0
+
+    h3
+      padding: 0 0 0 20px
+
+    p
+      font-size: 20px
+      padding: 0 0 0 20px
 
   .thumb-container
     // width: 100%
     margin: 0px auto
-    padding-bottom: 100px
+    // padding-bottom: 100px
     +clearfix()
 
     .thumb-unit

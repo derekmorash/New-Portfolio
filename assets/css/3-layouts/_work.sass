@@ -1,11 +1,23 @@
 .work
   padding: 100px 60px 0
 
+  h3
+    padding: 0
+
+  p
+    font-size: 24px
+    margin: 0
+    padding: 0
+
   @media screen and (max-width: $break-large)
-    padding: 0 40px
+    padding: 100px 40px 0
 
   @media screen and (max-width: $break-medium)
-    padding: 0 20px
+    padding: 100px 20px 0
+
+  @media screen and (max-width: $break-small)
+    p
+      font-size: 20px
 
   .work--card-container
     @include outer-container(100%)
