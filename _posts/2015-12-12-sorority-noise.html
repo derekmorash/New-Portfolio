@@ -1,0 +1,33 @@
+---
+layout: default
+title: Sorority Noise Joy Departed
+band: Sorority Noise
+album: Joy, Departed
+date:   2015-12-12
+thumbnail: /assets/post-assets/06-joy/img/joy.jpg
+<!-- styles: <link rel="stylesheet" href="/assets/post-assets/040-up/css/style.css"> -->
+categories: music sorority-noise
+type: music
+---
+<h1>Joy, Departed</h1>
+
+{% highlight javascript %}
+$(function() {
+  smoothScroll(300);
+});
+
+// smoothScroll function is applied from the document ready function
+function smoothScroll (duration) {
+	$('a[href^="#"]').on('click', function(event) {
+
+	    var target = $( $(this).attr('href') );
+
+	    if( target.length ) {
+	        event.preventDefault();
+	        $('html, body').animate({
+	            scrollTop: target.offset().top
+	        }, duration);
+	    }
+	});
+}
+{% endhighlight %}

@@ -1,0 +1,33 @@
+---
+layout: default
+title: Purity Ring Another Eternity
+band: Purity Ring
+album: Another Eternity
+date:   2015-12-12
+thumbnail: /assets/post-assets/05-eternity/img/eternity.jpg
+<!-- styles: <link rel="stylesheet" href="/assets/post-assets/040-up/css/style.css"> -->
+categories: music purity-ring
+type: music
+---
+<h1>Purity Ring</h1>
+
+{% highlight javascript %}
+$(function() {
+  smoothScroll(300);
+});
+
+// smoothScroll function is applied from the document ready function
+function smoothScroll (duration) {
+	$('a[href^="#"]').on('click', function(event) {
+
+	    var target = $( $(this).attr('href') );
+
+	    if( target.length ) {
+	        event.preventDefault();
+	        $('html, body').animate({
+	            scrollTop: target.offset().top
+	        }, duration);
+	    }
+	});
+}
+{% endhighlight %}
