@@ -979,6 +979,10 @@ header {
 
 .music-section {
   padding: 100px 60px 0; }
+  .music-section svg {
+    height: 80px;
+    width: 80px;
+    float: right; }
   .music-section h3 {
     padding: 0; }
   .music-section p {
@@ -1037,7 +1041,7 @@ header {
         right: 0;
         left: 0;
         height: 100%;
-        background: rgba(159, 219, 249, 0.8);
+        background: rgba(249, 189, 159, 0.8);
         text-align: center;
         -webkit-transition: all 0.15s ease-out 0s;
         transition: all 0.15s ease-out 0s; }
@@ -1047,7 +1051,7 @@ header {
             top: 0%;
             right: 0px;
             left: 0px;
-            background: rgba(159, 219, 249, 0.8); } }
+            background: rgba(249, 189, 159, 0.8); } }
         .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label strong {
           display: block;
           line-height: 1;
@@ -1065,7 +1069,7 @@ header {
           top: 0%;
           right: 0px;
           left: 0px;
-          background: rgba(159, 219, 249, 0.8); }
+          background: rgba(249, 189, 159, 0.8); }
           .music-section .thumb-container .thumb-unit:hover .thumb-overlay strong {
             color: black; }
             .music-section .thumb-container .thumb-unit:hover .thumb-overlay strong:nth-child(2) {
