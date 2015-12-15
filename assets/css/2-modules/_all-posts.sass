@@ -1,0 +1,37 @@
+.all-posts
+  display: block
+  width: 100%
+  padding: 20px 0
+  +clearfix()
+
+  a:nth-child(1)
+    float: left
+    display: block
+    font-size: 36px
+    font-weight: 700
+
+  a:nth-child(2)
+    svg
+      float: right
+      +size(57px)
+      margin-left: 20px
+
+      path
+        fill: $link-color
+        +transition(200ms)
+
+    &:hover
+      svg path
+        fill: transparentize($link-color, 0.4)
+
+  @media screen and (max-width: $break-medium)
+    padding: 0 20px
+
+  @media screen and (max-width: $break-small)
+    padding: 0 10px
+
+    a:nth-child(1)
+      font-size: 28px
+
+    a:nth-child(2)
+      display: none

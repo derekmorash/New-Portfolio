@@ -706,6 +706,41 @@ body {
 h3 {
   margin: 0; }
 
+.all-posts {
+  display: block;
+  width: 100%;
+  padding: 20px 0; }
+  .all-posts::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .all-posts a:nth-child(1) {
+    float: left;
+    display: block;
+    font-size: 36px;
+    font-weight: 700; }
+  .all-posts a:nth-child(2) svg {
+    float: right;
+    height: 57px;
+    width: 57px;
+    margin-left: 20px; }
+    .all-posts a:nth-child(2) svg path {
+      fill: #2E2D33;
+      -webkit-transition: 200ms;
+      transition: 200ms; }
+  .all-posts a:nth-child(2):hover svg path {
+    fill: rgba(46, 45, 51, 0.6); }
+  @media screen and (max-width: 768px) {
+    .all-posts {
+      padding: 0 20px; } }
+  @media screen and (max-width: 540px) {
+    .all-posts {
+      padding: 0 10px; }
+      .all-posts a:nth-child(1) {
+        font-size: 28px; }
+      .all-posts a:nth-child(2) {
+        display: none; } }
+
 header {
   display: block;
   max-width: 100%;
@@ -1071,37 +1106,3 @@ header {
             color: black; }
             .music-section .thumb-container .thumb-unit:hover .thumb-overlay strong:nth-child(2) {
               color: #46454e; }
-  .music-section .all-albums {
-    display: block;
-    width: 100%;
-    padding: 20px 0; }
-    .music-section .all-albums::after {
-      clear: both;
-      content: "";
-      display: table; }
-    .music-section .all-albums a:nth-child(1) {
-      float: left;
-      display: block;
-      font-size: 36px;
-      font-weight: 700; }
-    .music-section .all-albums a:nth-child(2) svg {
-      float: right;
-      height: 57px;
-      width: 57px;
-      margin-left: 20px; }
-      .music-section .all-albums a:nth-child(2) svg path {
-        fill: #2E2D33;
-        -webkit-transition: 200ms;
-        transition: 200ms; }
-    .music-section .all-albums a:nth-child(2):hover svg path {
-      fill: rgba(46, 45, 51, 0.6); }
-    @media screen and (max-width: 768px) {
-      .music-section .all-albums {
-        padding: 0 20px; } }
-    @media screen and (max-width: 540px) {
-      .music-section .all-albums {
-        padding: 0 10px; }
-        .music-section .all-albums a:nth-child(1) {
-          font-size: 28px; }
-        .music-section .all-albums a:nth-child(2) {
-          display: none; } }
