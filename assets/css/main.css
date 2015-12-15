@@ -674,13 +674,13 @@ a:hover, a:focus {
   text-decoration: none; }
 
 ::-moz-selection {
-  background: #9fdbf9; }
+  background: #f8b593; }
 
 ::selection {
-  background: #9fdbf9; }
+  background: #f8b593; }
 
 ::-moz-selection {
-  background: #9fdbf9; }
+  background: #f8b593; }
 
 img::-moz-selection {
   background: transparent; }
@@ -692,10 +692,10 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: #9fdbf9; }
+  -webkit-tap-highlight-color: #f8b593; }
 
 body {
-  background: #f9ea9f;
+  background: #f8e793;
   font-size: 20px;
   line-height: 1.6;
   font-family: Raleway, sans-serif;
@@ -979,10 +979,6 @@ header {
 
 .music-section {
   padding: 100px 60px 0; }
-  .music-section svg {
-    height: 80px;
-    width: 80px;
-    float: right; }
   .music-section h3 {
     padding: 0; }
   .music-section p {
@@ -1006,7 +1002,8 @@ header {
         font-size: 20px;
         padding: 0 0 0 20px; } }
   .music-section .thumb-container {
-    margin: 0px auto; }
+    margin: 0px auto;
+    padding: 20px 0; }
     .music-section .thumb-container::after {
       clear: both;
       content: "";
@@ -1041,7 +1038,7 @@ header {
         right: 0;
         left: 0;
         height: 100%;
-        background: rgba(249, 189, 159, 0.8);
+        background: rgba(147, 215, 248, 0.8);
         text-align: center;
         -webkit-transition: all 0.15s ease-out 0s;
         transition: all 0.15s ease-out 0s; }
@@ -1051,7 +1048,7 @@ header {
             top: 0%;
             right: 0px;
             left: 0px;
-            background: rgba(249, 189, 159, 0.8); } }
+            background: rgba(147, 215, 248, 0.8); } }
         .music-section .thumb-container .thumb-unit .thumb-overlay .overlay-label strong {
           display: block;
           line-height: 1;
@@ -1069,8 +1066,42 @@ header {
           top: 0%;
           right: 0px;
           left: 0px;
-          background: rgba(249, 189, 159, 0.8); }
+          background: rgba(147, 215, 248, 0.8); }
           .music-section .thumb-container .thumb-unit:hover .thumb-overlay strong {
             color: black; }
             .music-section .thumb-container .thumb-unit:hover .thumb-overlay strong:nth-child(2) {
               color: #46454e; }
+  .music-section .all-albums {
+    display: block;
+    width: 100%;
+    padding: 20px 0; }
+    .music-section .all-albums::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .music-section .all-albums a:nth-child(1) {
+      float: left;
+      display: block;
+      font-size: 36px;
+      font-weight: 700; }
+    .music-section .all-albums a:nth-child(2) svg {
+      float: right;
+      height: 57px;
+      width: 57px;
+      margin-left: 20px; }
+      .music-section .all-albums a:nth-child(2) svg path {
+        fill: #2E2D33;
+        -webkit-transition: 200ms;
+        transition: 200ms; }
+    .music-section .all-albums a:nth-child(2):hover svg path {
+      fill: rgba(46, 45, 51, 0.6); }
+    @media screen and (max-width: 768px) {
+      .music-section .all-albums {
+        padding: 0 20px; } }
+    @media screen and (max-width: 540px) {
+      .music-section .all-albums {
+        padding: 0 10px; }
+        .music-section .all-albums a:nth-child(1) {
+          font-size: 28px; }
+        .music-section .all-albums a:nth-child(2) {
+          display: none; } }
