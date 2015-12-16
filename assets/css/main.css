@@ -709,7 +709,7 @@ h3 {
 .all-posts {
   display: block;
   width: 100%;
-  padding: 20px 0; }
+  padding: 40px 0; }
   .all-posts::after {
     clear: both;
     content: "";
@@ -730,16 +730,19 @@ h3 {
       transition: 200ms; }
   .all-posts a:nth-child(2):hover svg path {
     fill: rgba(46, 45, 51, 0.6); }
-  @media screen and (max-width: 768px) {
-    .all-posts {
-      padding: 0 20px; } }
   @media screen and (max-width: 540px) {
-    .all-posts {
-      padding: 0 10px; }
-      .all-posts a:nth-child(1) {
-        font-size: 28px; }
-      .all-posts a:nth-child(2) {
-        display: none; } }
+    .all-posts a:nth-child(1) {
+      font-size: 28px; }
+    .all-posts a:nth-child(2) {
+      display: none; } }
+
+@media screen and (max-width: 768px) {
+  .music-section .all-posts {
+    padding: 0 20px; } }
+
+@media screen and (max-width: 540px) {
+  .music-section .all-posts {
+    padding: 0 10px; } }
 
 header {
   display: block;
@@ -892,15 +895,6 @@ header {
       vertical-align: baseline; }
       .about--title-blurb:last-child {
         margin-right: 0; }
-      .about--title-blurb p {
-        font-size: 30px;
-        font-weight: 700;
-        vertical-align: baseline;
-        margin: 46px 0 0; }
-      @media screen and (max-width: 1440px) {
-        .about--title-blurb p {
-          font-size: 28px;
-          margin: 38px 0 0; } }
       @media screen and (max-width: 1200px) {
         .about--title-blurb {
           float: left;
@@ -908,22 +902,31 @@ header {
           margin-right: 2.35765%;
           width: 100%; }
           .about--title-blurb:last-child {
-            margin-right: 0; }
-          .about--title-blurb p {
+            margin-right: 0; } }
+      .about--title-blurb p:nth-child(1) {
+        font-size: 30px;
+        font-weight: 700;
+        vertical-align: baseline;
+        margin: 46px 0 0; }
+        @media screen and (max-width: 1440px) {
+          .about--title-blurb p:nth-child(1) {
+            font-size: 28px;
+            margin: 38px 0 0; } }
+        @media screen and (max-width: 1200px) {
+          .about--title-blurb p:nth-child(1) {
             font-size: 28px;
             margin: 0; } }
-      @media screen and (max-width: 768px) {
-        .about--title-blurb p {
-          font-size: 26px;
-          margin: 0; } }
-      @media screen and (max-width: 768px) {
-        .about--title-blurb p {
-          font-size: 24px;
-          margin: 0; } }
-  .about--description {
-    padding: 40px 0 0;
-    font-size: 20px;
-    font-weight: 300; }
+        @media screen and (max-width: 768px) {
+          .about--title-blurb p:nth-child(1) {
+            font-size: 26px;
+            margin: 0; } }
+        @media screen and (max-width: 768px) {
+          .about--title-blurb p:nth-child(1) {
+            font-size: 24px;
+            margin: 0; } }
+      .about--title-blurb p:nth-child(2) {
+        font-size: 20px;
+        font-weight: 300; }
 
 .work {
   padding: 100px 60px 0; }
@@ -1038,7 +1041,7 @@ header {
         padding: 0 0 0 20px; } }
   .music-section .thumb-container {
     margin: 0px auto;
-    padding: 20px 0; }
+    padding: 0; }
     .music-section .thumb-container::after {
       clear: both;
       content: "";

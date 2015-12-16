@@ -45,35 +45,31 @@
       @include omega()
       vertical-align: baseline
 
-      p
+      @media screen and (max-width: $break-xlarge)
+        @include span-columns(12)
+
+      p:nth-child(1)
         font-size: 30px
         font-weight: 700
         vertical-align: baseline
         margin: 46px 0 0
 
-      @media screen and (max-width: $break-xxlarge)
-        p
-          font-size: 28px
-          margin: 38px 0 0
+        @media screen and (max-width: $break-xxlarge)
+            font-size: 28px
+            margin: 38px 0 0
 
-      @media screen and (max-width: $break-xlarge)
-        @include span-columns(12)
+        @media screen and (max-width: $break-xlarge)
+            font-size: 28px
+            margin: 0
 
-        p
-          font-size: 28px
-          margin: 0
+        @media screen and (max-width: $break-medium)
+            font-size: 26px
+            margin: 0
 
-      @media screen and (max-width: $break-medium)
-        p
-          font-size: 26px
-          margin: 0
+        @media screen and (max-width: $break-medium)
+            font-size: 24px
+            margin: 0
 
-      @media screen and (max-width: $break-medium)
-        p
-          font-size: 24px
-          margin: 0
-
-  &--description
-    padding: 40px 0 0
-    font-size: 20px
-    font-weight: 300
+      p:nth-child(2)
+        font-size: 20px
+        font-weight: 300
