@@ -1122,7 +1122,38 @@ header {
             .music-section .thumb-container .thumb-unit:hover .thumb-overlay strong:nth-child(2) {
               color: #46454e; }
 
-.footer--lockup {
-  padding: 50px 0;
-  text-align: center;
-  font-size: 5.9vw; }
+footer {
+  margin: 100px auto;
+  padding: 0 20px;
+  max-width: 800px;
+  text-align: center; }
+  footer::after {
+    clear: both;
+    content: "";
+    display: table; }
+  footer a {
+    font-size: 67.63001px; }
+  footer .footer--lockup {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    footer .footer--lockup::after {
+      clear: both;
+      content: "";
+      display: table; }
+    footer .footer--lockup::after {
+      clear: both;
+      content: "";
+      display: table; }
+    footer .footer--lockup a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%;
+      font-size: 16px;
+      display: block;
+      position: relative;
+      background-color: blue;
+      float: left; }
+      footer .footer--lockup a:last-child {
+        margin-right: 0; }
