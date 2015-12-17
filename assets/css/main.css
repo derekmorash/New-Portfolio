@@ -623,6 +623,11 @@ h3 {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
 
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+
 h1, h2, h3, h4, h5, h6 {
   color: black;
   font-weight: 700; }
@@ -667,11 +672,12 @@ hr {
 
 a {
   color: #2E2D33;
-  text-decoration: underline;
-  outline: 0; }
+  text-decoration: none;
+  border-bottom: 1px solid #2E2D33; }
 
 a:hover, a:focus {
-  text-decoration: none; }
+  text-decoration: none;
+  border: 0; }
 
 ::-moz-selection {
   background: #f8b593; }
@@ -718,18 +724,21 @@ h3 {
     float: left;
     display: block;
     font-size: 36px;
-    font-weight: 700; }
-  .all-posts a:nth-child(2) svg {
-    float: right;
-    height: 57px;
-    width: 57px;
-    margin-left: 20px; }
-    .all-posts a:nth-child(2) svg path {
-      fill: #2E2D33;
-      -webkit-transition: 200ms;
-      transition: 200ms; }
-  .all-posts a:nth-child(2):hover svg path {
-    fill: rgba(46, 45, 51, 0.6); }
+    font-weight: 700;
+    line-height: 1; }
+  .all-posts a:nth-child(2) {
+    border: 0; }
+    .all-posts a:nth-child(2) svg {
+      float: right;
+      height: 57px;
+      width: 57px;
+      margin-left: 20px; }
+      .all-posts a:nth-child(2) svg path {
+        fill: #2E2D33;
+        -webkit-transition: 200ms;
+        transition: 200ms; }
+    .all-posts a:nth-child(2):hover svg path {
+      fill: rgba(46, 45, 51, 0.6); }
   @media screen and (max-width: 540px) {
     .all-posts a:nth-child(1) {
       font-size: 28px; }
@@ -818,6 +827,7 @@ header {
           margin: 0 auto; } }
     header nav a {
       text-decoration: none;
+      border: 0;
       font-size: 18px;
       color: #7f7c8c;
       -webkit-transition: all 0.15s ease-out 0s;
@@ -963,7 +973,8 @@ header {
       background: white;
       padding-top: 30%;
       text-align: center;
-      text-decoration: none; }
+      text-decoration: none;
+      border: 0; }
       .work .work--card-container .work--card:nth-child(even) {
         margin-right: 0; }
       .work .work--card-container .work--card:hover img {
@@ -1052,6 +1063,7 @@ header {
       width: 33.33%;
       position: relative;
       padding-top: 16%;
+      border: 0;
       overflow: hidden;
       background-position: center center;
       background-repeat: no-repeat;
@@ -1109,3 +1121,8 @@ header {
             color: black; }
             .music-section .thumb-container .thumb-unit:hover .thumb-overlay strong:nth-child(2) {
               color: #46454e; }
+
+.footer--lockup {
+  padding: 50px 0;
+  text-align: center;
+  font-size: 5.9vw; }
