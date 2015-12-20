@@ -1,11 +1,7 @@
 $(function() {
-  smoothScroll(300);
-
-  hugeText('footer--email','email');
-
-  $('#email').fluidText();
-
-  headerPosition();
+  smoothScroll(300); //call smoothScroll function
+  $('#email').fluidText(); //call fluidText Function
+  headerPosition(); //call headerPosition function
 });
 
 // smoothScroll function is applied from the document ready function
@@ -25,8 +21,8 @@ function smoothScroll (duration) {
 
 //about section margin-top to position header in the middle of the page
 function headerPosition() {
-  var about = $('.about'),
-    windowHeight;
+  var about = $('.about');
+  var windowHeight;
 
   reposition();
 
@@ -50,39 +46,48 @@ function headerPosition() {
   $( window ).resize(function() {
     reposition();
   });
-}
 
-//Text resizing
-function hugeText (p, t) {
-  var parent = $('.'+p); //get parent
-  var text = $('#'+t);   //get text
-
-  // alert(parent.width() + ' and ' + text.width());
-
-  size();
-
-  function size () {
-    text.css('font-size', parent.width() / 11.8292);
-  }
-
-  $( window ).resize(function() {
-    size();
-  });
-
+  //call the reposition function on window resize
   $( window ).on("orientationchange", function() {
-    size();
+    reposition();
   });
-}
+} //end headerPosition
 
-
+/*
+ * Based on fitText.js
+ * Copyright 2011, Dave Rupert http://daverupert.com
+ * Released under the WTFPL license
+ * http://sam.zoy.org/wtfpl/
+*/
 (function($) {
   $.fn.fluidText = function() {
-    var parent = $(this);
-    // alert(this.html());
-    // alert(this.outerWidth());
-    // alert(parent.html());
-    // alert(parent.width());
+
+    //store the text element we want to resize
+    var text = $(this);
+
     return this.each(function(){
+
+      var parent;
+
+      size();
+
+      function size () {
+        //get the width of the texts parent container
+        parent = text.parent();
+
+        //resize the text acording to the parent width
+        text.css('font-size', parent.width() / 11.8292);
+      }
+
+      //call the size function on window resize
+      $( window ).resize(function() {
+        size();
+      });
+
+      //call the size function on window orientation change (for mobile devices)
+      $( window ).on("orientationchange", function() {
+        size();
+      });
 
     });
   };
