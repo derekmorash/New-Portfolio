@@ -783,6 +783,7 @@ header {
   header .menu--label {
     float: right;
     margin: 40px 60px 0 0;
+    cursor: pointer;
     display: none; }
     @media screen and (max-width: 768px) {
       header .menu--label {
@@ -823,12 +824,13 @@ header {
           clear: both;
           content: "";
           display: table; }
-        header nav ul li {
-          float: none;
-          width: 100;
-          text-align: center;
-          margin: 0 auto;
-          list-style: none; } }
+        header nav ul {
+          list-style: none; }
+          header nav ul li {
+            float: none;
+            width: 100;
+            text-align: center;
+            margin: 0 auto; } }
     header nav a {
       text-decoration: none;
       border: 0;
@@ -846,15 +848,15 @@ header {
 .about {
   width: 100%;
   padding: 0 60px;
-  margin-top: 200px; }
+  margin-top: 50px; }
   @media screen and (max-width: 1080px) {
     .about {
       padding: 0 40px;
-      margin-top: 200px; } }
+      margin-top: 50px; } }
   @media screen and (max-width: 768px) {
     .about {
       padding: 0 20px;
-      margin-top: 100px; } }
+      margin-top: 50px; } }
   .about::before::after {
     clear: both;
     content: "";
