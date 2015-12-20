@@ -1,19 +1,32 @@
 footer
   margin: 100px auto
-  padding: 0 20px
-  max-width: 800px
+  width: 100%
   text-align: center
   +clearfix
 
-  a
-    font-size: 67.63001px
+  .footer--email
+    max-width: 800px
+    margin: 0 auto
+
+    @media screen and (max-width: 820px)
+      padding: 0 10px
+
+    a
+      // margin: 0 10px
+      display: inline
+      font-size: 62px//67.63001px
 
   .footer--lockup
-    @include outer-container(100%)
+    max-width: 800px
+    margin: 0 auto
     +clearfix
+
+    @media screen and (max-width: 820px)
+      padding: 0 10px
 
     a
       @include span-columns(2)
+      @include omega(6)
       font-size: 16px
       display: block
       position: relative

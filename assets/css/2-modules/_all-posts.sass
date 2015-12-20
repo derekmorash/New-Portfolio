@@ -4,11 +4,14 @@
   padding: 40px 0
   +clearfix()
 
+  @media screen and (max-width: $break-medium)
+    padding: 20px 0
+
   a:nth-child(1)
     float: left
     display: block
     font-size: 36px
-    font-weight: 700
+    font-weight: 300
     line-height: 1
 
   a:nth-child(2)
@@ -36,7 +39,7 @@
 .music-section
   .all-posts
     @media screen and (max-width: $break-medium)
-      padding: 0 20px
+      padding: 20px 20px
 
     @media screen and (max-width: $break-small)
-      padding: 0 10px
+      padding: 20px 10px

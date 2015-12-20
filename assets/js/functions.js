@@ -3,7 +3,9 @@ $(function() {
   //initialize fit text
   // $('#email').fitText(1, { minFontSize: '10px', maxFontSize: '100px' });
 
-  hugeText('contact', 'email');
+  hugeText('footer--email','email');
+
+  $('#email').fluidText();
 });
 
 // smoothScroll function is applied from the document ready function
@@ -23,7 +25,7 @@ function smoothScroll (duration) {
 
 //Text resizing
 function hugeText (p, t) {
-  var parent = $('#'+p); //get parent
+  var parent = $('.'+p); //get parent
   var text = $('#'+t);   //get text
 
   alert(parent.width() + ' and ' + text.width());
@@ -41,11 +43,18 @@ function hugeText (p, t) {
   $( window ).on("orientationchange", function() {
     size();
   });
-
 }
 
-//get width of text
 
-//get width of parent
+(function($) {
+  $.fn.fluidText = function() {
+    var parent = $(this);
+    // alert(this.html());
+    // alert(this.outerWidth());
+    alert(parent.html());
+    alert(parent.width());
+    return this.each(function(){
 
-//increase font size until text width === parent width
+    });
+  };
+})(jQuery);
