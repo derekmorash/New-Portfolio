@@ -1,15 +1,17 @@
 .about
-  width: 100%
+  max-width: $break-max
+  margin: 0 auto
   padding: 0 60px
-  margin-top: 50px
+  // margin-top: 50px
+  margin-top: calc(50vh - 100px)
 
   @media screen and (max-width: $break-large)
     padding: 0 40px
-    margin-top: 50px
+    // margin-top: 50px
 
   @media screen and (max-width: $break-medium)
     padding: 0 20px
-    margin-top: 50px
+    // margin-top: 50px
 
   &::before
     +clearfix

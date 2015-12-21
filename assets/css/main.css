@@ -758,7 +758,7 @@ h3 {
 
 header {
   display: block;
-  max-width: 100%;
+  max-width: 1600px;
   margin: 0 auto;
   padding-bottom: 100px; }
   header .logo {
@@ -846,17 +846,17 @@ header {
       display: table; }
 
 .about {
-  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
   padding: 0 60px;
-  margin-top: 50px; }
+  margin-top: -webkit-calc(50vh - 100px);
+  margin-top: calc(50vh - 100px); }
   @media screen and (max-width: 1080px) {
     .about {
-      padding: 0 40px;
-      margin-top: 50px; } }
+      padding: 0 40px; } }
   @media screen and (max-width: 768px) {
     .about {
-      padding: 0 20px;
-      margin-top: 50px; } }
+      padding: 0 20px; } }
   .about::before::after {
     clear: both;
     content: "";
@@ -948,6 +948,8 @@ header {
         font-weight: 300; }
 
 .work {
+  max-width: 1600px;
+  margin: 0 auto;
   padding: 100px 60px 0; }
   .work h3 {
     padding: 0; }
@@ -1036,6 +1038,8 @@ header {
           line-height: normal; }
 
 .music-section {
+  max-width: 1600px;
+  margin: 0 auto;
   padding: 100px 60px 0; }
   .music-section h3 {
     padding: 0; }
@@ -1133,7 +1137,7 @@ header {
 
 footer {
   margin: 100px auto;
-  width: 100%;
+  max-width: 1600px;
   text-align: center; }
   footer::after {
     clear: both;
