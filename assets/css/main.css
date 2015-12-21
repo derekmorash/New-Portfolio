@@ -934,18 +934,19 @@ header {
         @media screen and (max-width: 1200px) {
           .about--title-blurb p:nth-child(1) {
             font-size: 28px;
-            margin: 0; } }
+            margin: 20px 0 0; } }
         @media screen and (max-width: 768px) {
           .about--title-blurb p:nth-child(1) {
             font-size: 26px;
-            margin: 0; } }
+            margin: 20px 0 0; } }
         @media screen and (max-width: 768px) {
           .about--title-blurb p:nth-child(1) {
             font-size: 24px;
-            margin: 0; } }
+            margin: 20px 0 0; } }
       .about--title-blurb p:nth-child(2) {
         font-size: 20px;
-        font-weight: 300; }
+        font-weight: 300;
+        margin: 20px 0 0; }
 
 .work {
   max-width: 1600px;
@@ -1136,7 +1137,7 @@ header {
               color: #46454e; }
 
 footer {
-  margin: 100px auto;
+  margin: 25vh auto;
   max-width: 1600px;
   text-align: center; }
   footer::after {
