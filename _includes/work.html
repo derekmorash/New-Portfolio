@@ -4,7 +4,6 @@
   <div class="work--card-container">
 
     {% for post in site.categories.work limit:6 %}
-
     <a href="{{ post.url }}" class="work--card">
       <span>{{ post.date | date: "%b, %d, %Y" }}</span>
       <div class="work--card-title">
@@ -13,7 +12,6 @@
       </div>
       <span>{{ post.tags }}</span>
     </a>
-
     {% endfor %}
 
   </div>

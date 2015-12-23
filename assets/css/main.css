@@ -680,13 +680,13 @@ a:hover, a:focus {
   border: 0; }
 
 ::-moz-selection {
-  background: #f8b593; }
+  background: #93d7f8; }
 
 ::selection {
-  background: #f8b593; }
+  background: #93d7f8; }
 
 ::-moz-selection {
-  background: #f8b593; }
+  background: #93d7f8; }
 
 img::-moz-selection {
   background: transparent; }
@@ -698,7 +698,7 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: #f8b593; }
+  -webkit-tap-highlight-color: #93d7f8; }
 
 body {
   background: #f8e793;
@@ -925,12 +925,12 @@ header {
       .about--title-blurb p:nth-child(1) {
         font-size: 30px;
         font-weight: 700;
-        vertical-align: baseline;
-        margin: 46px 0 0; }
+        line-height: 1.2;
+        margin: 52px 0 0; }
         @media screen and (max-width: 1440px) {
           .about--title-blurb p:nth-child(1) {
             font-size: 28px;
-            margin: 38px 0 0; } }
+            margin: 44px 0 0; } }
         @media screen and (max-width: 1200px) {
           .about--title-blurb p:nth-child(1) {
             font-size: 28px;
