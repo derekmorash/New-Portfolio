@@ -835,7 +835,7 @@ header {
       text-decoration: none;
       border: 0;
       font-size: 18px;
-      color: #7f7c8c;
+      color: #928f9d;
       -webkit-transition: all 0.15s ease-out 0s;
       transition: all 0.15s ease-out 0s; }
       header nav a:hover {
@@ -1177,3 +1177,51 @@ footer {
         margin-right: 0; }
       footer .footer--lockup a:nth-child(6) {
         margin-right: 0; }
+
+body.archive {
+  background: #d7f893; }
+
+.archive--posts {
+  max-width: 1600px;
+  margin: 100px auto 0;
+  padding: 0 60px;
+  -webkit-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s; }
+  .archive--posts:hover a {
+    color: #928f9d;
+    border-bottom: 1px solid #928f9d; }
+  @media screen and (max-width: 1080px) {
+    .archive--posts {
+      padding: 0 40px; } }
+  @media screen and (max-width: 768px) {
+    .archive--posts {
+      padding: 0 20px; } }
+  .archive--posts a {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-top: 2em;
+    border-bottom: 1px solid #2E2D33;
+    -webkit-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s; }
+    .archive--posts a::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .archive--posts a span {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .archive--posts a span:last-child {
+        margin-right: 0; }
+      .archive--posts a span:nth-child(3n) {
+        margin-right: 0; }
+      .archive--posts a span:nth-child(3n+1) {
+        clear: left; }
+      .archive--posts a span:nth-child(1) {
+        font-weight: 700; }
+    .archive--posts a:hover {
+      color: #2E2D33;
+      border-bottom: 1px solid #2E2D33; }

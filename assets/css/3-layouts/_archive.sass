@@ -1,0 +1,38 @@
+body.archive
+  background: $bg-archive
+
+.archive--posts
+  max-width: $break-max
+  margin: 100px auto 0
+  padding: 0 60px
+  +transition()
+
+  &:hover
+    a
+      color: lighten($text-color, 40%)
+      border-bottom: 1px solid lighten($text-color, 40%)
+
+  @media screen and (max-width: $break-large)
+    padding: 0 40px
+    // margin-top: 50px
+
+  @media screen and (max-width: $break-medium)
+    padding: 0 20px
+
+  a
+    @include outer-container(100%)
+    display: block
+    padding-top: 2em
+    border-bottom: 1px solid $text-color
+    +transition()
+
+    span
+      @include span-columns(4)
+      @include omega(3n)
+
+      &:nth-child(1)
+        font-weight: 700
+
+    &:hover
+      color: $text-color
+      border-bottom: 1px solid $text-color
