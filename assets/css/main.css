@@ -1220,8 +1220,10 @@ body.archive {
         margin-right: 0; }
       .archive--posts a span:nth-child(3n+1) {
         clear: left; }
-      .archive--posts a span:nth-child(1) {
-        font-weight: 700; }
+      .archive--posts a span:nth-child(2) {
+        text-align: center; }
+      .archive--posts a span:nth-child(3) {
+        text-align: right; }
     .archive--posts a:hover {
       color: #2E2D33;
       border-bottom: 1px solid #2E2D33; }
