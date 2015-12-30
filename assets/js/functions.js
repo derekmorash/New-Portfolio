@@ -22,6 +22,7 @@ function smoothScroll (duration) {
 //about section margin-top to position header in the middle of the page
 function headerPosition() {
   var about = $('.about');
+  var textHeight;
   var windowHeight;
 
   reposition();
@@ -29,12 +30,14 @@ function headerPosition() {
   function reposition() {
     //get the height of the window
     windowHeight = $(window).height();
+    //get the height of the header text
+    textHeight = about.find('h1').height();
 
     //if the window is taller than 400px
     if(windowHeight > 400) {
       //add a margin-top to the about selection-color
-      //margin is half the window height minus the 100px header
-      about.css('margin-top', (windowHeight/2) - 100);
+      //margin is half the window height minus the 100px header, and minus half the text height
+      about.css('margin-top', (windowHeight/2) - 100 - (textHeight/2));
     } else {
       //usually for phones in landscape
       //add margin-top of only 50px
