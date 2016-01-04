@@ -22,10 +22,10 @@
       font-size: 20px
 
   .work--card-container
-    @include outer-container(100%)
+    +outer-container(100%)
 
     .work--card
-      @include omega(even) //removes margin-right from every even element
+      +omega(even) //removes margin-right from every even element
 
       float: left
       display: block
@@ -46,8 +46,8 @@
           display: none
 
       @media screen and (max-width: $break-large)
-        @include span-columns(12)
-        @include omega()
+        +span-columns(12)
+        +omega()
         padding-top: 50%
 
       span
