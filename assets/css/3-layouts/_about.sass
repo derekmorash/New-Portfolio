@@ -17,10 +17,10 @@
     +clearfix
 
   &--title
-    @include outer-container(100%)
+    +outer-container(100%)
 
     &-name
-      @include span-columns(6)
+      +span-columns(6)
 
       h1
         font-size: 90px
@@ -32,26 +32,26 @@
           font-size: 80px
 
       @media screen and (max-width: $break-xlarge)
-        @include span-columns(12)
+        +span-columns(12)
 
         h1
           font-size: 70px
           margin-bottom: 0
 
       @media screen and (max-width: $break-small)
-        @include span-columns(12)
+        +span-columns(12)
 
         h1
           font-size: 50px
           margin-bottom: 0
 
     &-blurb
-      @include span-columns(6)
-      @include omega()
+      +span-columns(6)
+      +omega()
       vertical-align: baseline
 
       @media screen and (max-width: $break-xlarge)
-        @include span-columns(12)
+        +span-columns(12)
 
       p:nth-child(1)
         font-size: 30px

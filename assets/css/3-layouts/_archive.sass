@@ -5,7 +5,6 @@ body.archive
   max-width: $break-max
   margin: 100px auto 0
   padding: 0 60px
-  +transition()
 
   &:hover
     a
@@ -24,11 +23,15 @@ body.archive
     display: block
     padding-top: 2em
     border-bottom: 1px solid $text-color
-    +transition()
+    +transition(all 200ms ease-in-out)
+
+    &:hover
+      color: $text-color
+      border-bottom: 1px solid $text-color
 
     span
-      @include span-columns(4)
-      @include omega(3n)
+      +span-columns(4)
+      +omega(3n)
 
       &:nth-child(2)
         text-align: center
@@ -36,6 +39,5 @@ body.archive
       &:nth-child(3)
         text-align: right
 
-    &:hover
-      color: $text-color
-      border-bottom: 1px solid $text-color
+      // @media screan and (max-width: $break-small)
+      //   &:nth-child(1)
