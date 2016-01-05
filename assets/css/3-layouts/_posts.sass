@@ -6,21 +6,39 @@ body.posts
     margin: 100px auto 0
     padding: 0 60px
 
+    h1
+      margin: 0
+
     @media screen and (max-width: $break-large)
       padding: 0 40px
 
     @media screen and (max-width: $break-medium)
       padding: 0 20px
 
+      h1
+        font-size: 48px
+
     @media screen and (max-width: $break-small)
-      // padding: 0 10px
+      h1
+        font-size: 44px
+
       p
         font-size: 16px
 
     &--title
       max-width: $break-medium
-      margin: 0 auto
+      margin: 100px auto 50px
+
+      span
+        display: block
+
+      span:nth-child(3n)
+        color: black
+        font-weight: 700
 
     &--article
       max-width: $break-medium
       margin: 0 auto
+
+    #disqus_thread
+      margin-top: 100px

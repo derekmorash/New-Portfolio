@@ -1238,18 +1238,31 @@ body.posts {
       clear: both;
       content: "";
       display: table; }
+    body.posts .post h1 {
+      margin: 0; }
     @media screen and (max-width: 1080px) {
       body.posts .post {
         padding: 0 40px; } }
     @media screen and (max-width: 768px) {
       body.posts .post {
-        padding: 0 20px; } }
+        padding: 0 20px; }
+        body.posts .post h1 {
+          font-size: 48px; } }
     @media screen and (max-width: 540px) {
+      body.posts .post h1 {
+        font-size: 44px; }
       body.posts .post p {
         font-size: 16px; } }
     body.posts .post--title {
       max-width: 768px;
-      margin: 0 auto; }
+      margin: 100px auto 50px; }
+      body.posts .post--title span {
+        display: block; }
+      body.posts .post--title span:nth-child(3n) {
+        color: black;
+        font-weight: 700; }
     body.posts .post--article {
       max-width: 768px;
       margin: 0 auto; }
+    body.posts .post #disqus_thread {
+      margin-top: 100px; }
