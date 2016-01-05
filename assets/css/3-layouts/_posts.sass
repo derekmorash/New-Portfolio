@@ -6,8 +6,21 @@ body.posts
     margin: 100px auto 0
     padding: 0 60px
 
+    @media screen and (max-width: $break-large)
+      padding: 0 40px
+
+    @media screen and (max-width: $break-medium)
+      padding: 0 20px
+
+    @media screen and (max-width: $break-small)
+      // padding: 0 10px
+      p
+        font-size: 16px
+
     &--title
-      +span-columns(3)
+      max-width: $break-medium
+      margin: 0 auto
 
     &--article
-      +span-columns(9)
+      max-width: $break-medium
+      margin: 0 auto
