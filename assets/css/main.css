@@ -1225,3 +1225,30 @@ body.archive {
         text-align: center; }
       .archive--posts a span:nth-child(3) {
         text-align: right; }
+
+body.posts {
+  background-color: #93d7f8; }
+  body.posts .post {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 100px auto 0;
+    padding: 0 60px; }
+    body.posts .post::after {
+      clear: both;
+      content: "";
+      display: table; }
+    body.posts .post--title {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      body.posts .post--title:last-child {
+        margin-right: 0; }
+    body.posts .post--article {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%; }
+      body.posts .post--article:last-child {
+        margin-right: 0; }
