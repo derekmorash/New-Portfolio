@@ -1,6 +1,9 @@
 body.archive
   background: $bg-archive
 
+  nav
+    background-color: $bg-archive
+
 .archive--posts
   max-width: $break-max
   margin: 100px auto 0
@@ -38,6 +41,7 @@ body.archive
 
       &:nth-child(3)
         text-align: right
+        word-wrap: break-word
 
       // @media screan and (max-width: $break-small)
       //   &:nth-child(1)

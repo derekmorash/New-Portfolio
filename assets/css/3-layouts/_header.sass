@@ -1,90 +1,109 @@
 header
-  display: block
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: flex-end
+  align-content: flex-end
   max-width: $break-max
   margin: 0 auto
-  padding-bottom: 100px
-  background: blue
+  height: 100px
+  // background: goldenrod
 
-  .logo
-    // +size(50px)
-    // background: blue
+  .header--title
+    flex-grow: 1
     float: left
-    margin: 40px 0 0 60px
+    margin: 0 0 0 60px
     font-size: 50px
+    line-height: 1
+    letter-spacing: -5px
+
+    a
+      text-decoration: none
+      border: 0
+
+      &:hover
+        text-decoration: none
+        border: 0
 
     @media screen and(max-width: $break-large)
-      margin: 40px 0 0 40px
+      margin: 0 0 0 40px
 
     @media screen and(max-width: $break-medium)
-      margin: 40px 0 0 20px
+      margin: 0 0 0 20px
 
     @media screen and(max-width: $break-small)
-      margin: 40px 0 0 20px
-
-  .menu--check
-    display: none
-
-    &:checked ~ nav
-      display: block
-
-  .menu--label
-    float: right
-    margin: 40px 60px 0 0
-    cursor: pointer
-    display: none
-
-    @media screen and(max-width: $break-medium)
-      display: block
-      margin: 40px 20px 0 0
+      margin: 0 0 0 20px
 
   nav
-    +span-columns(6)
-    +omega()
-    float: right
-    // width: calc(50% - 10px)
-    padding-top: 40px
-    display: block
-    +transition
+    flex-grow: 1
+    display: flex
+    margin: 0 60px 0 0
+
+    @media screen and(max-width: $break-large)
+      margin: 0 40px 0 0
+
+    @media screen and(max-width: $break-medium)
+      margin: 0 20px 0 0
+
+    @media screen and(max-width: $break-small)
+      margin: 0 20px 0 0
+
+    svg
+      display: none
+
+      @media screen and(max-width: $break-medium)
+        display:block
 
     ul
-      width: 100%
+      flex-grow: 1
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-end
+      align-content: flex-end
       list-style: none
       padding: 0
       margin: 0
 
       li
-        display: inline-block
-        float: left
-        width: 50%
-        position: relative
-        padding-bottom: 10px
+        align-self: center
 
-    @media screen and (max-width: $break-medium)
-      +clearfix
+        a
+          text-decoration: none
+          border: 0
+          font-size: 18px
+          color: lighten($text-color, 40%)
+          +transition()
+
+          &:hover
+            color: black
+
+    // Mobile Nav
+    @media screen and(max-width: $break-medium)
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
       width: 100%
-      margin: 0 auto
-      padding: 0
+      height: 100%
       text-align: center
-      display: none
+      z-index: 1000
+      flex-grow: 1
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      align-content: center
 
       ul
-        list-style: none
+        flex-grow: 1
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        align-content: center
 
         li
-          float: none
-          width: 100
-          text-align: center
-          margin: 0 auto
-
-    a
-      text-decoration: none
-      border: 0
-      font-size: 18px
-      color: lighten($text-color, 40%)
-      +transition()
-
-      &:hover
-        color: black
-
-    &::after
-      +clearfix
+          a
+            font-size: 10vh
