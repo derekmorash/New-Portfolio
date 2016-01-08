@@ -4,7 +4,7 @@ title: WordPress Site Management
 date:   2015-09-21
 thumbnail: wordpress-management.jpg
 categories: work
-tags: wordpress
+tags: wordpress, seo, site migration
 ---
 
 ### Migrating WordPress

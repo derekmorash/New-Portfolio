@@ -1,0 +1,15 @@
+<header>
+  <div class="header--title">
+    <a class="" href="/">DM</a>
+  </div>
+
+  <nav>
+    <ul>
+      {% for item in site.data.settings.menu %}
+      <li>
+        <a href="{{ item.url }}">{{ item.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
