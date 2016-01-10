@@ -703,7 +703,6 @@ body {
 body {
   background: #f8e793;
   font-size: 20px;
-  overflow: hidden;
   line-height: 1.6;
   font-family: Raleway, Helvetica, sans-serif;
   color: #2E2D33;
@@ -897,10 +896,7 @@ header {
         height: 100%;
         text-align: center;
         z-index: 1000;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
+        display: none;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
@@ -952,6 +948,52 @@ header {
               header nav ul li a a:hover, header nav ul li a a:focus {
                 text-decoration: none;
                 border: 0; } }
+  header .hamburger {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-align-content: space-around;
+        -ms-flex-line-pack: distribute;
+            align-content: space-around;
+    height: 40px;
+    width: 50px;
+    margin: 0 20px 0 0;
+    cursor: pointer; }
+    @media screen and (max-width: 768px) {
+      header .hamburger {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; } }
+    header .hamburger div {
+      -webkit-align-self: flex-end;
+          -ms-flex-item-align: end;
+              align-self: flex-end;
+      width: 100%;
+      height: 2px;
+      background: black;
+      -webkit-transition: width 200ms ease-in-out;
+      transition: width 200ms ease-in-out; }
+      header .hamburger div:nth-child(2) {
+        width: 75%; }
+      header .hamburger div:nth-child(3) {
+        width: 50%; }
+    header .hamburger:hover div {
+      width: 100%; }
 
 .about {
   max-width: 1600px;
