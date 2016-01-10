@@ -56,13 +56,14 @@ header
       right: calc(50% - 2vh)
       height: 4vh
       width: 4vh
+      cursor: pointer
+      transition: transform 400ms ease-in-out
 
-      // @media screen and(max-width: $break-small)
-      //   top: 80px
-      //   left: calc(50% - 10px)
-      //   right: calc(50% - 10px)
-      //   height: 20px
-      //   width: 20px
+      path
+        fill: $text-color
+
+      &:hover
+        transform: rotateZ(-180deg)
 
     ul
       flex-grow: 1
@@ -99,7 +100,6 @@ header
       height: 100%
       text-align: center
       z-index: 1000
-      // flex-grow: 1
       display: flex
       flex-direction: column
       justify-content: center
@@ -125,3 +125,10 @@ header
 
           a
             font-size: 8vh
+            color: $text-color
+            text-decoration: none
+            border-bottom: 1px solid $link-color
+
+            a:hover, a:focus
+              text-decoration: none
+              border: 0
