@@ -13,7 +13,7 @@ header
     flex-grow: 1
     float: left
     margin: 0 0 0 60px
-    font-size: 50px
+    font-size: 54px
     line-height: 1
     letter-spacing: -5px
 
@@ -140,9 +140,9 @@ header
     justify-content: space-between
     align-items: flex-end
     align-content: space-around
-    height: 40px
+    height: 35px
     width: 50px
-    margin: 0 20px 0 0
+    margin: 0 20px 10px 0
     cursor: pointer
 
     @media screen and (max-width: $break-medium)
@@ -152,15 +152,35 @@ header
       align-self: flex-end
       width: 100%
       height: 2px
-      background: black
+      background: $text-color
+
+    .mid
+      width: 75%
       +transition(width 200ms ease-in-out)
 
-      &:nth-child(2)
-        width: 75%
-
-      &:nth-child(3)
-        width: 50%
+    .bot
+      width: 50%
+      +transition(width 400ms ease-in-out)
 
     &:hover
       div
         width: 100%
+
+      .top
+        animation: burger-hover 1s infinite ease-in-out alternate
+
+      .mid
+        animation: burger-hover 1s infinite ease-in-out alternate forwards 200ms
+
+      .bot
+        animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms
+
+
+// Keyframes for menu icon hover
+@keyframes burger-hover
+  0%
+    width: 100%
+  50%
+    width: 20%
+  100%
+    width: 100%
