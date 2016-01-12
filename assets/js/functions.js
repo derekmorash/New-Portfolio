@@ -4,6 +4,10 @@ $(function() {
   headerPosition(); //call headerPosition function
 });
 
+$(window).scroll(function() {
+  postBG();
+});
+
 // smoothScroll function is applied from the document ready function
 function smoothScroll (duration) {
 	$('a[href^="#"]').on('click', function(event) {
@@ -95,3 +99,16 @@ function headerPosition() {
     });
   };
 })(jQuery);
+
+/*
+ * Change post page background-color
+ * When the .post--article div is scrolled to the top of the window
+ */
+ function postBG(){
+  var wScroll = $(window).scrollTop();
+  console.log($('.post--article').offset().top);
+
+  if($('.post--article').offset().top === wScroll) {
+    console.log("we scrolled");
+  }
+}

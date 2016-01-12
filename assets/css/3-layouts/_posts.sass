@@ -1,8 +1,9 @@
 body.posts
-  background-color: $bg-posts
+  background-color: white
 
-  nav
-    background-color: $bg-posts
+  @media screen and (max-width: $break-medium)
+    nav
+      background-color: $bg-posts
 
   .post
     +outer-container(100%)
@@ -38,8 +39,8 @@ body.posts
       span
         display: block
 
-      span:nth-child(3n)
-        color: black
+      span:nth-child(2n)
+        // color: black
         font-weight: 700
 
     &--article

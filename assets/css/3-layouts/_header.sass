@@ -7,7 +7,6 @@ header
   max-width: $break-max
   margin: 0 auto
   height: 100px
-  // background: goldenrod
 
   .header--title
     flex-grow: 1
@@ -84,7 +83,7 @@ header
           border: 0
           font-size: 18px
           color: lighten($text-color, 40%)
-          +transition()
+          +transition(color 300ms ease-in-out)
 
           &:hover
             color: black
@@ -100,7 +99,9 @@ header
       height: 100%
       text-align: center
       z-index: 1000
-      display: none
+      // opacity: 0
+      display: flex
+      // pointer-events: none
       flex-direction: column
       justify-content: center
       align-items: center
