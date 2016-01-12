@@ -104,11 +104,14 @@ function headerPosition() {
  * Change post page background-color
  * When the .post--article div is scrolled to the top of the window
  */
- function postBG(){
-  var wScroll = $(window).scrollTop();
-  console.log($('.post--article').offset().top);
+function postBG(){
+  //if user is on a post page
+  if($('.post--article').length) {
+    var wScroll = $(window).scrollTop();
+    console.log($('.post--article').offset().top);
 
-  if($('.post--article').offset().top === wScroll) {
-    console.log("we scrolled");
+    if($('.post--article').offset().top === wScroll) {
+      console.log("we scrolled");
+    }
   }
 }
