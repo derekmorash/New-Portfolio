@@ -107,11 +107,17 @@ function headerPosition() {
 function postBG(){
   //if user is on a post page
   if($('.post--article').length) {
-    var wScroll = $(window).scrollTop();
-    console.log($('.post--article').offset().top);
 
-    if($('.post--article').offset().top === wScroll) {
-      console.log("we scrolled");
+    //get the scroll position
+    var wScroll = $(window).scrollTop();
+
+    //if the window is between the article and the comments section
+    //change the background color to white
+    //otherwise change it to the regular bg color
+    if($('.post--article').offset().top/1.2 < wScroll && $('#disqus_thread').offset().top/1.1 > wScroll) {
+      $('body').css('background-color', '#f2f2f2');
+    } else {
+      $('body').css('background-color', '#f8b593');
     }
   }
 }

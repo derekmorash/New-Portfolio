@@ -707,7 +707,9 @@ body {
   font-family: Raleway, Helvetica, sans-serif;
   color: #2E2D33;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%; }
+  -webkit-text-size-adjust: 100%;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out; }
   @media screen and (max-width: 768px) {
     body nav {
       background-color: #f8e793; } }
@@ -897,10 +899,12 @@ header {
         height: 100%;
         text-align: center;
         z-index: 1000;
+        opacity: 0;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+        pointer-events: none;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
@@ -1314,7 +1318,7 @@ body.archive {
         word-wrap: break-word; }
 
 body.posts {
-  background-color: white; }
+  background-color: #f8b593; }
   @media screen and (max-width: 768px) {
     body.posts nav {
       background-color: #f8b593; } }
