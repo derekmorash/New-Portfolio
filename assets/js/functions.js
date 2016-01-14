@@ -29,10 +29,11 @@ function smoothScroll (duration) {
  * toggles class on or off
  */
 function navToggle() {
+  //when menu hamburger is clicked
   $('.hamburger').click(function() {
     $('#nav').addClass('nav-open');
   });
-
+  //when menu close "X" is clicked
   $('#close-nav').click(function() {
     $('#nav').removeClass('nav-open');
   });
@@ -133,9 +134,22 @@ function postBG(){
     //change the background color to white
     //otherwise change it to the regular bg color
     if($('.post--article').offset().top/1.2 < wScroll && $('#disqus_thread').offset().top/1.1 > wScroll) {
-      $('body').css('background-color', '#f2f2f2');
+
+      /*
+       *only change bg color if the color isn't already the white color
+       *this is so the color isn't constantly being updated when it doesn't need to be
+       */
+      if($('body').css('background-color') !== 'rgb(242, 242, 242)') {
+        $('body').css('background-color', '#f2f2f2');
+      }
     } else {
-      $('body').css('background-color', '#f8b593');
+      /*
+       *only change bg color if the color isn't already the regular color
+       *this is so the color isn't constantly being updated when it doesn't need to be
+       */
+      if($('body').css('background-color') != 'rgb(248, 181, 147)') {
+        $('body').css('background-color', '#f8b593');
+      }
     }
   }
 }
