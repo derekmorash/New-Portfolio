@@ -89,7 +89,7 @@ header
             color: black
 
     // Mobile Nav
-    @media screen and(max-width: $break-large)
+    @media screen and(max-width: $break-medium)
       position: fixed
       top: 0
       left: 0
@@ -106,6 +106,7 @@ header
       justify-content: center
       align-items: center
       align-content: flex-start
+      +transition(opacity 200ms ease-in-out)
 
       svg
         display: block
@@ -134,6 +135,12 @@ header
               text-decoration: none
               border: 0
 
+  .nav-open
+    @media screen and(max-width: $break-large)
+      opacity: 1
+      pointer-events: all
+      +transition(opacity 200ms ease-in-out)
+
   .hamburger
     display: none
     flex-direction: column
@@ -146,7 +153,7 @@ header
     margin: 0 20px 10px 0
     cursor: pointer
 
-    @media screen and (max-width: $break-large)
+    @media screen and (max-width: $break-medium)
       display:flex
 
     div

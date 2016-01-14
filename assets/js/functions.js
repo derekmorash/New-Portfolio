@@ -1,5 +1,6 @@
 $(function() {
   smoothScroll(300); //call smoothScroll function
+  navToggle(); //call navToggle function
   $('#email').fluidText(); //call fluidText Function
   headerPosition(); //call headerPosition function
 });
@@ -23,7 +24,24 @@ function smoothScroll (duration) {
 	});
 }
 
-//about section margin-top to position header in the middle of the page
+/*
+ * mobile nav toggle
+ * toggles class on or off
+ */
+function navToggle() {
+  $('.hamburger').click(function() {
+    $('#nav').addClass('nav-open');
+  });
+
+  $('#close-nav').click(function() {
+    $('#nav').removeClass('nav-open');
+  });
+} //end navToggle
+
+/*
+ * about section position header in the middle of the window
+ * uses margin top to push the section down to the right height
+ */
 function headerPosition() {
   var about = $('.about');
   var textHeight;
@@ -114,8 +132,7 @@ function postBG(){
     //if the window is between the article and the comments section
     //change the background color to white
     //otherwise change it to the regular bg color
-    if($('.post--article').offset().top/1.2 < wScroll &&
-      $('#disqus_thread').offset().top/1.1 > wScroll) {
+    if($('.post--article').offset().top/1.2 < wScroll && $('#disqus_thread').offset().top/1.1 > wScroll) {
       $('body').css('background-color', '#f2f2f2');
     } else {
       $('body').css('background-color', '#f8b593');

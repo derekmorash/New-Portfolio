@@ -888,7 +888,7 @@ header {
           transition: color 300ms ease-in-out; }
           header nav ul li a:hover {
             color: black; }
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: 768px) {
       header nav {
         position: fixed;
         top: 0;
@@ -920,7 +920,9 @@ header {
                 align-items: center;
         -webkit-align-content: flex-start;
             -ms-flex-line-pack: start;
-                align-content: flex-start; }
+                align-content: flex-start;
+        -webkit-transition: opacity 200ms ease-in-out;
+        transition: opacity 200ms ease-in-out; }
         header nav svg {
           display: block; }
         header nav ul {
@@ -956,6 +958,12 @@ header {
               header nav ul li a a:hover, header nav ul li a a:focus {
                 text-decoration: none;
                 border: 0; } }
+  @media screen and (max-width: 1080px) {
+    header .nav-open {
+      opacity: 1;
+      pointer-events: all;
+      -webkit-transition: opacity 200ms ease-in-out;
+      transition: opacity 200ms ease-in-out; } }
   header .hamburger {
     display: none;
     -webkit-box-orient: vertical;
@@ -981,7 +989,7 @@ header {
     width: 50px;
     margin: 0 20px 10px 0;
     cursor: pointer; }
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: 768px) {
       header .hamburger {
         display: -webkit-box;
         display: -webkit-flex;
