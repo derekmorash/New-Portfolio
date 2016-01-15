@@ -27,6 +27,7 @@ function smoothScroll (duration) {
 /*
  * mobile nav toggle
  * toggles class on or off
+ * my selectors specificity is way to strong lol
  */
 function navToggle() {
   //when menu hamburger is clicked
@@ -35,6 +36,10 @@ function navToggle() {
   });
   //when menu close "X" is clicked
   $('#close-nav').click(function() {
+    $('#nav').removeClass('nav-open');
+  });
+  //when menu link is clicked
+  $('#nav a').click(function() {
     $('#nav').removeClass('nav-open');
   });
 } //end navToggle
