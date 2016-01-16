@@ -8,7 +8,7 @@ blurb: Full Stack Web Developer and recent graduate of the Information Technolog
 description: My name is Derek Morash and I am a young IT professional currently completing the Information Technology program at the Nova Scotia Community College (NSCC). Concentrating my studies on my passion for mobile application design, I am excited about the prospect of working with clients to develop solutions that mobilize their business and workforce.
 
 menu:
-- {name: About Me, url: '/#about'}
+# - {name: About Me, url: '#about'}
 - {name: My Work, url: '/archive'}
 # - {name: Music, url: '/music'}
 - {name: Contact, url: '#contact'}

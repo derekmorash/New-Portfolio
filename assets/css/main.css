@@ -746,7 +746,7 @@ h3 {
         -webkit-transition: 200ms;
         transition: 200ms; }
     .all-posts a:nth-child(2):hover svg path {
-      fill: #928f9d; }
+      fill: rgba(46, 45, 51, 0.6); }
   @media screen and (max-width: 540px) {
     .all-posts a:nth-child(1) {
       font-size: 28px; }
@@ -786,10 +786,6 @@ header {
   margin: 0 auto;
   height: 100px; }
   header .header--title {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
     float: left;
     margin: 0 0 0 60px;
     font-size: 54px;
@@ -811,10 +807,9 @@ header {
       header .header--title {
         margin: 0 0 0 20px; } }
   header nav {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    -webkit-flex-basis: 48.82117%;
+        -ms-flex-preferred-size: 48.82117%;
+            flex-basis: 48.82117%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -865,13 +860,13 @@ header {
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      -webkit-box-align: end;
-      -webkit-align-items: flex-end;
-          -ms-flex-align: end;
-              align-items: flex-end;
-      -webkit-align-content: flex-end;
-          -ms-flex-line-pack: end;
-              align-content: flex-end;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-align-content: center;
+          -ms-flex-line-pack: center;
+              align-content: center;
       list-style: none;
       padding: 0;
       margin: 0; }
@@ -1280,14 +1275,12 @@ footer {
       margin: 0;
       padding: 0;
       border: 0; }
-      footer .footer--lockup a svg {
-        -webkit-transition: all 0.15s ease-out 0s;
-        transition: all 0.15s ease-out 0s; }
-        footer .footer--lockup a svg:hover {
-          height: 42px;
-          width: 42px; }
-        footer .footer--lockup a svg path {
-          fill: #2E2D33; }
+      footer .footer--lockup a:hover svg path {
+        fill: rgba(46, 45, 51, 0.6); }
+      footer .footer--lockup a svg path {
+        fill: #2E2D33;
+        -webkit-transition: fill 200ms ease-in-out;
+        transition: fill 200ms ease-in-out; }
 
 body.archive {
   background: #d7f893; }
