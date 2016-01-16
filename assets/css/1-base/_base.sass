@@ -1,5 +1,6 @@
 *
   box-sizing: border-box
+  
 //	Typography
 
 h1, h2, h3, h4, h5, h6
@@ -50,21 +51,18 @@ hr
 
 a
   color: $link-color
-  // text-decoration: underline
-  // outline: 0
 
   text-decoration: none
   border-bottom: 1px solid $link-color
 
 a:hover, a:focus
-  // color: lighten($link-color, 20%)
   text-decoration: none
 
   border: 0
 
 
 
-// Selection colors (easy to forget)
+// Selection colors
 
 ::selection
   background: $selection-color
@@ -92,9 +90,6 @@ body
   color: $text-color
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: 100%
-
-  //this is for the background color changing for the posts
-  +transition(background-color 300ms ease-in-out)
 
   @media screen and (max-width: $break-medium)
     nav

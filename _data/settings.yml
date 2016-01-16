@@ -9,13 +9,13 @@ description: My name is Derek Morash and I am a young IT professional currently 
 
 menu-home:
 - {name: About Me, url: '#about'}
-- {name: My Work, url: '/archive'}
+- {name: My Work, url: '/work'}
 # - {name: Music, url: '/music'}
 - {name: Contact, url: '#contact'}
 
 menu:
 - {name: About Me, url: '/'}
-- {name: My Work, url: '/archive'}
+- {name: My Work, url: '/work'}
 # - {name: Music, url: '/music'}
 - {name: Contact, url: '#contact'}
 

@@ -3,6 +3,7 @@ layout: posts
 title: WordPress Site Management
 date:   2015-09-21
 thumbnail: wordpress-management.jpg
+assets: /assets/post-assets/03-milk/
 categories: work
 tags: wordpress seo site-migration
 ---
@@ -11,6 +12,8 @@ tags: wordpress seo site-migration
 For migrating WordPress from one host to another I use the WP Migrate DB plugin. This replaces the domain and file location paths in the database to point to the correct locations for where the site is being moved to.
 I start with a fresh install of wordpress, and upload the “wp-contents” folder to the new host. If the site is currently located at the domain “localhost/clintonwilkins/” and the file location “/var/www/html/clintonwilkins/” the Migrate DB plugin will change those paths to whatever you specify, for example “//clintonwilkins.ca” and “/var/www/html/clintonwilkins/” on the new host. I then simply download the new sql file and import it into the database on the new host. This can be done in a matter of minutes, excluding the time it takes for to FTP the “wp-contents” folder.
 This works whether you’re moving a site to production or copying a site that is already live to be able to test updates or new features locally before implementing them on production.
+
+![milk]({{ page.assets }}img/milk.jpg "Milk")
 
 {% highlight javascript %}
 $(function() {
