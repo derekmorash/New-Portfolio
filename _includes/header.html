@@ -14,11 +14,20 @@
       </g>
     </svg>
     <ul>
-      {% for item in site.data.settings.menu %}
-      <li>
-        <a href="{{ item.url }}">{{ item.name }}</a>
-      </li>
-      {% endfor %}
+
+      {% if page.menu == "home" %}
+        {% for item in site.data.settings.menu-home %}
+        <li>
+          <a href="{{ item.url }}">{{ item.name }}</a>
+        </li>
+        {% endfor %}
+      {% else %}
+        {% for item in site.data.settings.menu %}
+        <li>
+          <a href="{{ item.url }}">{{ item.name }}</a>
+        </li>
+        {% endfor %}
+      {% endif %}
     </ul>
   </nav>
   <div class="hamburger">
