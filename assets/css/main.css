@@ -1289,16 +1289,19 @@ body.archive {
 .archive--posts {
   max-width: 1600px;
   margin: 100px auto 0;
-  padding: 0 60px; }
+  padding: 0 60px;
+  font-size: 20px; }
   .archive--posts:hover a {
     color: #928f9d;
     border-bottom: 1px solid #928f9d; }
   @media screen and (max-width: 1080px) {
     .archive--posts {
-      padding: 0 40px; } }
+      padding: 0 40px;
+      font-size: 18px; } }
   @media screen and (max-width: 768px) {
     .archive--posts {
-      padding: 0 20px; } }
+      padding: 0 20px;
+      font-size: 16px; } }
   .archive--posts a {
     max-width: 100%;
     margin-left: auto;
@@ -1331,6 +1334,24 @@ body.archive {
       .archive--posts a span:nth-child(3) {
         text-align: right;
         word-wrap: break-word; }
+    @media screen and (max-width: 768px) {
+      .archive--posts a span {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        .archive--posts a span:last-child {
+          margin-right: 0; }
+        .archive--posts a span:nth-child(2n) {
+          margin-right: 0; }
+        .archive--posts a span:nth-child(2n+1) {
+          clear: left; }
+        .archive--posts a span:nth-child(1) {
+          text-align: left; }
+        .archive--posts a span:nth-child(2) {
+          text-align: right; }
+        .archive--posts a span:nth-child(3) {
+          display: none; } }
 
 body.posts {
   background-color: #f8b593;

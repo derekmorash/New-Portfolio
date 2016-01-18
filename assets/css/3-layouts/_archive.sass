@@ -9,6 +9,7 @@ body.archive
   max-width: $break-max
   margin: 100px auto 0
   padding: 0 60px
+  font-size: 20px
 
   &:hover
     a
@@ -17,10 +18,11 @@ body.archive
 
   @media screen and (max-width: $break-large)
     padding: 0 40px
-    // margin-top: 50px
+    font-size: 18px
 
   @media screen and (max-width: $break-medium)
     padding: 0 20px
+    font-size: 16px
 
   a
     +outer-container(100%)
@@ -44,5 +46,16 @@ body.archive
         text-align: right
         word-wrap: break-word
 
-      // @media screan and (max-width: $break-small)
-      //   &:nth-child(1)
+    @media screen and (max-width: $break-medium)
+      span
+        +span-columns(6)
+        +omega(2n)
+
+        &:nth-child(1)
+          text-align: left
+
+        &:nth-child(2)
+          text-align: right
+
+        &:nth-child(3)
+          display: none
