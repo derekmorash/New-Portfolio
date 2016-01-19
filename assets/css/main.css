@@ -664,7 +664,7 @@ strong {
   font-weight: bold; }
 
 hr {
-  border: solid #ddd;
+  border: solid #2E2D33;
   border-width: 1px 0 0;
   clear: both;
   margin: 10px 0 30px;
@@ -784,6 +784,9 @@ header {
   margin: 0 auto;
   height: 100px; }
   header .header--title {
+    -webkit-flex-basis: 48.82117%;
+        -ms-flex-preferred-size: 48.82117%;
+            flex-basis: 48.82117%;
     float: left;
     margin: 0 0 0 60px;
     font-size: 54px;
@@ -812,16 +815,16 @@ header {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    margin: 0 60px 0 0; }
+    margin: 0 60px 0 2.35765%; }
     @media screen and (max-width: 1080px) {
       header nav {
-        margin: 0 40px 0 0; } }
+        margin: 0 40px 0 2.35765%; } }
     @media screen and (max-width: 768px) {
       header nav {
-        margin: 0 20px 0 0; } }
+        margin: 0 20px 0 2.35765%; } }
     @media screen and (max-width: 540px) {
       header nav {
-        margin: 0 20px 0 0; } }
+        margin: 0 20px 0 2.35765%; } }
     header nav svg {
       display: none;
       position: absolute;
