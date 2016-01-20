@@ -1406,12 +1406,14 @@ body.posts {
           max-width: 540px; } }
       body.posts .post--article img {
         display: block;
-        width: 100%; }
+        max-width: 100%; }
       body.posts .post--article .highlight {
         font-size: 16px;
         padding: 0 10px; }
         @media screen and (max-width: 540px) {
           body.posts .post--article .highlight {
             font-size: 14px; } }
+      body.posts .post--article a {
+        word-wrap: break-word; }
       body.posts .post--article #disqus_thread {
         margin-top: 100px; }

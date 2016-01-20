@@ -10,11 +10,7 @@
         <img src="http://fillmurray.com/g/500/300" alt="" />
         <h2>{{ post.title }}</h2>
       </div>
-      <span>
-        {% for tag in post.tags %}
-          {{ tag }}
-        {% endfor %}
-      </span>
+      <span>{{ post.tags | join: ' | ' }}</span>
     </a>
     {% endfor %}
 
