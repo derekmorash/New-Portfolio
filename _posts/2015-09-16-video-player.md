@@ -2,7 +2,7 @@
 layout: posts
 title: Angular Video Player
 date:   2015-09-16
-thumbnail: wordpress-management.jpg
+thumbnail: angular.png
 assets: /assets/post-assets/angular-video/
 categories: work
 tags: angular css video
@@ -95,3 +95,45 @@ This puts the toolbar in the right place but now it’s covering part of the vid
    transition: opacity 0.15s ease-in;
 }
 {% endhighlight %}
+
+###Refactoring CSS
+
+Another thing I changed for this project was how the layout was built. The original course project was built on the bootstrap framework, which can be useful for some projects but for this I found it to be completely overkill. If the project was to build a full video hosting platform then I could see something like bootstrap being very beneficial, but for this small single page video player it is unnecessary.
+
+The most important thing I needed to do was to get the video player container to be the right size for a 16:9 aspect ratio video.
+
+This turned out to be easier than I expected. The main thing needed is a little trick with padding-bottom of 56.25%.
+
+{% highlight css %}
+.responsive-16by9 {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  height: 0;
+  margin: 0 auto;
+  padding: 0 0 56.25% 0;
+  overflow: hidden;
+}
+{% endhighlight %}
+
+Another big change to the css that I made was how the playlist videos are displayed. They used to be in a list with just the title of each video, but I wanted to have a thumbnail and the duration of the video displayed as well.
+
+I started by making a simple responsive grid using floats and margins for spacing.
+
+The playlist container with a max-width, and a clearfix on the ::after pseudo class.
+
+{% highlight css %}
+.playlist-container {
+  display: block;
+  max-width: 1300px;
+}
+.playlist-container::after {
+  clear:both;
+  display: table;
+  content: "";
+}
+{% endhighlight %}
+
+Then the playlist item, which would be each video in the playlist.
+
+While I was able to easily reduce the project size by creating the layout from scratch, I did have to find another way to get icons for the video player. For this I used <a href="http://fontawesome.io/" target="blank">font awesome icons</a> by adding using a CDN. Font awesome is still overkill for this project since I only need a few icons, but this still creates a smaller project size than using bootstrap.
