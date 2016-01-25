@@ -10,7 +10,7 @@
         <img src="{{ post.assets }}{{ post.thumbnail}}" alt="" />
         <h2>{{ post.title }}</h2>
       </div>
-      <span>{{ post.tags | join: ' | ' }}</span>
+      <span>{{ post.tags | join: ', ' }}</span>
     </a>
     {% endfor %}
 
