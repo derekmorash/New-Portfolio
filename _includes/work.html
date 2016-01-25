@@ -7,7 +7,7 @@
     <a href="{{ post.url }}" class="work--card">
       <span>{{ post.date | date: "%b, %d, %Y" }}</span>
       <div class="work--card-title">
-        <img src="http://fillmurray.com/g/500/300" alt="" />
+        <img src="{{ post.assets }}{{ post.thumbnail}}" alt="" />
         <h2>{{ post.title }}</h2>
       </div>
       <span>{{ post.tags | join: ' | ' }}</span>

@@ -2,8 +2,8 @@
 layout: posts
 title: Two Jekyll Blogs in one
 date:   2015-10-10
-thumbnail: two-jekyll-blogs.jpg
-assets: /assets/post-assets/two-jekyll-blogs/
+thumbnail: jekyll.png
+assets: /assets/post-assets/two-blogs/
 categories: work
 tags: jekyll two-blogs-in-one
 ---

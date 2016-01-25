@@ -53,6 +53,20 @@ gulp.task('sass', function () {
 });
 
 /**
+ * Compile and minify files
+ * from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
+ */
+gulp.task('sass-minify', function () {
+    return gulp.src('assets/css/main.sass')
+        .pipe(sass({
+            outputStyle: 'compressed',
+            includePaths: ['css']
+        }))
+        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(gulp.dest('_site/assets/css'));
+});
+
+/**
  * Compile all .js files in the assets/js folder into _site/assets/js/functions.js
  */
 gulp.task('js', function() {

@@ -2,8 +2,8 @@
 layout: posts
 title: WordPress Site Management
 date:   2015-09-21
-thumbnail: wordpress-management.jpg
-assets: /assets/post-assets/03-milk/
+thumbnail: wordpress.png
+assets: /assets/post-assets/wordpress-managment/
 categories: work
 tags: wordpress seo site-migration
 ---

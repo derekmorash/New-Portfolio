@@ -9,6 +9,8 @@ tags: angular css video
 ---
 This video player was built from an angular.js video tutorial on <a href="http://www.lynda.com/" target="blank">Lynda.com</a>. It was a fun course for learning some ways to use angular but when I finished it I wasn’t completely happy with the look and functionality. I won’t be going through how to build the entire thing, because that’s what the course is for, I’ll only be documenting and explaining some of the thing’s I did differently.
 
+View the <a href="http://derekmorash.github.io/AngularVideoPlayer/" target="blank">project</a> or the <a href="https://github.com/derekmorash/AngularVideoPlayer" target="blank">repo</a>.
+
 ###Progress bar/thumb scrubber
 The original video player took up the whole width of the browser, it was responsive but the player got too tall when the browser was full width of the screen causing the player toolbar to be pushed down below the window. The video below demonstrates this problem.
 
@@ -16,6 +18,8 @@ The original video player took up the whole width of the browser, it was respons
   <source src="{{ page.assets }}lynda-video.mp4" type="video/mp4">
   Your browser does not support the HTML5 video tag, please upgrade.
 </video>
+
+You can also view the completed course version of the project <a href="http://derekmorash.github.io/AngularVideoPlayer/lynda.html" target="blank">here</a>.
 
 So I made the player a max-width of 800px, this stopped the player from getting too tall at larger screen widths but it created other problems with the video progress bar and thumb scrubber. The progress bar is the red line at the bottom of the video showing the amount of time in the video has gone by, and the thumb scrubber is the little circle used for scrubbing through the video.
 
