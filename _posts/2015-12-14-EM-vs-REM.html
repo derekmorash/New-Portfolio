@@ -1,0 +1,102 @@
+---
+layout: posts
+title: CSS EM vs. REM
+date:   2015-12-14
+thumbnail: em-vs-rem.png
+assets: /assets/post-assets/em-vs-rem/
+css-style: em-vs-rem.css
+categories: work
+tags: css em rem
+---
+
+<p>This was originally created in <a href="http://codepen.io/derekmorash/pen/yeYLbZ" target="_blank">codepen.io</a> to demonstrate my knowledge of CSS EMs and REMs, and when to use each.</p>
+
+<p>The :root selector font-size is set with a pixel unit. This is the base font-size of the page. Anything that is given a 1rem will be whatever we have the :root font-size set to, in this case it's 16px. This doesn't only affect font-size, we could set
+  the width of an element to be 40rem.</p>
+
+{% highlight css %}
+:root {
+  font-size: 16px;
+}
+{% endhighlight %}
+
+<p>Button 1 has the font-size of 1rem, which would be the font-size of the root. The padding around the button is set to 1rem for the top and bottom, and 1.5rem for the right and left. This means that the padding will stay the same even if the font-size of the button is changed.</p>
+
+<p>Here's the styles for a button that isn't responsive to changing font-size.</p>
+
+{% highlight css %}
+.button {
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #e74c3c;
+  border: 1px #e74c3c solid;
+  border-radius: 3px;
+  padding: 1rem 1.5rem;
+  display: inline-block;
+  transition: all 200ms ease-in-out;
+}
+.button:hover {
+  color: white;
+  background-color: #e74c3c;
+}
+{% endhighlight %}
+
+<a href="#" class="button">button 1</a>
+
+<p>Button 2 is the same as button 1, but the font-size is increased to 4rem. You can see how the padding of the button hasn't changed.</p>
+
+{% highlight css %}
+.button {
+  font-size: 4rem;
+  ...
+}
+{% endhighlight %}
+
+<a href="#" class="button">button 2</a>
+
+<p>Button 3 also has a font-size of 4em but the padding is set to 1em for the top and bottom and 1.5em for the right and left. This padding is based off the font-size of the button itself, rather than the root font-size.</p>
+
+{% highlight css %}
+.button {
+  font-size: 4rem;
+  padding: 1em 1.5rem;
+  ...
+}
+{% endhighlight %}
+
+<a href="#" class="button">button 3</a>
+
+<p>Button 4 shows that the same can be done for the border. Instead of having a fixed size of 1px, we set it to 0.0625em which will make the border thickness be proportionate to the font-size of the element itself.</p>
+
+{% highlight css %}
+.button {
+  font-size: 4rem;
+  padding: 1em 1.5rem;
+  border: 0.0625em #e74c3c solid;
+  ...
+}
+{% endhighlight %}
+
+
+<a href="#" class="button">button 4</a>
+
+<p>Now the only thing left to fix is the border-radius. It's a small change and really not that noticeable in this situation but this is just to demonstrate how setting the border-radius to an em value will make it scale with the font-size of that element.</p>
+
+{% highlight css %}
+.button {
+  font-size: 4rem;
+  padding: 1em 1.5rem;
+  border: 0.0625em #e74c3c solid;
+  border-radius: 0.0625em;
+  ...
+}
+{% endhighlight %}
+
+<a href="#" class="button">button 5</a>
+
+<p>Check out the demo on <a href="http://codepen.io/derekmorash/pen/yeYLbZ" target="_blank">codepen.io</a> to play around with the EM and REM properties for a better understanding on how they work</p>
+
+<h3>REMs are based off the :root font-size. EMs are based off the current element font-size.</h3>
+
+<p>Big thanks to Travis from <a href="https://www.youtube.com/user/DevTipsForDesigners" target="_blank">DevTips</a> for teaching me this stuff.</p>

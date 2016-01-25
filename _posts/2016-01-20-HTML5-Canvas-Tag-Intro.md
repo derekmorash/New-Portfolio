@@ -4,7 +4,6 @@ title: HTML5 Canvas Tag Intro
 date:   2016-01-20
 thumbnail: canvas.png
 assets: /assets/post-assets/HTML5-Canvas-Tag/
-js-demo: true
 js-script: bouncing-ball.js
 categories: work
 tags: html5 canvas-tag

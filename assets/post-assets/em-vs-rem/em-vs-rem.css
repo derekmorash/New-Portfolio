@@ -1,0 +1,41 @@
+/* The base font-size of the page */
+:root {
+  font-size: 16px;
+}
+
+/* General button styles */
+.button {
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #e74c3c;
+  border: 1px #e74c3c solid;
+  border-radius: 3px;
+  padding: 1rem 1.5rem;
+  display: inline-block;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+.button:hover {
+  color: white;
+  background-color: #e74c3c;
+  border: 1px #e74c3c solid;
+}
+.button:nth-of-type(2) {
+  font-size: 4rem;
+}
+.button:nth-of-type(3) {
+  font-size: 4rem;
+  padding: 1em 1.5em;
+}
+.button:nth-of-type(4) {
+  font-size: 4rem;
+  padding: 1em 1.5em;
+  border: 0.0625em #e74c3c solid;
+}
+.button:nth-of-type(5) {
+  font-size: 4rem;
+  padding: 1em 1.5em;
+  border: 0.0625em #e74c3c solid;
+  border-radius: 0.0625em;
+}
