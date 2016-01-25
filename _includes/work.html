@@ -3,7 +3,7 @@
   <p>Articles and examples of some of the things I've been working on.</p>
   <div class="work--card-container">
 
-    {% for post in site.categories.work limit:6 %}
+    {% for post in site.categories.work limit:4 %}
     <a href="{{ post.url }}" class="work--card">
       <span>{{ post.date | date: "%b, %d, %Y" }}</span>
       <div class="work--card-title">

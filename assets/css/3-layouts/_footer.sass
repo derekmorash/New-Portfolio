@@ -33,13 +33,17 @@ footer
       padding: 0
       border: 0
 
+      svg
+        +size(32px)
+
+        @media screen and (max-width: $break-medium)
+          +size(24px)
+
+        path
+          fill: $text-color
+          +transition(fill 200ms ease-in-out)
+
       &:hover
         svg
           path
             fill: transparentize($link-color, 0.4)
-
-
-      svg
-        path
-          fill: $text-color
-          +transition(fill 200ms ease-in-out)

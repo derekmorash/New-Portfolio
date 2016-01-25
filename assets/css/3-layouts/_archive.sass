@@ -49,13 +49,15 @@ body.archive
     @media screen and (max-width: $break-medium)
       span
         +span-columns(6)
-        +omega(2n)
+        +omega(3n)
 
         &:nth-child(1)
           text-align: left
 
         &:nth-child(2)
-          text-align: right
-
-        &:nth-child(3)
+          // text-align: right
           display: none
+
+        // &:nth-child(3)
+          // display: none
+          // text-align: right

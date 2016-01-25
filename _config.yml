@@ -8,5 +8,7 @@ sass:
   sass_dir: assets/css
   style: :compressed
 
-paginate: 5
-paginate_path: "/all-posts/page:num/"
+exclude: [node_modules, gulpfile.js, package.json, README.md]
+
+# paginate: 5
+# paginate_path: "/all-posts/page:num/"
