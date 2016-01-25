@@ -3,13 +3,19 @@ layout: posts
 title: CSS vh and calc() vs Javascript
 date:   2015-12-04
 thumbnail: css-vs-js.png
-assets: /assets/post-assets/css-vh-vs-js/
+assets: /assets/post-assets/vh-vs-js/
 categories: work
 tags: css js vh calc
 ---
 **\*Updated Dec, 30, 2015, below\***
 
-For the about section of my portfolio site, the “Derek Morash” header, I made it appear in the middle of the window while the user is at the top of the page. I do this by adjusting the margin-top css property. I came up with two ways of doing this.
+For the about section of my portfolio site, the “Derek Morash” header, I made it appear in the middle of the window while the user is at the top of the page.
+
+This is what I mean:
+
+![desktop]({{ page.assets }}desktop.jpg "desktop")
+
+I do this by adjusting the margin-top css property. I came up with two ways of doing this.
 
 The first method is using javascript. I wrote a function that adds a margin-top to the .about section of half the window height minus 100px for the header. This function is called once on page load to set the initial margin, then the function is called whenever the window is resized or the orientation is change.
 

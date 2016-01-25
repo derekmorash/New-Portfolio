@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: WordPress Site Management
-date:   2015-09-21
+date:   2015-08-21
 thumbnail: wordpress.png
 assets: /assets/post-assets/wordpress-managment/
 categories: work
