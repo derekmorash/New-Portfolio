@@ -680,13 +680,13 @@ a:hover, a:focus {
   border: 0; }
 
 ::-moz-selection {
-  background: #93d7f8; }
+  background: #93a4f8; }
 
 ::selection {
-  background: #93d7f8; }
+  background: #93a4f8; }
 
 ::-moz-selection {
-  background: #93d7f8; }
+  background: #93a4f8; }
 
 img::-moz-selection {
   background: transparent; }
@@ -698,7 +698,7 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: #93d7f8; }
+  -webkit-tap-highlight-color: #93a4f8; }
 
 body {
   background: #f8e793;
@@ -1135,6 +1135,9 @@ header {
         font-size: 20px;
         font-weight: 300;
         margin: 20px 0 0; }
+
+body.about-me {
+  background-color: #93d7f8; }
 
 .work {
   max-width: 1600px;

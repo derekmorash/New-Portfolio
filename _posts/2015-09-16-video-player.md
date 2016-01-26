@@ -96,6 +96,8 @@ This puts the toolbar in the right place but now it’s covering part of the vid
 }
 {% endhighlight %}
 
+![player toolbar]({{ page.assets }}video-toolbar.png "player toolbar")
+
 ###Refactoring CSS
 
 Another thing I changed for this project was how the layout was built. The original course project was built on the bootstrap framework, which can be useful for some projects but for this I found it to be completely overkill. If the project was to build a full video hosting platform then I could see something like bootstrap being very beneficial, but for this small single page video player it is unnecessary.
@@ -134,6 +136,32 @@ The playlist container with a max-width, and a clearfix on the ::after pseudo cl
 }
 {% endhighlight %}
 
-Then the playlist item, which would be each video in the playlist.
+Then the playlist item, which would be each video in the playlist, uses different widths at different media query break points. There's also a margin left of 4% on each item, but using an nth-child class I remove that margin left from the first item on each row.
+
+Starting with large desktops I set each item to have a width of 22%. With 4% margin between each item there will be 4 items per row.
+
+{% highlight css %}
+.playlist-item {
+  display: block;
+  float: left;
+  width: 22%;
+  margin: 0 0 20px 4%;
+  padding: 10px 0;
+  background-color: #F0F2F2;
+  border-radius: 2px;
+}
+{% endhighlight %}
+
+Use the :nth-child selector to remove the margin-left from the playlist items that don't need it. (placeholder images and playlist items used)
+
+![playlist grid]({{ page.assets }}margin-left.jpg "playlist grid")
+
+While there are 4 items on each line we need to select every item that's a mulitple of 4, starting at 1.
+
+{% highlight css %}
+.playlist-item:nth-child(4n+1) {
+  margin: 0 0 20px 0;
+}
+{% endhighlight %}
 
 While I was able to easily reduce the project size by creating the layout from scratch, I did have to find another way to get icons for the video player. For this I used <a href="http://fontawesome.io/" target="blank">font awesome icons</a> by adding using a CDN. Font awesome is still overkill for this project since I only need a few icons, but this still creates a smaller project size than using bootstrap.

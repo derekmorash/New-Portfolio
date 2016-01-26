@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+
+    <title>{{ site.data.settings.title }}</title>
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  </head>
+  <body class="about-me">
+
+    {{ content }}
+
+    <!-- ANALYTICS -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-72561806-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="/assets/js/functions.js"></script>
+  </body>
+</html>
