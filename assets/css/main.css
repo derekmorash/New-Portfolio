@@ -680,13 +680,13 @@ a:hover, a:focus {
   border: 0; }
 
 ::-moz-selection {
-  background: #93a4f8; }
+  background: #e1e1e4; }
 
 ::selection {
-  background: #93a4f8; }
+  background: #e1e1e4; }
 
 ::-moz-selection {
-  background: #93a4f8; }
+  background: #e1e1e4; }
 
 img::-moz-selection {
   background: transparent; }
@@ -698,7 +698,7 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: #93a4f8; }
+  -webkit-tap-highlight-color: #e1e1e4; }
 
 body {
   background: #f8e793;

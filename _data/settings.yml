@@ -14,6 +14,7 @@ description: My name is Derek Morash, I am a young IT professional and recent gr
 # - {name: Contact, url: '#contact'}
 
 menu:
+- {name: Home, url: '/'}
 - {name: About Me, url: '/about'}
 - {name: My Work, url: '/work'}
 # - {name: Music, url: '/music'}
