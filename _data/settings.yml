@@ -5,16 +5,16 @@ title: Derek Morash
 email: derek.morash@gmail.com
 blurb: Full Stack Web Developer and music nerd.
 
-description: My name is Derek Morash, I am a young IT professional and recent graduate of the Information Technology program at <a href="#" target="_blank">NSCC</a>. 
+description: My name is Derek Morash, I am a young IT professional and recent graduate of the Information Technology program at <a href="#" target="_blank">NSCC</a>.
 
-menu-home:
-- {name: About Me, url: '#about'}
-- {name: My Work, url: '/work'}
-# - {name: Music, url: '/music'}
-- {name: Contact, url: '#contact'}
+# menu-home:
+# - {name: About Me, url: '#about'}
+# - {name: My Work, url: '/work'}
+#  - {name: Music, url: '/music'}
+# - {name: Contact, url: '#contact'}
 
 menu:
-- {name: About Me, url: '/'}
+- {name: About Me, url: '/about'}
 - {name: My Work, url: '/work'}
 # - {name: Music, url: '/music'}
 - {name: Contact, url: '#contact'}
