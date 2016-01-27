@@ -812,7 +812,9 @@ header {
         margin: 0 0 0 20px; } }
     @media screen and (max-width: 540px) {
       header .header--title {
-        margin: 0 0 0 20px; } }
+        margin: 0 0 0 20px; }
+        header .header--title a {
+          font-size: 54px; } }
   header nav {
     -webkit-flex-basis: 48.82117%;
         -ms-flex-preferred-size: 48.82117%;
@@ -1175,6 +1177,10 @@ body.about-me {
     .about--page section p {
       padding: 0;
       margin-bottom: 0; }
+  .about--page .about--education h3 {
+    padding: 20px 0;
+    color: #2E2D33;
+    font-weight: 300; }
   .about--page .about--education .education--header {
     margin-bottom: 20px;
     max-width: 100%;
@@ -1184,12 +1190,15 @@ body.about-me {
       clear: both;
       content: "";
       display: table; }
+    .about--page .about--education .education--header::after {
+      clear: both;
+      content: "";
+      display: table; }
     .about--page .about--education .education--header img {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 23.23176%;
-      max-width: 100%; }
+      width: 23.23176%; }
       .about--page .about--education .education--header img:last-child {
         margin-right: 0; }
     .about--page .about--education .education--header .course {

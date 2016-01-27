@@ -23,14 +23,19 @@ body.about-me
       margin-bottom: 0
 
   .about--education
+    h3
+      padding: 20px 0
+      color: $text-color
+      font-weight: 300
+
     .education--header
       margin-bottom: 20px
-
       +outer-container(100%)
+      +clearfix()
 
       img
         +span-columns(3)
-        max-width: 100%
+        // max-width: 100%
 
       .course
         margin: 0
