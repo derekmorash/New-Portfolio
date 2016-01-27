@@ -656,6 +656,9 @@ h4 {
 p {
   font-size: 20px;
   font-weight: 300; }
+  @media screen and (max-width: 540px) {
+    p {
+      font-size: 16px; } }
 
 em {
   font-style: italic; }
@@ -825,7 +828,7 @@ header {
     header nav .close-nav {
       height: 8vh;
       width: 8vh;
-      display: block;
+      display: none;
       position: absolute;
       top: 40px;
       left: -webkit-calc(50% - 4vh);
@@ -931,7 +934,7 @@ header {
                 align-content: flex-start;
         -webkit-transition: opacity 200ms ease-in-out;
         transition: opacity 200ms ease-in-out; }
-        header nav svg {
+        header nav .close-nav {
           display: block; }
         header nav ul {
           display: -webkit-box;
@@ -1156,7 +1159,11 @@ body.about-me {
 
 .about--me {
   max-width: 768px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 40px; }
+  @media screen and (max-width: 768px) {
+    .about--me {
+      padding: 0 20px; } }
 
 .work {
   max-width: 1600px;
@@ -1411,11 +1418,6 @@ body.posts {
         padding: 0 20px; }
         body.posts .post h1 {
           font-size: 42px; } }
-    @media screen and (max-width: 540px) {
-      body.posts .post h1 {
-        font-size: 44px; }
-      body.posts .post p {
-        font-size: 16px; } }
     body.posts .post--title {
       max-width: 768px;
       margin: 100px auto 50px; }
