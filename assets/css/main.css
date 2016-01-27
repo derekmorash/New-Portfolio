@@ -1213,6 +1213,9 @@ body.about-me {
         width: 100%; }
         .about--page .about--education .education--header .course:last-child {
           margin-right: 0; } }
+  .about--page .about--education .education--source {
+    display: block;
+    margin-top: 20px; }
 
 .work {
   max-width: 1600px;
