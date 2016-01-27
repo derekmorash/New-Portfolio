@@ -821,10 +821,7 @@ header {
         margin: 0 40px 0 2.35765%; } }
     @media screen and (max-width: 768px) {
       header nav {
-        margin: 0 20px 0 2.35765%; } }
-    @media screen and (max-width: 540px) {
-      header nav {
-        margin: 0 20px 0 2.35765%; } }
+        margin: 0; } }
     header nav svg {
       display: none;
       position: absolute;
@@ -1138,6 +1135,13 @@ header {
 
 body.about-me {
   background-color: #93d7f8; }
+  @media screen and (max-width: 768px) {
+    body.about-me nav {
+      background-color: #93d7f8; } }
+
+.about--me {
+  max-width: 768px;
+  margin: 0 auto; }
 
 .work {
   max-width: 1600px;
