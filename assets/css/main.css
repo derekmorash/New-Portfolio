@@ -822,22 +822,37 @@ header {
     @media screen and (max-width: 768px) {
       header nav {
         margin: 0; } }
-    header nav svg {
-      display: none;
+    header nav .close-nav {
+      height: 8vh;
+      width: 8vh;
+      display: block;
       position: absolute;
       top: 40px;
-      left: -webkit-calc(50% - 2vh);
-      left: calc(50% - 2vh);
-      right: -webkit-calc(50% - 2vh);
-      right: calc(50% - 2vh);
-      height: 4vh;
-      width: 4vh;
+      left: -webkit-calc(50% - 4vh);
+      left: calc(50% - 4vh);
+      right: -webkit-calc(50% - 4vh);
+      right: calc(50% - 4vh);
       cursor: pointer;
       -webkit-transition: -webkit-transform 400ms ease-in-out;
               transition: transform 400ms ease-in-out; }
-      header nav svg path {
-        fill: #2E2D33; }
-      header nav svg:hover {
+      header nav .close-nav:before,
+      header nav .close-nav:after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: #2E2D33;
+        position: absolute;
+        top: 50%;
+        -webkit-transform-origin: center;
+            -ms-transform-origin: center;
+                transform-origin: center;
+        -webkit-transform: rotateZ(45deg);
+                transform: rotateZ(45deg); }
+      header nav .close-nav:before {
+        -webkit-transform: rotateZ(-45deg);
+                transform: rotateZ(-45deg); }
+      header nav .close-nav:hover {
         -webkit-transform: rotateZ(-180deg);
                 transform: rotateZ(-180deg); }
     header nav ul {

@@ -50,19 +50,31 @@ header
     // @media screen and(max-width: $break-small)
     //   margin: 0 20px 0 2.35765%
 
-    svg
-      display: none
+    .close-nav
+      +size(8vh)
+      display: block
       position: absolute
       top: 40px
-      left: calc(50% - 2vh)
-      right: calc(50% - 2vh)
-      height: 4vh
-      width: 4vh
+      left: calc(50% - 4vh)
+      right: calc(50% - 4vh)
       cursor: pointer
       transition: transform 400ms ease-in-out
 
-      path
-        fill: $text-color
+      &:before,
+      &:after
+        content: ""
+        display: block
+        height: 2px
+        width: 100%
+        background: $text-color
+        position: absolute
+        top: 50%
+        // margin: 0 auto
+        transform-origin: center
+        transform: rotateZ(45deg)
+
+      &:before
+        transform: rotateZ(-45deg)
 
       &:hover
         transform: rotateZ(-180deg)
