@@ -5,10 +5,43 @@ body.about-me
     nav
       background-color: $bg-about-page
 
-.about--me
+.about--page
   max-width: $break-medium
-  margin: 200px auto 0
+  margin: 50px auto 0
   padding: 0 40px
 
   @media screen and (max-width: $break-medium)
     padding: 0 20px
+
+  section
+    margin-bottom: 20px
+    border-bottom: 1px transparentize($text-color, .8) solid
+    padding-bottom: 20px
+
+    p
+      padding: 0
+      margin-bottom: 0
+
+  .about--education
+    .education--header
+      margin-bottom: 20px
+
+      +outer-container(100%)
+
+      img
+        +span-columns(3)
+        max-width: 100%
+
+      .course
+        margin: 0
+        +span-columns(9)
+
+        span, h4
+          display: block
+          width: 100%
+          margin: 0
+
+      @media screen and (max-width: $break-medium)
+        .course
+          margin: 0
+          +span-columns(12)

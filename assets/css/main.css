@@ -677,6 +677,9 @@ a {
   color: #2E2D33;
   text-decoration: none;
   border-bottom: 1px solid #2E2D33; }
+  @media screen and (max-width: 540px) {
+    a {
+      font-size: 16px; } }
 
 a:hover, a:focus {
   text-decoration: none;
@@ -1158,13 +1161,58 @@ body.about-me {
     body.about-me nav {
       background-color: #93d7f8; } }
 
-.about--me {
+.about--page {
   max-width: 768px;
-  margin: 200px auto 0;
+  margin: 50px auto 0;
   padding: 0 40px; }
   @media screen and (max-width: 768px) {
-    .about--me {
+    .about--page {
       padding: 0 20px; } }
+  .about--page section {
+    margin-bottom: 20px;
+    border-bottom: 1px rgba(46, 45, 51, 0.2) solid;
+    padding-bottom: 20px; }
+    .about--page section p {
+      padding: 0;
+      margin-bottom: 0; }
+  .about--page .about--education .education--header {
+    margin-bottom: 20px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    .about--page .about--education .education--header::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .about--page .about--education .education--header img {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%;
+      max-width: 100%; }
+      .about--page .about--education .education--header img:last-child {
+        margin-right: 0; }
+    .about--page .about--education .education--header .course {
+      margin: 0;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%; }
+      .about--page .about--education .education--header .course:last-child {
+        margin-right: 0; }
+      .about--page .about--education .education--header .course span, .about--page .about--education .education--header .course h4 {
+        display: block;
+        width: 100%;
+        margin: 0; }
+    @media screen and (max-width: 768px) {
+      .about--page .about--education .education--header .course {
+        margin: 0;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        .about--page .about--education .education--header .course:last-child {
+          margin-right: 0; } }
 
 .work {
   max-width: 1600px;
