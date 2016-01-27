@@ -846,7 +846,8 @@ header {
         width: 100%;
         background: #2E2D33;
         position: absolute;
-        top: 50%;
+        top: -webkit-calc(4vh - 1px);
+        top: calc(4vh - 1px);
         -webkit-transform-origin: center;
             -ms-transform-origin: center;
                 transform-origin: center;
@@ -1159,7 +1160,7 @@ body.about-me {
 
 .about--me {
   max-width: 768px;
-  margin: 0 auto;
+  margin: 200px auto 0;
   padding: 0 40px; }
   @media screen and (max-width: 768px) {
     .about--me {
