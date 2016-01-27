@@ -1177,54 +1177,54 @@ body.about-me {
     .about--page section p {
       padding: 0;
       margin-bottom: 0; }
-  .about--page .about--education h3 {
+  .about--page .about--education h3, .about--page .about--work h3 {
     padding: 20px 0;
     color: #2E2D33;
     font-weight: 300; }
-  .about--page .about--education .education--header {
+  .about--page .about--lockup {
     margin-bottom: 20px;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto; }
-    .about--page .about--education .education--header::after {
+    .about--page .about--lockup::after {
       clear: both;
       content: "";
       display: table; }
-    .about--page .about--education .education--header::after {
+    .about--page .about--lockup::after {
       clear: both;
       content: "";
       display: table; }
-    .about--page .about--education .education--header img {
+    .about--page .about--lockup img {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 23.23176%; }
-      .about--page .about--education .education--header img:last-child {
+      .about--page .about--lockup img:last-child {
         margin-right: 0; }
-    .about--page .about--education .education--header .course {
+    .about--page .about--lockup .lockup--title {
       margin: 0;
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 74.41059%; }
-      .about--page .about--education .education--header .course:last-child {
+      .about--page .about--lockup .lockup--title:last-child {
         margin-right: 0; }
-      .about--page .about--education .education--header .course span, .about--page .about--education .education--header .course h4 {
+      .about--page .about--lockup .lockup--title span, .about--page .about--lockup .lockup--title h4 {
         display: block;
         width: 100%;
         margin: 0; }
     @media screen and (max-width: 768px) {
-      .about--page .about--education .education--header .course {
+      .about--page .about--lockup .lockup--title {
         margin: 0;
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 100%; }
-        .about--page .about--education .education--header .course:last-child {
+        .about--page .about--lockup .lockup--title:last-child {
           margin-right: 0; } }
-  .about--page .about--education .education--source {
-    display: block;
-    margin-top: 20px; }
+    .about--page .about--lockup .education--source {
+      display: block;
+      margin-top: 20px; }
 
 .work {
   max-width: 1600px;
