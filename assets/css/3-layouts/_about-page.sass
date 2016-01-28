@@ -6,27 +6,45 @@ body.about-me
       background-color: $bg-about-page
 
 .about--page
-  max-width: $break-medium
-  margin: 50px auto 0
-  padding: 0 40px
+  max-width: $break-max
+  margin: 200px auto 0
+  padding: 0 60px
+
+  @media screen and (max-width: $break-large)
+    padding: 0 40px
 
   @media screen and (max-width: $break-medium)
     padding: 0 20px
 
   section
+    +outer-container(100%)
     margin-bottom: 20px
     border-bottom: 1px transparentize($text-color, .8) solid
     padding-bottom: 20px
 
-    p
-      padding: 0
-      margin-bottom: 0
+    .about--left
+      +span-columns(6)
 
-  .about--education, .about--work
-    h3
-      padding: 20px 0
-      // color: $text-color
-      // font-weight: 300
+    .about--right
+      +span-columns(6)
+
+      p
+        padding: 0
+        margin: 0 0 10px
+
+    &:nth-last-child(1)
+      border: 0
+
+    @media screen and (max-width: $break-medium)
+      .about--left
+        +span-columns(12)
+
+        h3
+          padding-bottom: 20px
+
+      .about--right
+        +span-columns(12)
+
 
   .about--lockup
     margin-bottom: 20px
@@ -47,7 +65,7 @@ body.about-me
         margin: 0
         color: $text-color
 
-    @media screen and (max-width: $break-medium)
+    @media screen and (max-width: $break-xlarge)
       .lockup--title
         margin: 0
         +span-columns(12)

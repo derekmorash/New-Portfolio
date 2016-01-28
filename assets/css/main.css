@@ -653,11 +653,12 @@ h4 {
   font-size: 10px;
   line-height: 1.2; }
 
-p {
+p, a, li {
+  color: #2E2D33;
   font-size: 20px;
   font-weight: 300; }
-  @media screen and (max-width: 540px) {
-    p {
+  @media screen and (max-width: 768px) {
+    p, a, li {
       font-size: 16px; } }
 
 em {
@@ -674,16 +675,11 @@ hr {
   height: 0; }
 
 a {
-  color: #2E2D33;
   text-decoration: none;
   border-bottom: 1px solid #2E2D33; }
-  @media screen and (max-width: 540px) {
-    a {
-      font-size: 16px; } }
-
-a:hover, a:focus {
-  text-decoration: none;
-  border: 0; }
+  a:hover, a:focus {
+    text-decoration: none;
+    border: 0; }
 
 ::-moz-selection {
   background: #e1e1e4; }
@@ -800,7 +796,8 @@ header {
     letter-spacing: -5px; }
     header .header--title a {
       text-decoration: none;
-      border: 0; }
+      border: 0;
+      font-size: 54px; }
       header .header--title a:hover {
         text-decoration: none;
         border: 0; }
@@ -809,7 +806,9 @@ header {
         margin: 0 0 0 40px; } }
     @media screen and (max-width: 768px) {
       header .header--title {
-        margin: 0 0 0 20px; } }
+        margin: 0 0 0 20px; }
+        header .header--title a {
+          font-size: 54px; } }
     @media screen and (max-width: 540px) {
       header .header--title {
         margin: 0 0 0 20px; }
@@ -1164,21 +1163,62 @@ body.about-me {
       background-color: #93d7f8; } }
 
 .about--page {
-  max-width: 768px;
-  margin: 50px auto 0;
-  padding: 0 40px; }
+  max-width: 1600px;
+  margin: 200px auto 0;
+  padding: 0 60px; }
+  @media screen and (max-width: 1080px) {
+    .about--page {
+      padding: 0 40px; } }
   @media screen and (max-width: 768px) {
     .about--page {
       padding: 0 20px; } }
   .about--page section {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 20px;
     border-bottom: 1px rgba(46, 45, 51, 0.2) solid;
     padding-bottom: 20px; }
-    .about--page section p {
-      padding: 0;
-      margin-bottom: 0; }
-  .about--page .about--education h3, .about--page .about--work h3 {
-    padding: 20px 0; }
+    .about--page section::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .about--page section .about--left {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .about--page section .about--left:last-child {
+        margin-right: 0; }
+    .about--page section .about--right {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .about--page section .about--right:last-child {
+        margin-right: 0; }
+      .about--page section .about--right p {
+        padding: 0;
+        margin: 0 0 10px; }
+    .about--page section:nth-last-child(1) {
+      border: 0; }
+    @media screen and (max-width: 768px) {
+      .about--page section .about--left {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        .about--page section .about--left:last-child {
+          margin-right: 0; }
+        .about--page section .about--left h3 {
+          padding-bottom: 20px; }
+      .about--page section .about--right {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        .about--page section .about--right:last-child {
+          margin-right: 0; } }
   .about--page .about--lockup {
     margin-bottom: 20px;
     max-width: 100%;
@@ -1212,7 +1252,7 @@ body.about-me {
         width: 100%;
         margin: 0;
         color: #2E2D33; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1200px) {
       .about--page .about--lockup .lockup--title {
         margin: 0;
         float: left;
