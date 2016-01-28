@@ -4,6 +4,7 @@ var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var concat      = require('gulp-concat');
+var imagemin    = require('gulp-imagemin');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -65,6 +66,18 @@ gulp.task('sass-minify', function () {
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('_site/assets/css'));
 });
+
+/*
+ * Image optimization
+ */
+ gulp.task('image', function() {
+     return gulp.src(['assets/post-assets/**/*.jpg', 'assets/post-assets/**/*.png'])
+         .pipe(imagemin({
+             progressive: true,
+             svgoPlugins: [{removeViewBox: false}]
+         }))
+         .pipe(gulp.dest('_site/assets/post-assets'));
+ });
 
 /**
  * Compile all .js files in the assets/js folder into _site/assets/js/functions.js
