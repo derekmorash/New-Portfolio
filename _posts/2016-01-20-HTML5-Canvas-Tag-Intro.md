@@ -8,7 +8,7 @@ js-script: bouncing-ball.js
 categories: work
 tags: html5 canvas-tag
 ---
-This is a walk through/tutorial on the basics of the HTML5 Canvas Tag. We will start by creating some simple shapes and then move on to some animation. To download the code and follow along you can check out the <a href="https://github.com/derekmorash/SchoolWork/tree/master/HTMLCanvasProject" target="blank">github repo here</a>.
+This is a walk through/tutorial on the basics of the HTML5 Canvas Tag. We will start by creating some simple shapes and then move on to some animation. To download the code and follow along you can check out the <a href="https://github.com/derekmorash/SchoolWork/tree/master/HTMLCanvasProject" >github repo here</a>.
 
 ###Canvas Setup
 Start with a basic HTML5 document, in the body add your \<canvas\> tag. The tag will need at least three things; an id, a width, and a height. Like this:
@@ -234,20 +234,20 @@ Now the ball will bounce around the canvas without leaving a trail behind it.
 ###References
 **Basic HTML5 Canvas Tutorials:**
 
-<a href="http://www.html5canvastutorials.com/tutorials/html5-canvas-rectangles/" target="blank">http://www.html5canvastutorials.com/tutorials/html5-canvas-rectangles/</a>
+<a href="http://www.html5canvastutorials.com/tutorials/html5-canvas-rectangles/" >http://www.html5canvastutorials.com/tutorials/html5-canvas-rectangles/</a>
 
 **HTML5 Canvas Tag Tutorial Learn to Draw and Animate Using Javascript:**
 
-<a href="https://www.youtube.com/watch?v=RV3SaSH8lw0" target="blank">https://www.youtube.com/watch?v=RV3SaSH8lw0</a>
+<a href="https://www.youtube.com/watch?v=RV3SaSH8lw0" >https://www.youtube.com/watch?v=RV3SaSH8lw0</a>
 
 **HTML5 Canvas For Absolute Beginners:**
 
-<a href="http://www.onlywebpro.com/2011/06/25/html5-canvas-for-absolute-beginners-part-1/" target="blank">http://www.onlywebpro.com/2011/06/25/html5-canvas-for-absolute-beginners-part-1/</a>
+<a href="http://www.onlywebpro.com/2011/06/25/html5-canvas-for-absolute-beginners-part-1/" >http://www.onlywebpro.com/2011/06/25/html5-canvas-for-absolute-beginners-part-1/</a>
 
 **HTML5 Canvas Essentials:**
 
-<a href="http://www.informit.com/articles/article.aspx?p=1903884" target="blank">http://www.informit.com/articles/article.aspx?p=1903884</a>
+<a href="http://www.informit.com/articles/article.aspx?p=1903884" >http://www.informit.com/articles/article.aspx?p=1903884</a>
 
 **Github Repo for my code:**
 
-<a href="https://github.com/derekmorash/SchoolWork/tree/master/HTMLCanvasProject" target="blank">https://github.com/derekmorash/SchoolWork/tree/master/HTMLCanvasProject</a>
+<a href="https://github.com/derekmorash/SchoolWork/tree/master/HTMLCanvasProject" >https://github.com/derekmorash/SchoolWork/tree/master/HTMLCanvasProject</a>

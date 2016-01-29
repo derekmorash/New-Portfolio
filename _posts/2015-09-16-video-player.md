@@ -7,9 +7,9 @@ assets: /assets/post-assets/angular-video/
 categories: work
 tags: angular css video
 ---
-This video player was built from an angular.js video tutorial on <a href="http://www.lynda.com/" target="blank">Lynda.com</a>. It was a fun course for learning some ways to use angular but when I finished it I wasn’t completely happy with the look and functionality. I won’t be going through how to build the entire thing, because that’s what the course is for, I’ll only be documenting and explaining some of the thing’s I did differently.
+This video player was built from an angular.js video tutorial on <a href="http://www.lynda.com/" >Lynda.com</a>. It was a fun course for learning some ways to use angular but when I finished it I wasn’t completely happy with the look and functionality. I won’t be going through how to build the entire thing, because that’s what the course is for, I’ll only be documenting and explaining some of the thing’s I did differently.
 
-View the <a href="http://derekmorash.github.io/AngularVideoPlayer/" target="blank">project</a> or the <a href="https://github.com/derekmorash/AngularVideoPlayer" target="blank">repo</a>.
+View the <a href="http://derekmorash.github.io/AngularVideoPlayer/" >project</a> or the <a href="https://github.com/derekmorash/AngularVideoPlayer" >repo</a>.
 
 ###Progress bar/thumb scrubber
 The original video player took up the whole width of the browser, it was responsive but the player got too tall when the browser was full width of the screen causing the player toolbar to be pushed down below the window. The video below demonstrates this problem.
@@ -19,7 +19,7 @@ The original video player took up the whole width of the browser, it was respons
   Your browser does not support the HTML5 video tag, please upgrade.
 </video>
 
-You can also view the completed course version of the project <a href="http://derekmorash.github.io/AngularVideoPlayer/lynda.html" target="blank">here</a>.
+You can also view the completed course version of the project <a href="http://derekmorash.github.io/AngularVideoPlayer/lynda.html" >here</a>.
 
 So I made the player a max-width of 800px, this stopped the player from getting too tall at larger screen widths but it created other problems with the video progress bar and thumb scrubber. The progress bar is the red line at the bottom of the video showing the amount of time in the video has gone by, and the thumb scrubber is the little circle used for scrubbing through the video.
 
@@ -164,4 +164,4 @@ While there are 4 items on each line we need to select every item that's a mulit
 }
 {% endhighlight %}
 
-While I was able to easily reduce the project size by creating the layout from scratch, I did have to find another way to get icons for the video player. For this I used <a href="http://fontawesome.io/" target="blank">font awesome icons</a> by adding using a CDN. Font awesome is still overkill for this project since I only need a few icons, but this still creates a smaller project size than using bootstrap.
+While I was able to easily reduce the project size by creating the layout from scratch, I did have to find another way to get icons for the video player. For this I used <a href="http://fontawesome.io/" >font awesome icons</a> by adding using a CDN. Font awesome is still overkill for this project since I only need a few icons, but this still creates a smaller project size than using bootstrap.
