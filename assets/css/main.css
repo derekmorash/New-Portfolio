@@ -1164,7 +1164,7 @@ body.about-me {
 
 .about--page {
   max-width: 1600px;
-  margin: 200px auto 0;
+  margin: 100px auto 0;
   padding: 0 60px; }
   @media screen and (max-width: 1080px) {
     .about--page {

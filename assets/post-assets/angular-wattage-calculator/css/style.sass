@@ -1,0 +1,173 @@
+@import "vars"
+@import "mixins"
+@import url(https://fonts.googleapis.com/css?family=Lato:300,700)
+
+html, body
+  margin: 0
+  padding: 0
+  width: 100%
+
+body
+  font-family: Lato
+  font-size: 16px
+  font-weight: 300
+  line-height: 24px
+
+.myCalculator
+  max-width: 800px
+  margin: 0 auto
+  padding: 0
+
+  // information display section
+  main
+    background-color: #444
+    +clearfix
+
+    section
+      width: 25%
+      float: left
+      text-align: center
+      padding-top: 110px
+      color: #fff
+      background:
+        repeat: no-repeat
+        position: center 5px
+        size: 63px 100px
+      +clearfix
+
+      &.inc
+        background-color: $inc
+        background-image: url(/assets/img/bulb_inc.svg)
+
+      &.hal
+        background-color: $hal
+        background-image: url(/assets/img/bulb_hal.svg)
+
+      &.cfl
+        background-color: $cfl
+        background-image: url(/assets/img/bulb_cfl.svg)
+
+      &.led
+        background-color: $led
+        background-image: url(/assets/img/bulb_led.svg)
+
+      > div
+        padding: 5px 0
+        background-color: transparentize(black, 0.85)
+
+      h4
+        font-weight: 300
+        font-size: 0.8em
+        letter-spacing: 1px
+        margin: 0 0 5px 0
+        text-transform: uppercase
+
+      p
+        margin: 0
+        font-size: 1.5em
+        font-weight: 700
+
+        &:after
+          content: 'w'
+
+        + p
+          font-size: 1em
+          font-weight: 300
+
+          &:after
+            content: 'per year'
+            color: transparentize(white, 0.5)
+            padding-left: 4px
+
+          &:before
+            content: '$'
+
+  // bottome form section
+  form
+    background-color: black
+    margin: 0
+    padding: 10px 0
+    +clearfix
+
+    br
+      display: none
+
+    > div
+      color: white
+      width: 33%
+      float: left
+      text-align: center
+      padding: 10px 0 5px
+      +clearfix
+
+    h4
+      color: #aaa
+      margin: 0 0 -5px 0
+      font-size: 1.5em
+      font-weight: 300
+
+    p
+      color: #888
+      margin: 0 0 6px 0
+      font-size: 0.9em
+
+    input[type=number]
+      width: 50px
+      text-align: left
+      font-size: 1em
+
+    select
+      font-size: 1em
+      appearance: none
+      background:
+        color: white
+        image: url(/assets/img/icons_arrows.svg)
+        repeat: no-repeat
+        position: right 4px
+        size: 30px 20px
+      padding: 3px 30px 3px 5px
+
+  // For small mobile devices
+  @media screen and (max-width: $break-small)
+    font-size: 15px
+
+    main
+
+      section
+        background-size: 45px 71px
+        padding-top: 80px
+
+        h4
+          margin: 0
+          font-size: 0.6em
+          letter-spacing: 0
+
+        p
+          font-size: 1.1em
+
+          + p
+            font-size: 1em
+
+            &:after
+              display: block
+              margin-top: -10px
+              color: white
+
+    form
+      h4
+        font-size: 1.1em
+        margin: 0
+
+      p
+        font-size: 0.8em
+        line-height: 14px
+
+      br
+        display: inline
+
+      input[type=number]
+        width: 30px
+        font-size: 0.8em
+
+      select
+        font-size: 0.8em
