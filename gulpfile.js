@@ -71,7 +71,7 @@ gulp.task('sass-minify', function () {
  * Image optimization
  */
  gulp.task('image', function() {
-     return gulp.src(['assets/post-assets/**/*.jpg', 'assets/post-assets/**/*.png'])
+     return gulp.src(['assets/post-assets/**/*.jpg', 'assets/post-assets/**/*.png', 'assets/post-assets/**/*.gif'])
          .pipe(imagemin({
              progressive: true,
              svgoPlugins: [{removeViewBox: false}]
