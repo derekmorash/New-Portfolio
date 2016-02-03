@@ -3,7 +3,7 @@ layout: posts
 title: CSS vh and calc() vs Javascript
 date:   2015-12-04
 thumbnail: css-vs-js.png
-assets: /assets/post-assets/vh-vs-js/
+assets: /assets/post-assets/05-vh-vs-js/
 categories: work
 tags: css js vh calc
 ---

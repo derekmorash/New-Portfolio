@@ -3,7 +3,7 @@ layout: posts
 title: Team Client Project
 date:   2015-04-17
 thumbnail: nsccrobo.png
-assets: /assets/post-assets/team-client-project/
+assets: /assets/post-assets/01-team-client-project/
 categories: work
 tags: client-project
 ---

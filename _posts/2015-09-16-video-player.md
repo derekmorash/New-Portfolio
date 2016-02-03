@@ -3,7 +3,7 @@ layout: posts
 title: Angular Video Player
 date:   2015-09-16
 thumbnail: angular.png
-assets: /assets/post-assets/angular-video/
+assets: /assets/post-assets/03-angular-video/
 categories: work
 tags: angular css video
 ---
