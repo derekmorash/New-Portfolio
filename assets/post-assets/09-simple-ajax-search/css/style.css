@@ -1,0 +1,212 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
+\:root {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 1px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #ecf0f1;
+  font-family: Roboto;
+}
+
+.searcharea {
+  display: block;
+  max-width: 800px;
+  margin: 1rem auto 0;
+  border-radius: 1rem 1rem 0 0;
+  background: #3498db;
+  text-align: center;
+}
+
+.searcharea label {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  padding: 1rem;
+}
+
+.searcharea p {
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.searcharea .search {
+  display: inline-block;
+  margin: 1em auto;
+  padding: 0.4em 1em;
+  border: 0;
+  border-bottom: 3px #FC575E solid;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 0;
+  -webkit-appearance: textfield;
+  background-image: linear-gradient(to right, rgba(52, 152, 219, 0.9) 50%, rgba(252, 87, 94, 0.8) 50%);
+  background-position: 0;
+  background-size: 200%;
+  transition: background 300ms ease-in-out;
+}
+
+.searcharea .search::-webkit-input-placeholder {
+  color: #ecf0f1;
+  color: rgba(236, 240, 241, 0.6);
+}
+
+.searcharea .search::-moz-placeholder {
+  color: #ecf0f1;
+  color: rgba(236, 240, 241, 0.6);
+}
+
+.searcharea .search:-ms-input-placeholder {
+  color: #ecf0f1;
+  color: rgba(236, 240, 241, 0.6);
+}
+
+.searcharea .search::placeholder {
+  color: #ecf0f1;
+  color: rgba(236, 240, 241, 0.6);
+}
+
+.searcharea .search:focus {
+  outline: 0;
+  background-position: -100%;
+}
+
+.searcharea .search::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.speakers {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 0 0 1rem 1rem;
+  background: white;
+  color: black;
+}
+
+.speakers ul {
+  list-style: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin: 0 1rem 1rem;
+  padding: 0;
+  -webkit-animation: myanim 500ms;
+  animation: myanim 500ms;
+}
+
+.speakers ul li {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  margin: 1rem 0;
+}
+
+.speakers ul li img {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin-right: 10px;
+}
+
+.speakers ul li .info {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+
+.speakers ul li .info h2 {
+  margin: 0;
+  color: #FC575E;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.speakers ul li .info p {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  color: #7f8c8d;
+  overflow: hidden;
+  transition: all 400ms;
+}
+
+@-webkit-keyframes myanim {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1.0;
+  }
+}
+
+@keyframes myanim {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1.0;
+  }
+}
