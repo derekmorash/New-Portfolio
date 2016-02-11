@@ -1,0 +1,51 @@
+.footer
+  +outer-container($break-max)
+  margin: 25vh auto 80px
+  padding: 0 60px
+  display: flex
+  flex-direction: row
+  // justify-content: flex-end
+  align-items: flex-end
+
+  @media screen and (max-width: $break-large)
+    padding: 0 40px
+
+  @media screen and (max-width: $break-medium)
+    display: block
+    padding: 0 20px
+
+  &--email
+    +span-columns(6)
+
+    a
+      font-size: 24px
+      @media screen and (max-width: $break-large)
+        font-size: 20px
+
+    @media screen and (max-width: $break-medium)
+      +span-columns(12)
+      // margin-bottom: 10px
+
+  &--social-code, &--social-media
+    +span-columns(3)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    @media screen and (max-width: $break-medium)
+      +span-columns(6)
+
+    a
+      display: flex
+      margin-top: 20px
+      text-decoration: none
+      border: 0
+      font-size: 20px
+      color: lighten($text-color, 40%)
+      +transition(color 300ms ease-in-out)
+
+      @media screen and (max-width: $break-large)
+        font-size: 18px
+
+      &:hover
+        color: black
