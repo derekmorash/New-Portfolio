@@ -172,5 +172,5 @@ function allPosts() {
     } else {
       allPosts.text('All');
     }
-  }, 1000);
+  }, 800);
 }
