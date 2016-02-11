@@ -1085,9 +1085,12 @@ header {
       .about--title-name:last-child {
         margin-right: 0; }
       .about--title-name h1 {
-        font-size: 90px;
+        font-size: 110px;
         font-weight: 700;
         margin-top: 0; }
+      @media screen and (max-width: 1606px) {
+        .about--title-name h1 {
+          font-size: 96px; } }
       @media screen and (max-width: 1440px) {
         .about--title-name h1 {
           font-size: 80px; } }
@@ -1100,7 +1103,18 @@ header {
           .about--title-name:last-child {
             margin-right: 0; }
           .about--title-name h1 {
-            font-size: 70px;
+            font-size: 80px;
+            margin-bottom: 0; } }
+      @media screen and (max-width: 580px) {
+        .about--title-name {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 100%; }
+          .about--title-name:last-child {
+            margin-right: 0; }
+          .about--title-name h1 {
+            font-size: 60px;
             margin-bottom: 0; } }
       @media screen and (max-width: 540px) {
         .about--title-name {
@@ -1111,7 +1125,7 @@ header {
           .about--title-name:last-child {
             margin-right: 0; }
           .about--title-name h1 {
-            font-size: 50px;
+            font-size: 52px;
             margin-bottom: 0; } }
     .about--title-blurb {
       float: left;
@@ -1131,17 +1145,21 @@ header {
           .about--title-blurb:last-child {
             margin-right: 0; } }
       .about--title-blurb p:nth-child(1) {
-        font-size: 30px;
+        font-size: 40px;
         font-weight: 700;
         line-height: 1.2;
-        margin: 52px 0 0; }
+        margin: 58px 0 0; }
+        @media screen and (max-width: 1606px) {
+          .about--title-blurb p:nth-child(1) {
+            font-size: 36px;
+            margin: 50px 0 0; } }
         @media screen and (max-width: 1440px) {
           .about--title-blurb p:nth-child(1) {
-            font-size: 28px;
-            margin: 44px 0 0; } }
+            font-size: 36px;
+            margin: 35px 0 0; } }
         @media screen and (max-width: 1200px) {
           .about--title-blurb p:nth-child(1) {
-            font-size: 28px;
+            font-size: 36px;
             margin: 20px 0 0; } }
         @media screen and (max-width: 768px) {
           .about--title-blurb p:nth-child(1) {

@@ -23,9 +23,13 @@
       +span-columns(6)
 
       h1
-        font-size: 90px
+        font-size: 110px
         font-weight: 700
         margin-top: 0
+
+      @media screen and (max-width: 1606px)
+        h1
+          font-size: 96px
 
       @media screen and (max-width: $break-xxlarge)
         h1
@@ -35,14 +39,21 @@
         +span-columns(12)
 
         h1
-          font-size: 70px
+          font-size: 80px
+          margin-bottom: 0
+
+      @media screen and (max-width: 580px)
+        +span-columns(12)
+
+        h1
+          font-size: 60px
           margin-bottom: 0
 
       @media screen and (max-width: $break-small)
         +span-columns(12)
 
         h1
-          font-size: 50px
+          font-size: 52px
           margin-bottom: 0
 
     &-blurb
@@ -54,18 +65,22 @@
         +span-columns(12)
 
       p:nth-child(1)
-        font-size: 30px
+        font-size: 40px
         font-weight: 700
         line-height: 1.2
         // vertical-align: baseline
-        margin: 52px 0 0
+        margin: 58px 0 0
+
+        @media screen and (max-width: 1606px)
+            font-size: 36px
+            margin: 50px 0 0
 
         @media screen and (max-width: $break-xxlarge)
-            font-size: 28px
-            margin: 44px 0 0
+            font-size: 36px
+            margin: 35px 0 0
 
         @media screen and (max-width: $break-xlarge)
-            font-size: 28px
+            font-size: 36px
             margin: 20px 0 0
 
         @media screen and (max-width: $break-medium)
