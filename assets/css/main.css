@@ -1103,6 +1103,17 @@ header {
           .about--title-name:last-child {
             margin-right: 0; }
           .about--title-name h1 {
+            font-size: 96px;
+            margin-bottom: 0; } }
+      @media screen and (max-width: 1200px) {
+        .about--title-name {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 100%; }
+          .about--title-name:last-child {
+            margin-right: 0; }
+          .about--title-name h1 {
             font-size: 80px;
             margin-bottom: 0; } }
       @media screen and (max-width: 580px) {
@@ -1114,7 +1125,7 @@ header {
           .about--title-name:last-child {
             margin-right: 0; }
           .about--title-name h1 {
-            font-size: 60px;
+            font-size: 70px;
             margin-bottom: 0; } }
       @media screen and (max-width: 540px) {
         .about--title-name {
