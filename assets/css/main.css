@@ -731,27 +731,36 @@ h3 {
   .all-posts a:nth-child(1) {
     float: left;
     display: block;
-    font-size: 46px;
+    font-size: 80px;
     font-weight: 700;
     line-height: 1; }
+    @media screen and (max-width: 1080px) {
+      .all-posts a:nth-child(1) {
+        font-size: 60px; } }
+    @media screen and (max-width: 540px) {
+      .all-posts a:nth-child(1) {
+        font-size: 40px; } }
   .all-posts a:nth-child(2) {
     border: 0; }
     .all-posts a:nth-child(2) svg {
       float: right;
-      height: 57px;
-      width: 57px;
+      height: 76px;
+      width: 76px;
+      margin-top: 8px;
       margin-left: 20px; }
+      @media screen and (max-width: 1080px) {
+        .all-posts a:nth-child(2) svg {
+          height: 52px;
+          width: 52px; } }
       .all-posts a:nth-child(2) svg path {
         fill: #2E2D33;
         -webkit-transition: 200ms;
         transition: 200ms; }
     .all-posts a:nth-child(2):hover svg path {
       fill: rgba(46, 45, 51, 0.6); }
-  @media screen and (max-width: 540px) {
-    .all-posts a:nth-child(1) {
-      font-size: 28px; }
-    .all-posts a:nth-child(2) {
-      display: none; } }
+    @media screen and (max-width: 540px) {
+      .all-posts a:nth-child(2) {
+        display: none; } }
 
 @media screen and (max-width: 768px) {
   .music-section .all-posts {

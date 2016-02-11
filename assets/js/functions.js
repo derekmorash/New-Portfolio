@@ -1,8 +1,9 @@
 $(function() {
   smoothScroll(300); //call smoothScroll function
   navToggle(); //call navToggle function
-  $('#email').fluidText(); //call fluidText Function
+  // $('#email').fluidText(); //call fluidText Function
   headerPosition(); //call headerPosition function
+  allPosts();
 });
 
 $(window).scroll(function() {
@@ -90,39 +91,39 @@ function headerPosition() {
  * Released under the WTFPL license
  * http://sam.zoy.org/wtfpl/
 */
-(function($) {
-  $.fn.fluidText = function() {
-
-    //store the text element we want to resize
-    var text = $(this);
-
-    return this.each(function(){
-
-      var parent;
-
-      size();
-
-      function size () {
-        //get the width of the texts parent container
-        parent = text.parent();
-
-        //resize the text acording to the parent width
-        text.css('font-size', parent.width() / 11.8292);
-      }
-
-      //call the size function on window resize
-      $( window ).resize(function() {
-        size();
-      });
-
-      //call the size function on window orientation change (for mobile devices)
-      $( window ).on("orientationchange", function() {
-        size();
-      });
-
-    });
-  };
-})(jQuery);
+// (function($) {
+//   $.fn.fluidText = function() {
+//
+//     //store the text element we want to resize
+//     var text = $(this);
+//
+//     return this.each(function(){
+//
+//       var parent;
+//
+//       size();
+//
+//       function size () {
+//         //get the width of the texts parent container
+//         parent = text.parent();
+//
+//         //resize the text acording to the parent width
+//         text.css('font-size', parent.width() / 11.8292);
+//       }
+//
+//       //call the size function on window resize
+//       $( window ).resize(function() {
+//         size();
+//       });
+//
+//       //call the size function on window orientation change (for mobile devices)
+//       $( window ).on("orientationchange", function() {
+//         size();
+//       });
+//
+//     });
+//   };
+// })(jQuery);
 
 /*
  * Change post page background-color
@@ -157,4 +158,19 @@ function postBG(){
       }
     }
   }
+}
+
+
+/*
+ * Switching text on the all posts button
+ */
+function allPosts() {
+  var allPosts = $('#all-posts');
+  setInterval(function() {
+    if(allPosts.text() === 'All') {
+      allPosts.text('Posts');
+    } else {
+      allPosts.text('All');
+    }
+  }, 1000);
 }

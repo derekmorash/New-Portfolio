@@ -10,16 +10,26 @@
   a:nth-child(1)
     float: left
     display: block
-    font-size: 46px
+    font-size: 80px
     font-weight: 700
     line-height: 1
+
+    @media screen and (max-width: $break-large)
+      font-size: 60px
+
+    @media screen and (max-width: $break-small)
+      font-size: 40px
 
   a:nth-child(2)
     border: 0
     svg
       float: right
-      +size(57px)
+      +size(76px)
+      margin-top: 8px
       margin-left: 20px
+
+      @media screen and (max-width: $break-large)
+        +size(52px)
 
       path
         fill: $link-color
@@ -29,12 +39,8 @@
       svg path
         fill: transparentize($link-color, 0.4)
 
-  @media screen and (max-width: $break-small)
-    a:nth-child(1)
-      font-size: 28px
-
-    a:nth-child(2)
-      display: none
+    @media screen and (max-width: $break-small)
+        display: none
 
 .music-section
   .all-posts
