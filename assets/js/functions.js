@@ -99,8 +99,7 @@ function postBG(){
     //if the window is between the article and the comments section
     //change the background color to white
     //otherwise change it to the regular bg color
-    if($('.post--article').offset().top/1.2 < wScroll && $('#disqus_thread').offset().top/1.4 > wScroll) {
-
+    if($('.post--article').offset().top/1.2 < wScroll && $('#disqus_thread').offset().top > wScroll + 500) {
       /*
        *only change bg color if the color isn't already the white color
        *this is so the color isn't constantly being updated when it doesn't need to be

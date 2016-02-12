@@ -1602,15 +1602,13 @@ body.posts {
       @media screen and (max-width: 768px) {
         body.posts .post--article {
           max-width: 540px; } }
-      body.posts .post--article img {
-        display: block;
-        max-width: 100%; }
-      body.posts .post--article video {
+      body.posts .post--article img, body.posts .post--article video {
         display: block;
         max-width: 100%; }
       body.posts .post--article .highlight {
-        font-size: 16px;
-        padding: 0 10px; }
+        font-size: 14px;
+        padding: 0 10px;
+        border: 3px solid #93d7f8; }
         @media screen and (max-width: 540px) {
           body.posts .post--article .highlight {
             font-size: 12px; } }
