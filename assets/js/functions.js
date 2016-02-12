@@ -86,46 +86,6 @@ function headerPosition() {
 } //end headerPosition
 
 /*
- * Based on fitText.js
- * Copyright 2011, Dave Rupert http://daverupert.com
- * Released under the WTFPL license
- * http://sam.zoy.org/wtfpl/
-*/
-// (function($) {
-//   $.fn.fluidText = function() {
-//
-//     //store the text element we want to resize
-//     var text = $(this);
-//
-//     return this.each(function(){
-//
-//       var parent;
-//
-//       size();
-//
-//       function size () {
-//         //get the width of the texts parent container
-//         parent = text.parent();
-//
-//         //resize the text acording to the parent width
-//         text.css('font-size', parent.width() / 11.8292);
-//       }
-//
-//       //call the size function on window resize
-//       $( window ).resize(function() {
-//         size();
-//       });
-//
-//       //call the size function on window orientation change (for mobile devices)
-//       $( window ).on("orientationchange", function() {
-//         size();
-//       });
-//
-//     });
-//   };
-// })(jQuery);
-
-/*
  * Change post page background-color
  * When the .post--article div is scrolled to the top of the window
  */
@@ -139,7 +99,7 @@ function postBG(){
     //if the window is between the article and the comments section
     //change the background color to white
     //otherwise change it to the regular bg color
-    if($('.post--article').offset().top/1.2 < wScroll && $('#disqus_thread').offset().top/1.1 > wScroll) {
+    if($('.post--article').offset().top/1.2 < wScroll && $('#disqus_thread').offset().top/1.4 > wScroll) {
 
       /*
        *only change bg color if the color isn't already the white color
