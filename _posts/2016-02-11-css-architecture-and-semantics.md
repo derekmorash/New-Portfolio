@@ -18,7 +18,7 @@ One of the most important things in any kind of programming is inheritance. Inhe
 
 Extending styles is the best way to keep code DRY. Using the comma combinator in CSS allows us to set the same style rules on multiple selectors or elements. The code below takes all heading elements and declares the same font-family, instead of declaring the font-family separately on each element.
 
-{% highlight css %}
+{% highlight css linenos %}
 h1, h2, h3, h4, h5, h6 {
   font-family: sans-serif;
 }
@@ -28,7 +28,7 @@ __Practical Example:__
 
 Making buttons is a real world example of how inheritance can be used very well. Generally you'll want all the buttons to look the same. We can set up a SASS placeholder to declare the basic styles of the buttons we want.
 
-{% highlight sass %}
+{% highlight sass linenos %}
 %button
   font-size: 1rem
   text-decoration: none
