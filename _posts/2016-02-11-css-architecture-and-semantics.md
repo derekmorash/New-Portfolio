@@ -2,7 +2,7 @@
 layout:     posts
 title:      CSS Architecture and Semantics
 date:       2016-02-11
-thumbnail:  css.png
+thumbnail:  sass.png
 assets:     /assets/post-assets/10-css-architecture-and-semantics/
 categories: work
 tags:       css-architecture sass semantics
@@ -13,12 +13,15 @@ SASS variables should be used when declaring things like colors or media query b
 
 ## Architecture and File Structure
 
+![Terrible Meme]({{ page.assets }}meme.jpg "Terrible Meme")
+- ([terrible meme source](http://www.sitepoint.com/architecture-sass-project/))
+
 ## Modular Inheritance
 One of the most important things in any kind of programming is inheritance. Inheritance is the ability to reuse code that is already written instead of having to write the same thing over and over in different places. This is just as important in CSS as it is in any programming language. There's no reason to redefine the same styles across multiple selectors or elements when we could just do it once. Don't Repeat Yourself or DRY is the principle that should be followed when writing CSS.
 
 Extending styles is the best way to keep code DRY. Using the comma combinator in CSS allows us to set the same style rules on multiple selectors or elements. The code below takes all heading elements and declares the same font-family, instead of declaring the font-family separately on each element.
 
-{% highlight css linenos %}
+{% highlight css %}
 h1, h2, h3, h4, h5, h6 {
   font-family: sans-serif;
 }
@@ -28,7 +31,7 @@ __Practical Example:__
 
 Making buttons is a real world example of how inheritance can be used very well. Generally you'll want all the buttons to look the same. We can set up a SASS placeholder to declare the basic styles of the buttons we want.
 
-{% highlight sass linenos %}
+{% highlight sass %}
 %button
   font-size: 1rem
   text-decoration: none
@@ -130,7 +133,8 @@ Inside the user section there’s an avatar and the name/username. I mark these 
 </div>
 {% endhighlight %}
 
-
+### Now for the styles
+For
 
 {% highlight sass %}
 .tweet
@@ -139,7 +143,7 @@ Inside the user section there’s an avatar and the name/username. I mark these 
     &-name
 {% endhighlight %}
 
-This renders to:
+These simple SASS selector declarations render to this output CSS:
 
 {% highlight css %}
 .tweet {}
@@ -149,3 +153,12 @@ This renders to:
 {% endhighlight %}
 
 This is one of the things I love most about SASS, nesting. It allows the reader to visualize how the markup is written and laid out. One of the reasons why it's important to use namespaced classnames that describe the content of the element.
+
+## Resources
+I a couple videos to recommend for learning more on the topic of CSS architecture. The first and best video is from Caleb Meredith cohosting a video on the youtube channel called [DevTips](https://www.youtube.com/user/DevTipsForDesigners) from [Travis Neilson](https://twitter.com/travisneilson):
+
+__watch:__ [https://www.youtube.com/watch?v=6co781JgoqQ](https://www.youtube.com/watch?v=6co781JgoqQ)
+
+The second is a talk by [Dan Eden](https://twitter.com/_dte), a designer at Dropbox. He talks about the work he's doing to clean up the bloated CSS for Dropbox and make it more modular.
+
+__watch:__ [https://www.youtube.com/watch?v=zmjfh099zYg](https://www.youtube.com/watch?v=zmjfh099zYg)
