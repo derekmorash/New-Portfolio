@@ -200,7 +200,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 1em; }
 
 /* Forms
@@ -372,17 +372,16 @@ th {
   padding: 0; }
 
 .highlight {
-  background-color: #efefef;
+  background-color: #ececec;
   padding: 7px 7px 7px 10px;
-  border: 1px solid #ddd;
-  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
-  margin: 20px 10px;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
   overflow: hidden;
   font-size: 14px; }
-
-code {
-  font-family: 'Bitstream Vera Sans Mono','Courier', monospace; }
+  @media screen and (max-width: 768px) {
+    .highlight {
+      font-size: 12px; } }
 
 .highlight .c {
   color: #586E75; }

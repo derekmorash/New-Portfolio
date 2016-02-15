@@ -8,13 +8,14 @@ categories: work
 tags:       css-architecture sass semantics
 ---
 ## SASS
+I use SASS for the majority of this article
 
 SASS variables should be used when declaring things like colors or media query break points that will be constant across the site or application. If a unit needs to be changed it can be changed in one place and have it take affect throughout the rest of the styles. This keeps you from having to search through all the styles to find each instance that the unit gets declared.
 
 ## Architecture and File Structure
 
 ![Terrible Meme]({{ page.assets }}meme.jpg "Terrible Meme")
-- ([terrible meme source](http://www.sitepoint.com/architecture-sass-project/))
+- [terrible meme source](http://www.sitepoint.com/architecture-sass-project/)
 
 ## Modular Inheritance
 One of the most important things in any kind of programming is inheritance. Inheritance is the ability to reuse code that is already written instead of having to write the same thing over and over in different places. This is just as important in CSS as it is in any programming language. There's no reason to redefine the same styles across multiple selectors or elements when we could just do it once. Don't Repeat Yourself or DRY is the principle that should be followed when writing CSS.
@@ -97,13 +98,9 @@ This will inherit the same button styles as before but then the new styles will 
   display: inline-block;
 }
 
-.buy {
-  font-size: 2rem;
-}
+.buy { font-size: 2rem; }
 
-.play {
-  color: green;
-}
+.play { color: green; }
 {% endhighlight %}
 
 You can see how the basic button styles are only written once and reused by each selector. Then when we want to make a slightly different button we don't rewrite all the styles, we simply override the ones we want to change
@@ -133,7 +130,8 @@ Inside the user section there’s an avatar and the name/username. I mark these 
 </div>
 {% endhighlight %}
 
-### Now for the styles
+__Now for the styles__
+
 For
 
 {% highlight sass %}
@@ -152,7 +150,7 @@ These simple SASS selector declarations render to this output CSS:
 .tweet .tweet--user .tweet--user-name {}
 {% endhighlight %}
 
-This is one of the things I love most about SASS, nesting. It allows the reader to visualize how the markup is written and laid out. One of the reasons why it's important to use namespaced classnames that describe the content of the element.
+This is one of the things I love most about SASS, nesting. By just looking at the selectors you can tell how the elements in the markup are structured.
 
 ## Resources
 I a couple videos to recommend for learning more on the topic of CSS architecture. The first and best video is from Caleb Meredith cohosting a video on the youtube channel called [DevTips](https://www.youtube.com/user/DevTipsForDesigners) from [Travis Neilson](https://twitter.com/travisneilson):
