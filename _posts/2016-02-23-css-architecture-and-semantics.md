@@ -1,16 +1,13 @@
 ---
 layout:     posts
-title:      CSS Architecture and Semantics
-date:       2016-02-11
+title:      CSS Architecture
+date:       2016-02-23
 thumbnail:  sass.png
 assets:     /assets/post-assets/10-css-architecture-and-semantics/
 categories: work
 tags:       css-architecture sass semantics
 ---
-
-I use SASS for the majority of this article
-
-
+CSS can quickly become a large mess that's nearly impossible to work. Keeping a project organized from the start with a clean file structure and reusing code is the only way to keep from getting overwhelmed. I tried my best to explain how I organize and write my CSS code using SASS, and some of the practices I find to be the most helpful when maintaining a project.
 
 ## Architecture and File Structure
 File structure is the key to writing maintainable CSS. There's nothing worse than coming back to a project after a while and not being able to figure out the styles because you're lost in a CSS file that's a million lines long. With SASS we can break up the styles into different files to have better organization to help with maintaining the code later on, or if someone new tries to work on the project they can easily figure out how things work.
@@ -60,7 +57,9 @@ css/
 
    I'll use twitter again for an example. The twitter feed could have a container that is used to hold all of the tweet modules. There are other layouts on the page like a header and sidebar, the "feed container" is a specific layout separate to hold the tweet modules.
 
-SASS imports allow you to break your stylesheets up into multiple files and then have them imported into one when everything gets compiled. It's important to import your files and dependancies in the right order. If you're using a library like bourbon then it should be one of the first things imported, otherwise you may not be able to inherit it's functionality. A mixin or placeholder needs to be declared before it can be used.
+SASS imports allow you to break your stylesheets up into multiple files and then have them imported into one when everything gets compiled. It's important to import your files and dependancies in the right order. If you're using a library like bourbon then it should be one of the first things imported, otherwise you may not be able to inherit it's functionality. A mixin or placeholder needs to be declared before it can be used. This isn't strictly a SASS only thing, you can do this in other CSS preprocessors or use a build process to like [gulp.js](http://gulpjs.com/) to concatenate multiple plain CSS files together.
+
+The reason why having all styles compiled into one file is to reduce load times. Every time a stylesheet is linked to the browser has to stop and download it before it can continue to load the content of the page. This is called render blocking. It's generally easier for a browser to download __1__ - __60kb__ file than it is to download download __6__ - __10kb__ files. The overall size of the CSS is the same but the browser only has to stop once to download it.
 
 SASS variables should be used when declaring things like colors or media query break points that will be constant across the site or application. If a unit needs to be changed it can be changed in one place and have it take affect throughout the rest of the styles. This keeps you from having to search through all the styles to find each instance that the unit gets declared.
 
