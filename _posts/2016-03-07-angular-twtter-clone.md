@@ -52,15 +52,86 @@ Now we can go to the /login page and see the login form or the /register page to
 ## The "Tweets"
 
 ### Data Structure
-<!-- Thoughts and ideas -->
+
+User data
+users are identified by a unique hash from firebase when they created their account
+user objects only hold info on the user, not about their tweets
+
+{% highlight javascript %}
+{
+  "users": {
+    "0f0089bd-5ac8-4cd8-b2cc-346446a02ba0": {
+      "firstname": "Derek",
+      "lastname":  "Morash",
+      "email":     "derek.morash@gmail.com",
+      "date":      1457233194399, /*Server Value from firebase*/
+      "regUser":   "0f0089bd-5ac8-4cd8-b2cc-346446a02ba0"
+    },
+    "a33d273e-2a3f-42a0-bfaa-a66638b6ab1b": {
+      "firstname": "Carl",
+      "lastname":  "Sagan",
+      "email":     "carl.sagan@gmail.com",
+      "date":      1458230984893, /*Server Value from firebase*/
+      "regUser":   "a33d273e-2a3f-42a0-bfaa-a66638b6ab1b"
+    }
+  }
+}
+{% endhighlight %}
 <!-- Putting tweets inside the user objects? -->
 <!-- NO! Creating a tweet object -->
 
+
+
+
+{% highlight javascript %}
+{
+  "users": {...},
+  "tweets" : {
+    "-KC9s551uW1H9ZCuSGjN" : {
+      "date" : 1457250132514, /*server value from firebase*/
+      "tweet" : "This is a tweet",
+      "userID" : "0f0089bd-5ac8-4cd8-b2cc-346446a02ba0"
+    },
+    "-KC9zn9JADSrxL4i1I3Y" : {
+      "date" : 1457252152016, /*server value from firebase*/
+      "tweet" : "This is another tweet",
+      "userID" : "0f0089bd-5ac8-4cd8-b2cc-346446a02ba0"
+    },
+  }
+}
+{% endhighlight %}
+
 ### Adding and Retrieving Data (Tweets)
+
+{% highlight javascript %}
+ref.child('tweets').on('value', function(snapshot) {
+  //init an array to hold the tweets
+  var tweetFeed = [];
+  //loop through the list of tweets
+  snapshot.forEach(function(childSnapshot) {
+    //store the userID for each tweet
+    var nextTweet = childSnapshot;
+    //get the user based on the userID
+    ref.child('users/' + nextTweet.val().userID).once('value', function(snapshot) {
+      //join the tweet and the user
+      var singleTweet = {
+        userID: snapshot.key(),
+        user: snapshot.val().firstname,
+        tweet: nextTweet.val().tweet,
+        tweetKey: nextTweet.key(),
+        date: nextTweet.val().date
+      };
+      //add the data to the array we initialized
+      tweetFeed.push(singleTweet);
+    });
+  });
+  $scope.tweetFeed = tweetFeed;
+});
+{% endhighlight %}
 
 ### Next Steps
 <!-- adding delete and edit on tweets -->
 I need to add more CRUD functionality to the app. Users should be able to delete and edit their tweets. My first idea for this was to just only display the delete and edit buttons when that specific tweet belonged to the logged in user using the ngShow directive. The problem with this is that the buttons still exist in the markup, they are only being hidden, so anyone could inspect the element and remove that ngShow directive and be able to delete a tweet that doesn't belong to them. I need to think of a way to create the buttons ONLY if they belong to the person logged in instead of simply hiding them.
 
 <!-- maybe adding user control like changing passwords/deleting account -->
-Another thing I'd like to add is the ability for users to update their account info or delete their accounts. This simply means going through Firebase's documentation and tutorials, but I think the CRUD actions are more a higher priority. Not that this project would actually go into production because I would be sued.
+Another thing I'd like to add is the ability for users to update their account info or delete their accounts. This simply means going through Firebase's documentation and tutorials, but I think the CRUD actions are more a higher priority.
