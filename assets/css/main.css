@@ -1658,6 +1658,8 @@ body.posts {
       body.posts .post--article img, body.posts .post--article video {
         display: block;
         max-width: 100%; }
+      body.posts .post--article p {
+        margin: 0 0 20px 0; }
       body.posts .post--article a {
         word-wrap: break-word; }
       body.posts .post--article #disqus_thread {
