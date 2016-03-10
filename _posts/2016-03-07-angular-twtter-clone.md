@@ -7,13 +7,12 @@ assets:     /assets/post-assets/11-angular-twitter-clone/
 categories: work
 tags:       javascript angular firebase
 ---
-Okay so maybe not EXACTLY a twitter clone but that's not the point. I wanted to build a quick app and some sort of twitter/text based posting app is what came to mind
+Okay so maybe not EXACTLY a twitter clone but that's not the point. I wanted to build a quick app and some sort of twitter/text based posting app is what came to mind. You can demo the project here, or view the code on github [here](https://github.com/derekmorash/AngularTwitter).
 
 ## Starting point
 I love gulp, I use it for everything and this was no exception. My gulp process compiles my SASS, and I also use it to concatenate my javascript files into one so I only had to have one script tag to import the code I wrote. This isn't necessary the best way to do things when debugging because error messages only point to one file instead of pointing to the specific file where the error occurred, but this was a small project just for some experience so I could live with it.
 
-### It has to look nice
-I started by creating basic styles to give everything I might need a similar look and feel, like how I designed the buttons and input forms. For the styles I used SASS with the Bourbon and Neat mixin libraries just to make things quick and easy. I used the same SASS architecture for this project that I described in my last post, [here]({% post_url 2016-02-23-css-architecture-and-semantics %}).
+I also wanted to make it look nice with a clean and simple design. I started by creating basic styles to give everything I might need a similar look and feel, like how I designed the buttons and input forms. For the styles I used SASS with the Bourbon and Neat mixin libraries just to make things quick and easy. I used the same SASS architecture for this project that I described in my last post, [here]({% post_url 2016-02-23-css-architecture-and-semantics %}).
 
 ### Angular Templates
 I created a basic HTML document to structure the application and to layout the components I was going to use. Things like the login/register forms and the nav bar. I then broke these components up into their own view template files. I used a ng-include directive to pull in the nav.html template since it is a constant on each page. Next I have a main element with a ng-view that the main components of the app will be loaded into depending on the page the user is on.
@@ -47,7 +46,7 @@ Now we can go to the /login page and see the login form or the /register page to
 
 When a user registers their information is first stored in Firebase's authentication but also as a data object to be used by the app. Firebase's user auth and login service stores the user email, date created, and unique user UID hash. The users password is never accessible but there are functions for reseting it.
 
-I created an angular service to handle authentication. In the service I declare an object to hold the methods used for login and registration. The registration method takes the data the user inputs into the register form and uses the Firebase $createUser function to create the new user.
+I created an angular service to handle authentication. The service returns an object that holds the methods used for login and registration. The registration method takes the data the user inputs into the register form and uses the Firebase $createUser function to create the new user.
 
 {% highlight javascript %}
 register: function(user) {
@@ -79,7 +78,7 @@ register: function(user) {
       }); //user info
 
     myObject.login(user);
-  }).catch(function(error) { //catch any errors from firebase (email already registered)
+  }).catch(function(error) {
     $rootScope.message = error.message;
   }); //auth.createUser()
 } //register method
@@ -108,9 +107,6 @@ The user data that gets store is structured like this:
 }
 {% endhighlight %}
 
-### Authentication Service
-<!-- Angular Service -->
-<!-- making sure a user is logged in -->
 
 ## The "Tweets"
 
@@ -170,8 +166,9 @@ ref.child('tweets').on('value', function(snapshot) {
 {% endhighlight %}
 
 ### Next Steps
-<!-- adding delete and edit on tweets -->
+
 I need to add more CRUD functionality to the app. Users should be able to delete and edit their tweets. My first idea for this was to just only display the delete and edit buttons when that specific tweet belonged to the logged in user using the ngShow directive. The problem with this is that the buttons still exist in the markup, they are only being hidden, so anyone could inspect the element and remove that ngShow directive and be able to delete a tweet that doesn't belong to them. I need to think of a way to create the buttons ONLY if they belong to the person logged in instead of simply hiding them.
 
-<!-- maybe adding user control like changing passwords/deleting account -->
-Another thing I'd like to add is the ability for users to update their account info or delete their accounts. This simply means going through Firebase's documentation and tutorials, but I think the CRUD actions are more a higher priority.
+I'd also like to make the tweets load on scroll. Right now all tweets get loaded right away, there's no limit to how many are retrieved. It'd be nice to have a number like 20 be loaded at first and then when the user scrolls to the bottom of the page another 20 get loaded after.
+
+And the last thing I'd like to add is the ability for users to update their account info or delete their accounts. This simply means going through Firebase's documentation and tutorials, but I think the CRUD actions are more a higher priority.
