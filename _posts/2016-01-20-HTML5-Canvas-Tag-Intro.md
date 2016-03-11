@@ -99,27 +99,27 @@ Drawing lines is similar to rectangles but they take a little bit more to draw.
 context.beginPath();
 {% endhighlight %}
 
-Then set the coordinate for the beginning of the line
+* Then set the coordinate for the beginning of the line
 {% highlight javascript %}
 context.moveTo(100, 150);
 {% endhighlight %}
-Set the end coordinate of the line
+* Set the end coordinate of the line
 {% highlight javascript %}
 context.lineTo(450, 50);
 {% endhighlight %}
-(optional) Set the line width in pixels, default 1px
+* (optional) Set the line width in pixels, default 1px
 {% highlight javascript %}
 context.lineWidth = 10;
 {% endhighlight %}
-(optional) Set the line colour with a strokeStyle, default is black
+* (optional) Set the line colour with a strokeStyle, default is black
 {% highlight javascript %}
 context.strokeStyle = 'red';
 {% endhighlight %}
-(optional) Change the look of the end of the line. Adding a lineCap of ‘round’ will add a rounded point to the line
+* (optional) Change the look of the end of the line. Adding a lineCap of ‘round’ will add a rounded point to the line
 {% highlight javascript %}
 context.lineCap = 'round';
 {% endhighlight %}
-Then finally to draw the line with stroke
+* Then finally to draw the line with stroke
 {% highlight javascript %}
 context.stroke();
 {% endhighlight %}

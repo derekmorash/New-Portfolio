@@ -7,7 +7,7 @@ assets:     /assets/post-assets/11-angular-twitter-clone/
 categories: work
 tags:       javascript angular firebase
 ---
-Okay so maybe not EXACTLY a twitter clone but that's not the point. I wanted to build a quick app and some sort of twitter/text based posting app is what came to mind. You can demo the project here, or view the code on github [here](https://github.com/derekmorash/AngularTwitter).
+Okay so maybe not EXACTLY a twitter clone but that's not the point. I wanted to build a quick app and some sort of twitter/text based posting app is what came to mind. [Demo](http://derekmorash.github.io/AngularTwitter/#/login) the project, or view the [github repo](https://github.com/derekmorash/AngularTwitter) for the code.
 
 ## Starting point
 I love gulp, I use it for everything and this was no exception. My gulp process compiles my SASS, and I also use it to concatenate my javascript files into one so I only had to have one script tag to import the code I wrote. This isn't necessary the best way to do things when debugging because error messages only point to one file instead of pointing to the specific file where the error occurred, but this was a small project just for some experience so I could live with it.
@@ -40,6 +40,8 @@ myApp.config(['$routeProvider', function($routeProvider) {
 Now we can go to the /login page and see the login form or the /register page to see the register form. If the user tries to access any other page they are just redirected to the /login page.
 
 ## Firebase Authentication
+
+Firebase does a great job at handling user authentication. For this project I used the basic email and password authentication but there are also APIs for Facebook, Twitter, and Google logins. It's so easy to get simple and secure authentication in any app.
 
 ### Login/Registration
 <!-- Page Routes/MVC -->
