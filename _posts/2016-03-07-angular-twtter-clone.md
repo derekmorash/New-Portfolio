@@ -3,11 +3,13 @@ layout:     posts
 title:      Angular Twitter Clone
 date:       2016-03-08
 thumbnail:  sass.png
-assets:     /assets/post-assets/11-angular-twitter-clone/
+assets:     /assets/post-assets/11-angular-twitter/
 categories: work
 tags:       javascript angular firebase
 ---
 Okay so maybe not EXACTLY a twitter clone but that's not the point. I wanted to build a quick app and some sort of twitter/text based posting app is what came to mind. [Demo](http://derekmorash.github.io/AngularTwitter/#/login) the project, or view the [github repo](https://github.com/derekmorash/AngularTwitter) for the code.
+
+![login page]({{ page.assets }}login.jpg "Login Page")
 
 ## Starting point
 I love gulp, I use it for everything and this was no exception. My gulp process compiles my SASS, and I also use it to concatenate my javascript files into one so I only had to have one script tag to import the code I wrote. This isn't necessary the best way to do things when debugging because error messages only point to one file instead of pointing to the specific file where the error occurred, but this was a small project just for some experience so I could live with it.
@@ -43,10 +45,26 @@ Now we can go to the /login page and see the login form or the /register page to
 
 Firebase does a great job at handling user authentication. For this project I used the basic email and password authentication but there are also APIs for Facebook, Twitter, and Google logins. It's so easy to get simple and secure authentication in any app.
 
+The authentication service starts by declaring some variables for things needed for firebase. First is a reference to the Firebase URL for the app, and second is an instance of the Firebase authentication service for our app URL.
+
+{% highlight javascript %}
+var ref = new Firebase(FIREBASE_URL);
+var auth = $firebaseAuth(ref);
+{% endhighlight %}
+
+__FIREBASE_URL__ is a constant I created in my app.js file to store the URL to my firebase app. This is so I can use it throughout the app and if I need to change the URL I can do it in just one place.
+
+{% highlight javascript %}
+var myApp = angular.module('myApp',
+  ['ngRoute', 'firebase'])
+  .constant('FIREBASE_URL', 'https://angulartwitter.firebaseio.com/');
+{% endhighlight %}
+
 ### Login/Registration
-<!-- Page Routes/MVC -->
 
 When a user registers their information is first stored in Firebase's authentication but also as a data object to be used by the app. Firebase's user auth and login service stores the user email, date created, and unique user UID hash. The users password is never accessible but there are functions for reseting it.
+
+The view stores the users info using a ng-model directive on each input box. Each input box stores it's data like this __ng-model="user.firstname"__. The user object used as in the login/register methods.
 
 I created an angular service to handle authentication. The service returns an object that holds the methods used for login and registration. The registration method takes the data the user inputs into the register form and uses the Firebase $createUser function to create the new user.
 
@@ -107,6 +125,22 @@ The user data that gets store is structured like this:
     }
   }
 }
+{% endhighlight %}
+
+The login method is very similar but shorter. It takes the user object and verifies the user using the authentication service from Firebase. After the user is verified the app takes them to the /feed page where they will see all the tweets. If there are any errors like an incorrect password then they are caught and displayed to the user by a simple message using $rootScope and angular's data binding.
+
+{% highlight javascript %}
+login: function(user) {
+  //pass the users login info to firebase
+  auth.$authWithPassword({
+    email:    user.email,
+    password: user.password
+  }).then(function(regUser) { //firebase callback promis
+    $location.path('/feed');
+  }).catch(function(error) { //cath any errors (incorrect password)
+    $rootScope.message = error.message;
+  });// auth
+}, //login method
 {% endhighlight %}
 
 

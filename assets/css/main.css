@@ -1637,8 +1637,6 @@ body.posts {
       body.posts .post--article img, body.posts .post--article video {
         display: block;
         max-width: 100%; }
-      body.posts .post--article h3, body.posts .post--article h4, body.posts .post--article h5, body.posts .post--article h6 {
-        font-weight: 300; }
       body.posts .post--article p {
         margin: 0 0 20px 0; }
       body.posts .post--article a {
