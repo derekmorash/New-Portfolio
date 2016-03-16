@@ -380,13 +380,33 @@ th {
   background-color: #272822; }
   .highlight pre {
     margin: 0;
-    padding: 16px;
+    padding: 50px 20px 20px;
     background-color: #272822; }
+    .highlight pre code {
+      position: relative; }
+      .highlight pre code:before {
+        font-family: Raleway, Helvetica, sans-serif;
+        content: attr(data-lang);
+        position: absolute;
+        width: 100%;
+        top: -50px;
+        left: -20px;
+        background: #46454e;
+        text-shadow: none;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 300;
+        padding: 5px 200% 5px 20px;
+        color: #c7c6cc;
+        margin: 0; }
   @media screen and (max-width: 768px) {
     .highlight {
       font-size: 14px; }
       .highlight pre {
-        padding: 10px; } }
+        padding: 40px 20px 20px; }
+        .highlight pre code:before {
+          top: -40px;
+          font-size: 16px; } }
 
 .highlight .hll {
   background-color: #272822; }

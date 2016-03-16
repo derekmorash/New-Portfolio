@@ -148,12 +148,11 @@ login: function(user) {
 
 ### Data Structure
 
+It took me a little while to figure out the best way to create the data structure for this app. I tried a few different things before settling with what I think will give me the best scaleability and ease of use.
 
-<!-- Putting tweets inside the user objects? -->
-<!-- NO! Creating a tweet object -->
+One of the things I thought of was putting the tweets inside each user object that is created when the user registers. I thought this might be a good way to keep the tweets together and to show who they belong to. However this would cause the user object to get very large as more tweets are added, which would cause slow load times if you wanted to retrieve only the users information from the database.
 
-
-
+So I decided to separate the tweets and the users into their own objects. Each tweet has a unique key, and also a reference to the user ID of the user who created the tweet so that the tweet can be joined with it's user.
 
 {% highlight json %}
 {

@@ -14,15 +14,40 @@
 
   pre {
     margin: 0;
-    padding: 16px;
+    padding: 50px 20px 20px;
     background-color: #272822;
+
+    code {
+      position: relative;
+      &:before {
+        font-family: Raleway, Helvetica, sans-serif;
+        content: attr(data-lang);
+        position: absolute;
+        width: 100%;
+        top: -50px;
+        left: -20px;
+        background: lighten(#2E2D33, 10%);
+        text-shadow: none;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 300;
+        padding: 5px 200% 5px 20px;
+        color: lighten(#2E2D33, 60%);;
+        margin: 0;
+      }
+    }
   }
 
   @media screen and (max-width: 768px) {
     font-size: 14px;
 
     pre {
-      padding: 10px;
+      padding: 40px 20px 20px;
+
+      code:before {
+        top: -40px;
+        font-size: 16px;
+      }
     }
   }
 }
