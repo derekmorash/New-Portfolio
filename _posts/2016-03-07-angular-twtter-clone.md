@@ -2,7 +2,7 @@
 layout:     posts
 title:      Angular Twitter Clone
 date:       2016-03-08
-thumbnail:  sass.png
+thumbnail:  angular-firebase.gif
 assets:     /assets/post-assets/11-angular-twitter/
 categories: work
 tags:       javascript angular firebase
@@ -59,7 +59,7 @@ var myApp = angular.module('myApp', ['ngRoute', 'firebase'])
   .constant('FIREBASE_URL', 'https://angulartwitter.firebaseio.com/');
 {% endhighlight %}
 
-### Login/Registration
+### Registration
 
 When a user registers their information is first stored in Firebase's authentication but also as a data object to be used by the app. Firebase's user auth and login service stores the user email, date created, and unique user UID hash. The users password is never accessible but there are functions for reseting it.
 
@@ -125,6 +125,8 @@ The user data that gets store is structured like this:
   }
 }
 {% endhighlight %}
+
+### Login
 
 The login method is very similar but shorter. It takes the user object and verifies the user using the authentication service from Firebase. After the user is verified the app takes them to the /feed page where they will see all the tweets. If there are any errors like an incorrect password then they are caught and displayed to the user by a simple message using $rootScope and angular's data binding.
 
