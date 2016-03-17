@@ -55,8 +55,7 @@ var auth = $firebaseAuth(ref);
 __FIREBASE_URL__ is a constant I created in my app.js file to store the URL to my firebase app. This is so I can use it throughout the app and if I need to change the URL I can do it in just one place.
 
 {% highlight javascript %}
-var myApp = angular.module('myApp',
-  ['ngRoute', 'firebase'])
+var myApp = angular.module('myApp', ['ngRoute', 'firebase'])
   .constant('FIREBASE_URL', 'https://angulartwitter.firebaseio.com/');
 {% endhighlight %}
 
@@ -135,7 +134,7 @@ login: function(user) {
   auth.$authWithPassword({
     email:    user.email,
     password: user.password
-  }).then(function(regUser) { //firebase callback promis
+  }).then(function(regUser) { //firebase callback promise
     $location.path('/feed');
   }).catch(function(error) { //cath any errors (incorrect password)
     $rootScope.message = error.message;
@@ -161,18 +160,52 @@ So I decided to separate the tweets and the users into their own objects. Each t
     "-KC9s551uW1H9ZCuSGjN" : {
       "date" : 1457250132514, /*server value from firebase*/
       "tweet" : "This is a tweet",
-      "userID" : "0f0089bd-5ac8-4cd8-b2cc-346446a02ba0"
+      "userID" : "0f0089bd-5ac8-4cd8-b2cc-346446a02ba0" /*matches the users unique id*/
     },
     "-KC9zn9JADSrxL4i1I3Y" : {
       "date" : 1457252152016, /*server value from firebase*/
       "tweet" : "This is another tweet",
-      "userID" : "0f0089bd-5ac8-4cd8-b2cc-346446a02ba0"
+      "userID" : "0f0089bd-5ac8-4cd8-b2cc-346446a02ba0" /*matches the users unique id*/
     },
   }
 }
 {% endhighlight %}
 
 ### Adding and Retrieving Data (Tweets)
+
+I'm using Angular Fire's ability to create three way data binding with the view, scope, and database. Whenever a tweet is added or deleted it will be automatically updated on the /feed page.
+
+Using the reference to the the Firebase app, I get the child of "Tweets" which is the object that holds the tweets. On any change to the object, like a tweet added or deleted, I get retrieve the object as snapshot. I then loop through each tweet in the snapshot. For each tweet I grab the userID and then create another call to the database using the reference and a child of "users/" plus the userID of the current tweet. This happens only once for each tweet looped through so we can grab any user data belonging to the user who posted the current tweet.
+
+{% highlight javascript %}
+ref.child('tweets').on('value', function(snapshot) {
+  //init an array to hold the tweets
+  var tweetFeed = [];
+  //loop through the list of tweets
+  snapshot.forEach(function(childSnapshot) {
+    //store the userID for each tweet
+    var nextTweet = childSnapshot;
+    //get the user based on the userID
+    ref.child('users/' + nextTweet.val().userID).once('value', function(snapshot) {
+
+    });
+  });
+});
+{% endhighlight %}
+
+Each time the user data is retrieved I create an object to hold all the data needed to display the tweets. This holds the userID, users first name, the tweet text, the unique key for the tweet (this won't be displayed but needed for CRUD actions), and the data given by firebase.
+
+{% highlight javascript %}
+var singleTweet = {
+  userID: snapshot.key(),
+  user: snapshot.val().firstname,
+  tweet: nextTweet.val().tweet,
+  tweetKey: nextTweet.key(),
+  date: nextTweet.val().date
+};
+{% endhighlight %}
+
+Then each singleTweet object is pushed into the tweetFeed array created when the tweets are first accessed. Once all the tweets have been looped through and stored in the tweetsFeed array I put the array in a $scope object to be used by the tweet HTML view template.
 
 {% highlight javascript %}
 ref.child('tweets').on('value', function(snapshot) {
@@ -198,6 +231,15 @@ ref.child('tweets').on('value', function(snapshot) {
   });
   $scope.tweetFeed = tweetFeed;
 });
+{% endhighlight %}
+
+I have the tweets broken out into a custom directive. Here the tweetFeed $scope object is looped through using ng-repeat and filtered by date. For each tweet the users name is displayed with a link to their personal feed, and also the tweet itself is displayed using angular expressions.
+
+{% highlight html %}
+<div class="feed--tweet" ng-repeat="(key, tweet) in tweetFeed | orderBy: '-date'">
+  <a ng-href="#/user/{% raw %}{{{% endraw %} tweet.userID {% raw %}}}{% endraw %}" class="tweet-user">{% raw %}{{{% endraw %} tweet.user {% raw %}}}{% endraw %}</a>
+  <p>{% raw %}{{{% endraw %} tweet.tweet {% raw %}}}{% endraw %}</p>
+</div>
 {% endhighlight %}
 
 ### Next Steps

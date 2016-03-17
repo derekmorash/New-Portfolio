@@ -383,7 +383,8 @@ th {
     padding: 50px 20px 20px;
     background-color: #272822; }
     .highlight pre code {
-      position: relative; }
+      position: relative;
+      color: #f8f8f2; }
       .highlight pre code:before {
         font-family: Raleway, Helvetica, sans-serif;
         content: attr(data-lang);

@@ -19,6 +19,7 @@
 
     code {
       position: relative;
+      color: #f8f8f2;
       &:before {
         font-family: Raleway, Helvetica, sans-serif;
         content: attr(data-lang);
