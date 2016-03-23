@@ -1,7 +1,7 @@
 ---
 layout:     posts
 title:      Angular Twitter Clone
-date:       2016-03-08
+date:       2016-03-17
 thumbnail:  angular-firebase.gif
 assets:     /assets/post-assets/11-angular-twitter/
 categories: work

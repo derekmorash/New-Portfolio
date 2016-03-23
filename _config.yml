@@ -1,6 +1,6 @@
 # Build settings
 markdown: kramdown
-permalink: none
+permalink: /:categories/:title
 
 port: 9000
 
