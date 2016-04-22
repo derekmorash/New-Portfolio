@@ -2,7 +2,7 @@
 layout:     posts
 title:      Internet Explorer Pseudo Class Animations
 date:       2016-04-20
-thumbnail:  salesforce-wordpress.gif
+thumbnail:  css3.png
 assets:     /assets/post-assets/13-internet-explorer-pseudo-class-animations/
 categories: work
 tags:       css pseudo-classes internet-explorer
