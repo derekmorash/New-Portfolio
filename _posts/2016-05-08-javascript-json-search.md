@@ -2,12 +2,15 @@
 layout:     posts
 title:      Javascript Ajax JSON Search
 date:       2016-05-08
-thumbnail:  css3.png
+thumbnail:  js.png
 assets:     /assets/post-assets/14-javascript-json-search/
 categories: work
 tags:       javascript json
 ---
-A quick tutorial on how to load JSON data with Ajax and query it with a search string. To see a demo and the working code checkout [this codepen](http://codepen.io/derekmorash/pen/dGLdxN), it was a Javascript challenge exercise by [Wes Bos](https://twitter.com/wesbos).
+A quick tutorial on how to load JSON data with Ajax and query it with a search string. To see a demo and the working code checkout [this codepen](http://codepen.io/derekmorash/pen/dGLdxN). It was a Javascript challenge exercise by [Wes Bos](https://twitter.com/wesbos), I wrote the Javascript.
+
+This is what it looks like completed. A list of results appear that match the search query.
+![search]({{ page.assets }}search.gif "search")
 
 First we'll set up our HTML, it's super simple. We'll need an input text box to type our search query into, and an unordered list to display the matched results. I have these wrapped in a form element just to be able to style it, but I won't cover any CSS styling in this.
 
