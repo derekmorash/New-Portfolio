@@ -1,12 +1,14 @@
 ---
 layout:     posts
 title:      Javascript Ajax JSON Search
-date:       2016-04-25
+date:       2016-05-08
 thumbnail:  css3.png
 assets:     /assets/post-assets/14-javascript-json-search/
 categories: work
 tags:       javascript json
 ---
+A quick tutorial on how to load JSON data with Ajax and query it with a search string. To see a demo and the working code checkout [this codepen](http://codepen.io/derekmorash/pen/dGLdxN), it was a Javascript challenge exercise by [Wes Bos](https://twitter.com/wesbos).
+
 First we'll set up our HTML, it's super simple. We'll need an input text box to type our search query into, and an unordered list to display the matched results. I have these wrapped in a form element just to be able to style it, but I won't cover any CSS styling in this.
 
 {% highlight html %}
@@ -96,7 +98,7 @@ if(search.value === '') {
 
 For each record in the data we want to check if the city or the state of the record matches our RegExp. We check this by using the Javascript search method on the record.
 
-For the city we take the data record at the specific key the loop is at, and search the city object for "myExp". "(data[key].city.search(myExp) != -1)" If this does NOT return a "-1" then that means the expression matches. Then we use || to if the city OR state gives a match.
+For the city we take the data record at the specific key the loop is at, and search the city object for "myExp". "(data[key].city.search(myExp) != -1)" If this does NOT return a "-1" then that means the expression matches. Then we use two pipes, "\|\|", to indicate if the city OR state gives a match.
 
 {% highlight javascript %}
 else {
@@ -148,75 +150,4 @@ else {
 } //end else
 {% endhighlight %}
 
-{% highlight javascript %}
-if((data[key].city.search(myExp) != -1) || (data[key].state.search(myExp) != -1)) {
-
-  output += '<li><span>' + data[key].city.replace(myExp, function(str) {
-    return '<span class="hl">'+str+'</span>'
-  }) + ', ' +
-  data[key].state.replace(myExp, function(str) {
-    return '<span class="hl">'+str+'</span>'
-  }) + '</span><span class="population">' +
-  data[key].population +'</span></li>';
-
-} //end if
-{% endhighlight %}
-
-
-
-Here's the final code with overkill comments:
-
-{% highlight javascript %}
-var url = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
-
-//get the search box
-var search = document.querySelector(".search");
-//get the list
-var list = document.querySelector(".suggestions");
-//initialize a variable to hold the data
-var data = [];
-//start an HTTP request
-var xmlhttp = new XMLHttpRequest();
-
-//make the HTTP request
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
-xmlhttp.onreadystatechange = function() {
-  if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-    data = JSON.parse(xmlhttp.responseText);
-  }
-};
-
-//when a key is pressed
-search.addEventListener('keyup', function() {
-  //create a new regex
-  var myExp = new RegExp(search.value, 'gi');
-  //create a new output variable
-  var output = '';
-
-  //if the search box is emptied
-  if(search.value === '') {
-    //remove all list items
-    list.innerHTML = '';
-  } else {
-    //loop through the data
-    for(var key in data) {
-      //if the city or state matches
-      if((data[key].city.search(myExp) != -1) || (data[key].state.search(myExp) != -1)) {
-        //apend a new list item containing the location info to the output string variable
-        var newLocation = '<li><span>' + data[key].city.replace(myExp, function(str) {
-        return '<span class="hl">'+str+'</span>'}) + ', ' +
-          data[key].state.replace(myExp, function(str) {
-        return '<span class="hl">'+str+'</span>'}) + '</span><span class="population">' +
-          data[key].population +'</span></li>';
-
-        output += newLocation;
-
-      } //end if
-    } //end for
-
-    //put the contents of the output variable into the list
-    list.innerHTML = output;
-  } //end else
-}); //end searchList
-{% endhighlight %}
+And that's it, we have a search box that returns results instantly without a page reload.
