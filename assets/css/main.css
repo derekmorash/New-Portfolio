@@ -1662,5 +1662,7 @@ body.posts {
         margin: 0 0 20px 0; }
       body.posts .post--article a {
         word-wrap: break-word; }
+      body.posts .post--article h3, body.posts .post--article h4 {
+        margin: 1em 0 0 0; }
       body.posts .post--article #disqus_thread {
         margin-top: 100px; }
