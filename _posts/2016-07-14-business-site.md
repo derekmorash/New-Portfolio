@@ -1,7 +1,7 @@
 ---
 layout:     posts
 title:      Small Business Client Site
-date:       2016-07-12
+date:       2016-07-14
 thumbnail:  x.png
 assets:     /assets/post-assets/18-business-site/
 categories: work
